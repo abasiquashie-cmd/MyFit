@@ -23,7 +23,7 @@ button.wide + .grid{margin-top:12px}
 .recipe-detail-actions{display:grid;gap:.5rem;margin-top:1rem}
 #recordDate{font-size:.75rem}#recordDate[hidden]{display:none}#recordDate input{display:block;margin:2px 0 0;width:145px}.week-day{width:100%;display:block;text-align:left;margin-top:8px}.week-day[aria-current=date]{border:1px solid #a5ef91}.week-meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;margin-top:7px;font-weight:400}.week-meals small{display:block}.daily-disclosure{margin:12px 0;padding:12px;border:1px solid #42564a;border-radius:12px}.daily-disclosure>summary{cursor:pointer;font-weight:700}
 .briefing-identity{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:12px 0}.briefing-portrait{width:50px;flex:none}.briefing-identity button{margin-left:auto}
-</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.2</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
+</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.3</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
 const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());let S={profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,legs:true},meals:{},work:{},measure:[]};var storageBlocked=false;try{let x=localStorage.getItem('myfit-v1');if(x){let parsed=JSON.parse(x);if(!validState(parsed))throw Error('Invalid saved data');S=parsed}}catch(e){storageBlocked=true;alert('Saved data could not be read. Automatic saving is disabled to protect it. Export or restore a valid backup.')}function save(){if(storageBlocked)return false;try{localStorage.setItem('myfit-v1',JSON.stringify(S));return true}catch(e){alert('Storage unavailable. Export your data before closing.')}}S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};let plannerDate = '';
 const day = () => tab === 'Planner' ? plannerDate || today() : ['Home','Coach'].includes(tab) ? today() : $('date').value;
 function openMainTab(next) {
@@ -1201,13 +1201,211 @@ const historyRender=render;render=function(){historyRender();if(tab==='Progress'
 addSetDetail=function(n){let r={load:Number($('setLoad').value),reps:Number($('setReps').value),effort:Number($('setEffort').value)};if(['setLoad','setReps','setEffort'].some(k=>$(k).value.trim()==='')||!setDetailValid(r))return alert('Enter a valid load, reps and effort.');let key=day()+'|'+n,prior=JSON.stringify(S);if(!adoptDetail(key))return;((S.setDetails??={})[key]??=[]).push(r);syncDetail(key);if(!save()){S=JSON.parse(prior);return alert('Set not saved. Your entry is still on screen. Check browser storage.')}render();let el=$('setLoad');if(el){el.value=r.load;$('setReps').value=r.reps;$('setEffort').value=r.effort;el.insertAdjacentHTML('beforebegin','<small role="status">✓ Set saved to workout log</small>')}};
 
 
+const equipmentNames = {
+  dumbbells:'Dumbbells', bands:'Resistance bands', bench:'Bench or sturdy step',
+  barbell:'Barbell and plates', kettlebell:'Kettlebell', pullup:'Pull-up bar',
+  cable:'Cable station', pulldown:'Lat pulldown machine', legPress:'Leg press',
+  legExtension:'Leg extension', legCurl:'Leg curl', chestFly:'Chest fly machine'
+};
+const trainingLocations = {
+  gym:['Gym',Object.keys(equipmentNames)],
+  home:['Home', ['dumbbells','bands']],
+  crossfit:['CrossFit-style station',['dumbbells','bench','barbell','kettlebell','pullup']],
+  none:['Bodyweight only',[]]
+};
+
+function trainingEquipment() {
+  const stored = S.profile.trainingEquipment;
+  if (stored && Object.hasOwn(trainingLocations,stored.location) && Array.isArray(stored.gear)) return stored;
+  const earlier = S.setup596?.draft?.equipment;
+  const location = Object.hasOwn(trainingLocations,earlier) ? earlier : 'gym';
+  return {location,gear:trainingLocations[location][1]};
+}
+
+// Alternatives are ordered by movement and available equipment.
+const exerciseAlternatives = {
+  'Leg press':[['legPress'],['kettlebell','Kettlebell goblet squat'],['dumbbells','Dumbbell goblet squat'],['','Bodyweight squat']],
+  'Leg extension':[['legExtension'],['bands','Band knee extension'],['','Reverse lunge']],
+  'Seated hamstring curl':[['legCurl'],['bands','Standing band leg curl'],['','Hamstring walkout']],
+  'Hamstring curl':[['legCurl'],['bands','Standing band leg curl'],['','Hamstring walkout']],
+  'Hip thrust':[['bench'],['','Glute bridge']],
+  'Dumbbell Romanian deadlift':[['dumbbells'],['barbell','Barbell Romanian deadlift'],['kettlebell','Kettlebell deadlift'],['','Bodyweight hip hinge']],
+  'Dumbbell bench press':[['dumbbells+bench'],['dumbbells','Dumbbell floor press'],['','Push-up']],
+  'Incline press':[['dumbbells+bench','Incline dumbbell press'],['bands','Standing band chest press'],['','Incline push-up']],
+  'Seated shoulder press':[['dumbbells','Dumbbell shoulder press'],['kettlebell','Kettlebell shoulder press'],['bands','Band shoulder press'],['','Pike push-up']],
+  'Lateral raise':[['dumbbells'],['bands','Band lateral raise'],['','Prone T raise']],
+  'Triceps pushdown':[['cable'],['bands','Band triceps extension'],['','Close-grip wall push-up']],
+  'Lat pulldown':[['pulldown'],['pullup','Pull-up'],['bands','Band pulldown'],['','Prone lat pull']],
+  'Chest-supported row':[['dumbbells+bench'],['barbell','Barbell row'],['dumbbells','Dumbbell row'],['kettlebell','Kettlebell row'],['bands','Resistance band row'],['','Prone W raise']],
+  'Cable row':[['cable'],['barbell','Barbell row'],['bands','Resistance band row'],['dumbbells','Dumbbell row'],['','Reverse snow angel']],
+  'Face pull':[['cable'],['bands','Band pull-apart'],['','Prone Y raise']],
+  'Biceps curl':[['dumbbells'],['bands','Band curl'],['','Self-resisted curl']],
+  'Hammer curl':[['dumbbells'],['bands','Band curl'],['','Self-resisted curl']],
+  'Dumbbell step-up':[['dumbbells+bench'],['bench','Bodyweight step-up'],['','Split squat']],
+  'Machine chest fly':[['chestFly'],['bands','Band chest fly'],['','Wall push-up']],
+  'Straight-arm pulldown':[['cable'],['bands','Band pulldown'],['','Prone lat pull']],
+  'Resistance band row':[['bands'],['dumbbells','Dumbbell row'],['kettlebell','Kettlebell row'],['','Prone W raise']],
+  'Farmer carry':[['dumbbells'],['kettlebell','Kettlebell carry'],['','March in place']]
+};
+
+const coachExerciseList = exerciseList;
+exerciseList = function(session) {
+  const gear = new Set(trainingEquipment().gear);
+  const selected = new Set();
+  return coachExerciseList(session).flatMap(row => {
+    const [name,sets,range] = row.split('|');
+    const option = (exerciseAlternatives[name] || [['']]).find(([needs,replacement]) =>
+      (!needs || needs.split('+').every(item=>gear.has(item))) && !selected.has(replacement || name));
+    if (!option) return [];
+    const exercise = option[1] || name;
+    selected.add(exercise);
+    return [`${exercise}|${sets}|${exercise==='Pull-up'?'3–5':range}`];
+  });
+};
+
+function showEquipmentPreset(location) {
+  const gear = trainingLocations[location][1];
+  document.querySelectorAll('[data-training-gear]').forEach(input=>input.checked=gear.includes(input.value));
+}
+
+function saveTrainingEquipment() {
+  const location = $('trainingLocation').value;
+  const gear = [...document.querySelectorAll('[data-training-gear]:checked')].map(input=>input.value);
+  if (saveProfile({...S.profile,trainingEquipment:{location,gear}})) render();
+}
+
+function trainingEquipmentPanel() {
+  const {location,gear} = trainingEquipment();
+  return `<section><details><summary>Workout equipment · ${trainingLocations[location][0]}</summary>
+    <label>Training location<select id="trainingLocation" onchange="showEquipmentPreset(this.value)">
+      ${Object.entries(trainingLocations).map(([key,[label]])=>`<option value="${key}" ${key===location?'selected':''}>${label}</option>`).join('')}
+    </select></label>
+    <p>Check only the equipment you have. Your coach will suggest alternatives for the rest.</p>
+    <div class="grid">${Object.entries(equipmentNames).map(([key,label])=>
+      `<label><input data-training-gear type="checkbox" value="${key}" style="width:auto" ${gear.includes(key)?'checked':''}> ${label}</label>`).join('')}</div>
+    <button class="wide" onclick="saveTrainingEquipment()">Save equipment</button>
+  </details></section>`;
+}
+
 // Separate entry workflows, shared date/exercise records.
 let entryMode='',entryExercise='',restUntil=0,entryNotice='';
 function entryList(){return [...new Set([...exerciseList(workout()),...Object.values(ex).flat()].filter(x=>typeof x==='string'&&/^\d+(?:[–-]\d+)?$/.test(x.split('|')[2])).map(x=>x.split('|')[0]))]}
-function entryStart(mode){entryMode=mode;entryExercise='';entryNotice='';if(mode==='live')$('date').value=today();render()}
+function entryStart(mode){entryMode=mode;entryExercise='';entryNotice='';if(mode==='live'){entryWorkout='';$('date').value=today()}render()}
 function entryCommit(date,name,rows,replace=false){if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||date>today()||!name||!rows.length||!rows.every(setDetailValid))return false;let prior=JSON.stringify(S),key=date+'|'+name;if(!adoptDetail(key))return false;let a=(S.setDetails??={})[key]??=[];S.setDetails[key]=replace?rows:[...a,...rows];syncDetail(key);if(!save()){S=JSON.parse(prior);return false}return true}
 function entrySave(){let n=entryExercise,d=entryMode==='live'?today():day(),r={load:Number($('entryLoad').value),reps:Number($('entryReps').value),effort:Number($('entryEffort').value)},count=entryMode==='live'?1:Number($('entryCount').value);if(['entryLoad','entryReps','entryEffort'].some(k=>$(k).value.trim()==='')||!setDetailValid(r)||!Number.isInteger(count)||count<1||count>30)return alert('Check weight, reps, effort and sets.');let replace=entryMode==='past'&&$('entryReplace').checked;if(replace&&!confirm('Replace detailed sets for this exercise and date?'))return;if(!entryCommit(d,n,Array.from({length:count},()=>({...r})),replace))return alert('Not saved. Check date and storage.');if(entryMode==='live')restUntil=Date.now()+90000;entryNotice='✓ Saved to workout history';render();$('entryLoad').value=r.load;$('entryReps').value=r.reps;$('entryEffort').value=r.effort;}
-function entryPanel(){let live=entryMode==='live';if(live)$('date').value=today();let list=entryList();if(!list.includes(entryExercise))entryExercise=list[0]||'';let a=S.setDetails?.[day()+'|'+entryExercise]||[],last=a.at(-1),prev=workoutHistory(S).find(x=>x.name===entryExercise&&x.date<day()),range=exerciseList(workout()).find(x=>x.split('|')[0]===entryExercise)?.split('|')[2]||'';return `<section id="entryPanel"><h2>${live?'Live workout':'Log past workout'}</h2><p>${esc(day())} · ${live?'Save each completed set':'Choose the workout date using the date field above.'}</p><label>Exercise<select onchange="entryExercise=this.value;entryNotice='';render()">${list.map(n=>`<option ${n===entryExercise?'selected':''}>${esc(n)}</option>`).join('')}</select></label>${prev?`<small>Previous: ${esc(prev.date)} · ${prev.a.length?prev.a.map(r=>r.load+' lb × '+r.reps).join(', '):esc(prev.r.weight)+' lb × '+esc(prev.r.reps)}</small>`:''}<p>${a.length} saved sets · ${detailSummary(a).volume} lb volume</p>${a.map((r,i)=>`<div class="line"><span>${i+1}. ${r.load} lb × ${r.reps} · effort ${r.effort}</span><button class="alt" onclick="entryDelete(${i})">Remove</button></div>`).join('')}<label>Weight (lb)<input id="entryLoad" type="number" min="0" value="${last?.load??''}"></label><label>Reps<input id="entryReps" type="number" min="1" value="${last?.reps??''}"></label><label>Effort (1–10)<input id="entryEffort" type="number" min="1" max="10" value="${last?.effort??7}"></label>${live?'':`<label>Identical sets<input id="entryCount" type="number" min="1" max="30" value="1"></label><label><input id="entryReplace" type="checkbox" style="width:auto"> Replace existing detailed sets instead of adding</label>`}<button class="wide" onclick="entrySave()">${live?'Save completed set':'Save workout entry'}</button><p role="status">${esc(entryNotice)}</p>${live?'<p id="entryRest"></p><button class="alt wide" onclick="restUntil=0;updateEntryRest()">Skip rest timer</button>':''}<p>${esc(detailAdvice(a,range,recoveryAdvice(S.recovery?.[today()])))}</p><button class="alt wide" onclick="entryMode=\'\';restUntil=0;render()">${live?'Finish / exit workout':'Done logging'}</button></section>`}
+let entryWorkout = '';
+
+function livePlan() {
+  return exerciseList(entryWorkout || workout()).map(row => row.split('|'));
+}
+
+function liveExtras() {
+  const extras = S.workoutExtras?.[today()];
+  return Array.isArray(extras) ? extras.filter(name=>typeof name==='string') : [];
+}
+
+function chooseLiveExercise(name) {
+  entryExercise = name;
+  entryNotice = '';
+  render();
+}
+
+function selectLiveWorkout(session) {
+  entryWorkout = session;
+  chooseLiveExercise('');
+}
+
+function addLiveExercise() {
+  const typed = $('extraExerciseName').value.trim();
+  const name = typed || $('extraExerciseCatalog').value;
+  if (!name || name.length>80 || /[|\r\n]/.test(name)) return alert('Choose an exercise or enter a name up to 80 characters.');
+  const existing = [...livePlan().map(row=>row[0]),...liveExtras()].find(value=>value.toLowerCase()===name.toLowerCase());
+  if (existing) return chooseLiveExercise(existing);
+  const previous = S.workoutExtras;
+  S.workoutExtras = {...previous,[today()]:[...liveExtras(),name]};
+  if (!save()) {
+    if (previous === undefined) delete S.workoutExtras;
+    else S.workoutExtras = previous;
+    return;
+  }
+  chooseLiveExercise(name);
+}
+
+function logTimedRound(increment) {
+  const key = today()+'|'+entryExercise;
+  const previous = S.work[key];
+  const sets = Math.max(0,loggedSetCount(S,key)+increment);
+  if (S.detailUnified?.[key] || S.setDetails?.[key]?.length) return alert('This exercise already has saved sets. Use Workout history to review them.');
+  S.work[key] = {...previous,sets};
+  if (!save()) {
+    if (previous === undefined) delete S.work[key];
+    else S.work[key] = previous;
+    return;
+  }
+  entryNotice = increment>0?'Round saved':'Round removed';
+  render();
+}
+
+function liveEntryPanel() {
+  const session = entryWorkout || workout();
+  const plan = livePlan();
+  const plannedNames = plan.map(row=>row[0]);
+  const extras = liveExtras().filter(name=>!plannedNames.includes(name));
+  const count = name => loggedSetCount(S,today()+'|'+name);
+  if (![...plannedNames,...extras].includes(entryExercise)) {
+    entryExercise = plan.find(([name,sets])=>count(name)<Number(sets))?.[0] || plannedNames[0] || extras[0] || '';
+  }
+  const selected = plan.find(row=>row[0]===entryExercise);
+  const target = selected?.[1];
+  const range = selected?.[2] || '';
+  const timed = /\b(?:sec|min)\b/.test(range);
+  const sets = S.setDetails?.[today()+'|'+entryExercise] || [];
+  const last = sets.at(-1);
+  const prior = workoutHistory(S).find(row=>row.name===entryExercise&&row.date<today());
+  const priorSet = prior?.a.at(-1);
+  const previous = priorSet ? `${priorSet.load} lb × ${priorSet.reps}` :
+    prior?.r.weight!==''&&prior?.r.weight!=null&&prior?.r.reps ? `${prior.r.weight} lb × ${prior.r.reps}` : '';
+  const next = plan.find(([name,sets])=>name!==entryExercise&&count(name)<Number(sets));
+  const catalog = [...new Set([
+    ...Object.values(ex).flat().map(row=>row.split('|')[0]),
+    ...Object.values(exerciseAlternatives).flatMap(options=>options.map(([,name])=>name).filter(Boolean)),
+    ...workoutHistory(S).map(row=>row.name)
+  ])].filter(name=>![...plannedNames,...extras].includes(name)).sort();
+  const options = names => names.map(name=>`<option value="${esc(name)}" ${name===entryExercise?'selected':''}>${esc(name)}</option>`).join('');
+  const completion = entryExercise ? (timed ?
+    `<p>${count(entryExercise)} of ${esc(target)} rounds recorded</p>
+    <button class="wide" onclick="logTimedRound(1)">Mark round complete</button>
+    ${count(entryExercise)?'<button class="alt" onclick="logTimedRound(-1)">Undo one round</button>':''}` :
+    `<p>${count(entryExercise)}${target?' of '+esc(target):''} sets recorded</p>
+    ${sets.map((row,index)=>`<div class="line"><span>Set ${index+1} · ${row.load} lb × ${row.reps}</span><button class="alt" onclick="entryDelete(${index})">Remove</button></div>`).join('')}
+    <label>Weight (lb, use 0 for bodyweight)<input id="entryLoad" type="number" min="0" value="${last?.load??''}"></label>
+    <label>${range.includes('/side')?'Reps per side':'Reps'}<input id="entryReps" type="number" min="1" value="${last?.reps??''}"></label>
+    <label>Effort (1–10)<input id="entryEffort" type="number" min="1" max="10" value="${last?.effort??7}"></label>
+    <button class="wide" onclick="entrySave()">Save completed set</button>
+    <p id="entryRest"></p><button class="alt" onclick="restUntil=0;updateEntryRest()">Skip rest timer</button>`) : '';
+  return `<section id="entryPanel"><h2>Live workout</h2>
+    <label>Workout<select id="liveWorkoutType" onchange="selectLiveWorkout(this.value)">
+      ${Object.entries(names).map(([key,label])=>`<option value="${key}" ${session===key?'selected':''}>${esc(label)}${key===workout()?' · Scheduled today':''}</option>`).join('')}
+    </select></label>
+    ${plan.length||extras.length?`<label>Exercise<select id="liveExercise" onchange="chooseLiveExercise(this.value)">
+      ${plan.length?`<optgroup label="Coach’s recommendations">${options(plannedNames)}</optgroup>`:''}
+      ${extras.length?`<optgroup label="Your added exercises">${options(extras)}</optgroup>`:''}
+    </select></label>`:'<p>No exercises scheduled for recovery. Choose another workout or add an exercise.</p>'}
+    ${selected?`<p><b>Coach’s target:</b> ${esc(target)} ${timed?'rounds':'sets'} × ${esc(range)}${timed||range.includes('/')?'':' reps'}</p>`:''}
+    ${!timed&&previous?`<small>Last session · ${esc(prior.date)} · ${esc(previous)}</small>`:''}
+    ${completion}
+    <p role="status">${esc(entryNotice)}</p>
+    ${next?`<button class="alt wide" onclick="chooseLiveExercise(this.dataset.exercise)" data-exercise="${esc(next[0])}">Next recommended: ${esc(next[0])}</button>`:''}
+    <details><summary>Add exercise</summary>
+      <label>Choose an exercise<select id="extraExerciseCatalog"><option value="">Select an exercise</option>${options(catalog)}</select></label>
+      <label>Or enter your own<input id="extraExerciseName" maxlength="80"></label>
+      <button class="alt wide" onclick="addLiveExercise()">Add to this workout</button>
+    </details>
+    <button class="alt wide" onclick="entryMode='';restUntil=0;render()">Finish / exit workout</button>
+  </section>`;
+}
+
+function entryPanel(){if(entryMode==='live')return liveEntryPanel();let list=entryList();if(!list.includes(entryExercise))entryExercise=list[0]||'';let a=S.setDetails?.[day()+'|'+entryExercise]||[],last=a.at(-1),prev=workoutHistory(S).find(x=>x.name===entryExercise&&x.date<day()),range=exerciseList(workout()).find(x=>x.split('|')[0]===entryExercise)?.split('|')[2]||'';return `<section id="entryPanel"><h2>Log past workout</h2><p>${esc(day())} · Choose the workout date using the date field above.</p><label>Exercise<select onchange="entryExercise=this.value;entryNotice='';render()">${list.map(n=>`<option ${n===entryExercise?'selected':''}>${esc(n)}</option>`).join('')}</select></label>${prev?`<small>Previous: ${esc(prev.date)} · ${prev.a.length?prev.a.map(r=>r.load+' lb × '+r.reps).join(', '):esc(prev.r.weight)+' lb × '+esc(prev.r.reps)}</small>`:''}<p>${a.length} saved sets · ${detailSummary(a).volume} lb volume</p>${a.map((r,i)=>`<div class="line"><span>${i+1}. ${r.load} lb × ${r.reps} · effort ${r.effort}</span><button class="alt" onclick="entryDelete(${i})">Remove</button></div>`).join('')}<label>Weight (lb)<input id="entryLoad" type="number" min="0" value="${last?.load??''}"></label><label>Reps<input id="entryReps" type="number" min="1" value="${last?.reps??''}"></label><label>Effort (1–10)<input id="entryEffort" type="number" min="1" max="10" value="${last?.effort??7}"></label><label>Identical sets<input id="entryCount" type="number" min="1" max="30" value="1"></label><label><input id="entryReplace" type="checkbox" style="width:auto"> Replace existing detailed sets instead of adding</label><button class="wide" onclick="entrySave()">Save workout entry</button><p role="status">${esc(entryNotice)}</p><p>${esc(detailAdvice(a,range,recoveryAdvice(S.recovery?.[today()])))}</p><button class="alt wide" onclick="entryMode=\'\';restUntil=0;render()">Done logging</button></section>`}
 function entryDelete(i){let key=day()+'|'+entryExercise,a=S.setDetails?.[key];if(!a?.[i]||!confirm('Remove this saved set?'))return;let prior=JSON.stringify(S);if(!adoptDetail(key))return;a.splice(i,1);syncDetail(key);if(!save()){S=JSON.parse(prior);return alert('Removal not saved.')}render()}
 function updateEntryRest(){let el=$('entryRest');if(el){let n=Math.max(0,Math.ceil((restUntil-Date.now())/1000));el.textContent=n?'Rest: '+Math.floor(n/60)+':'+String(n%60).padStart(2,'0'):'Ready for next set when recovered.'}}
 setInterval(updateEntryRest,1000);
@@ -1356,7 +1554,7 @@ function setupPause596(){setup596().paused=true;save();render()}
 const tour596=[['Home','Dashboard','Your daily targets and next activity.'],['Workout','Training','Log sets, reps and weights; review your training history.'],['Food','Nutrition','Log meals, scan labels, estimate meals from photos and track water.'],['Planner','Planner','Review your upcoming routine.'],['Progress','Progress','Review your recorded measurements and results.']];
 function setupTour596(t){setup596().paused=true;save();tab=t;render()}
 function setupFinish596(){let o=setup596(),d=o.draft;if(!String(d.name||'').trim())return alert('Enter your name in the starting point step.');if([0,1,2,3].some(i=>d['baseline'+i]&&(!Number.isFinite(+d['baseline'+i])||+d['baseline'+i]<=0)))return alert('Enter positive measurements.');if(!validTime58(d.time)||!goals[d.goal]||![3,4,5].includes(+d.days))return alert('Review your training settings.');if(![d.age,d.height,d.weight].every(x=>x!==''&&Number.isFinite(+x))||+d.age<18||+d.age>100||+d.height<120||+d.height>230||+d.weight<80||+d.weight>600)return alert('Review your physical assessment.');if(d.budget!==''&&(!Number.isFinite(+d.budget)||+d.budget<0))return alert('Review your budget.');let old=JSON.stringify(S);Object.assign(S.profile,{goal:d.goal,age:+d.age,height:+d.height,weight:+d.weight,sex:d.sex,activity:+d.activity,days:+d.days});let i=Math.floor(+d.coach/4),j=+d.coach%4;Object.assign(coachPrefs(),{style:i,auto:false,intensity:coachStyles[i][2]});(coachPrefs().avatars??={})[i]=j;rhythm().work=d.time;S.profile.name=String(d.name).trim();S.profile.baseline597={date:today(),v:[String(d.weight),...[0,1,2,3].map(i=>String(d['baseline'+i]||''))]};S.measure.push(S.profile.baseline597);o.completed=true;o.paused=false;o.approved=today();if(!save()){S=JSON.parse(old);return}tab='Home';render()}
-function setupHTML596(){let o=setup596(),d=o.draft,n=o.step,i=Math.floor(+d.coach/4),j=+d.coach%4,c=character58(i,j);let field=(k,label,type='text',attrs='')=>`<label>${label}<input type="${type}" ${attrs} value="${esc(String(d[k]??''))}" oninput="setupField596('${k}',this.value)"></label>`,sel=(k,label,opts)=>`<label>${label}<select onchange="setupField596('${k}',this.value)">${opts.map(([v,l])=>`<option value="${esc(String(v))}" ${String(d[k])===String(v)?'selected':''}>${esc(l)}</option>`).join('')}</select></label>`;let body=[()=>roster597(d),()=>tourHTML597(),()=>sel('goal','What are we working toward?',Object.entries(goals)),()=>field('name','Your name')+field('age','Age','number','min="18" max="100"')+field('height','Height (cm)','number')+field('weight','Weight (lb)','number')+sel('sex','Sex used for calorie estimate',[['male','Male'],['female','Female']])+sel('activity','Activity level',[[1.2,'Sedentary'],[1.375,'Light'],[1.5,'Moderate'],[1.725,'Very active']])+field('limitations','Physical limitations (optional)')+['Waist','Chest','Thigh','Arm'].map((x,i)=>field('baseline'+i,x+' (in, optional)','number','min="0" step="0.1"')).join(''),()=>field('budget','Weekly grocery budget (optional)','number','min="0"')+field('diet','Food preferences and allergies (optional)'),()=>sel('days','Training days per week',[[3,'3 days'],[4,'4 days'],[5,'5 days']])+field('time','Usual training time','time')+sel('equipment','Equipment available',[['gym','Full gym'],['home','Home equipment'],['none','No equipment']])+field('duration','Session duration (minutes)','number','min="10" max="180"'),()=>review597(d)][n]();return `<section><small>CONSULTATION · STEP ${n+1} OF 7</small><h2>${['Meet your coach','Your MyFit tour','Your goals','Your starting point','Nutrition consultation','Training consultation','Review your program'][n]}</h2><div style="display:flex;gap:12px;align-items:center"><img src="${coachPortraits[i][j]}" style="width:76px;border-radius:12px" alt=""><div><b>${esc(c[0])}</b><p>${esc(c[4])}</p></div></div>${body}<button class="wide" onclick="${n===6?'setupFinish596()':`setupGo596(${n+1})`}">${n===6?'Approve & begin':'Continue'}</button>${n?`<button class="alt wide" onclick="setupGo596(${n-1})">Back</button>`:''}<button class="alt wide" onclick="setupPause596()">Pause setup</button></section>`}
+function setupHTML596(){let o=setup596(),d=o.draft,n=o.step,i=Math.floor(+d.coach/4),j=+d.coach%4,c=character58(i,j);let field=(k,label,type='text',attrs='')=>`<label>${label}<input type="${type}" ${attrs} value="${esc(String(d[k]??''))}" oninput="setupField596('${k}',this.value)"></label>`,sel=(k,label,opts)=>`<label>${label}<select onchange="setupField596('${k}',this.value)">${opts.map(([v,l])=>`<option value="${esc(String(v))}" ${String(d[k])===String(v)?'selected':''}>${esc(l)}</option>`).join('')}</select></label>`;let body=[()=>roster597(d),()=>tourHTML597(),()=>sel('goal','What are we working toward?',Object.entries(goals)),()=>field('name','Your name')+field('age','Age','number','min="18" max="100"')+field('height','Height (cm)','number')+field('weight','Weight (lb)','number')+sel('sex','Sex used for calorie estimate',[['male','Male'],['female','Female']])+sel('activity','Activity level',[[1.2,'Sedentary'],[1.375,'Light'],[1.5,'Moderate'],[1.725,'Very active']])+field('limitations','Physical limitations (optional)')+['Waist','Chest','Thigh','Arm'].map((x,i)=>field('baseline'+i,x+' (in, optional)','number','min="0" step="0.1"')).join(''),()=>field('budget','Weekly grocery budget (optional)','number','min="0"')+field('diet','Food preferences and allergies (optional)'),()=>sel('days','Training days per week',[[3,'3 days'],[4,'4 days'],[5,'5 days']])+field('time','Usual training time','time')+sel('equipment','Equipment available',[['gym','Gym'],['home','Home equipment'],['crossfit','CrossFit-style station'],['none','No equipment']])+field('duration','Session duration (minutes)','number','min="10" max="180"'),()=>review597(d)][n]();return `<section><small>CONSULTATION · STEP ${n+1} OF 7</small><h2>${['Meet your coach','Your MyFit tour','Your goals','Your starting point','Nutrition consultation','Training consultation','Review your program'][n]}</h2><div style="display:flex;gap:12px;align-items:center"><img src="${coachPortraits[i][j]}" style="width:76px;border-radius:12px" alt=""><div><b>${esc(c[0])}</b><p>${esc(c[4])}</p></div></div>${body}<button class="wide" onclick="${n===6?'setupFinish596()':`setupGo596(${n+1})`}">${n===6?'Approve & begin':'Continue'}</button>${n?`<button class="alt wide" onclick="setupGo596(${n-1})">Back</button>`:''}<button class="alt wide" onclick="setupPause596()">Pause setup</button></section>`}
 function routine596(){return `<section><h3>Training schedule</h3><p>Usual time: ${fmt58(rhythm().work)} · Today: ${fmt58(rhythm().commit[today()]||rhythm().work)}</p><label>Training time<input id="routineTime596" type="time" value="${rhythm().commit[today()]||rhythm().work}"></label><button class="wide" onclick="routineSave596(false)">Change today only</button><button class="alt wide" onclick="routineSave596(true)">Change usual training time</button></section>`}
 function routineSave596(all){let v=$('routineTime596').value;if(!validTime58(v))return;let r=rhythm();if(all){r.work=v;delete r.commit[today()]}else r.commit[today()]=v;if(save())render()}
 const prior596=render;render=function(){prior596();let o=setup596(),app=$('app');if(tab==='Home'&&entryMode!=='live'&&!o.completed&&!o.paused){app.innerHTML=setupHTML596();return}if(tab==='Home'&&entryMode!=='live'&&!o.completed)app.insertAdjacentHTML('afterbegin','<section><button class="wide" onclick="setupOpen596()">Resume coach consultation</button></section>');if(tab==='Workout'&&entryMode!=='live')app.insertAdjacentHTML('afterbegin',routine596());if(tab==='Coach'&&o.completed)app.insertAdjacentHTML('afterbegin','<section><small>Program active · Your coach can change without resetting your routine.</small></section>')};
@@ -1543,6 +1741,7 @@ render = function() {
   $('recordDate').hidden = !['Food','Workout','Progress'].includes(tab);
   $('date').max = today();
   if (tab === 'Coach') arrangeCoach();
+  if (tab === 'Workout' && entryMode !== 'past') $('app').firstElementChild?.insertAdjacentHTML('afterend',trainingEquipmentPanel());
   if (tab === 'Progress') groupProgress();
   if (tab === 'Data') $('app').insertAdjacentHTML('beforeend',dataBackupPanel());
   placeDailyControls();
