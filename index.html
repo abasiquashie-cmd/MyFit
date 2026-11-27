@@ -7,6 +7,7 @@ button.wide:not(.alt) + button.wide.alt{margin-top:16px}
 button.wide + .grid{margin-top:12px}
 .scan-actions > button.wide + button.wide{margin-top:0}
 #coachAppearance{background:#0b1518;color:#f4f6f5;border:1px solid #38494c;padding:14px;border-radius:16px}#coachAppearance .roster{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x proximity}#coachAppearance button{background:#182629;color:white;border:1px solid #526164;min-width:0;white-space:normal}#coachAppearance button[aria-pressed=true]{border:2px solid #a4f52b;box-shadow:0 0 0 1px #a4f52b}#coachAppearance .roster button{flex:0 0 105px;scroll-snap-align:start;padding:5px;font-size:12px}#coachAppearance .hero{position:relative;overflow:hidden;border-radius:12px;background:#111;margin:10px 0}#coachAppearance .hero img{width:100%;display:block;aspect-ratio:1.7;object-fit:cover}#coachAppearance .hero h2{color:#a4f52b;text-transform:uppercase;font-style:italic;margin:0;font-size:clamp(22px,6vw,38px)}#coachAppearance .heroText{padding:14px;background:linear-gradient(120deg,#101b1d,#1d3031)}#coachAppearance .looks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}#coachAppearance .looks button{padding:5px}#coachAppearance .confirm{background:#a4f52b;color:#101710;font-weight:900;margin-top:16px}#coachAppearance small{color:#c3cfcc}#coachAppearance img{border-radius:8px}.planner-meal-actions{display:flex;flex-wrap:wrap;gap:8px}.planner-month-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}.planner-month-grid button{min-width:0;padding:8px 2px}.planner-meal small{display:block}.week-strip button{min-width:0}
+.planner-range{grid-template-columns:repeat(3,minmax(0,1fr))}.planner-agenda-day .line span{text-align:right}
 </style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.9.5</small></div><input id="date" type="date" style="width:145px;margin:0"></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
 const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());let S={profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,legs:true},meals:{},work:{},measure:[]};var storageBlocked=false;try{let x=localStorage.getItem('myfit-v1');if(x){let parsed=JSON.parse(x);if(!validState(parsed))throw Error('Invalid saved data');S=parsed}}catch(e){storageBlocked=true;alert('Saved data could not be read. Automatic saving is disabled to protect it. Export or restore a valid backup.')}function save(){if(storageBlocked)return false;try{localStorage.setItem('myfit-v1',JSON.stringify(S));return true}catch(e){alert('Storage unavailable. Export your data before closing.')}}S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};const day=()=>$('date').value;const goals={recomp:'Body recomposition',bulk:'Muscle gain',cut:'Fat loss',maintain:'Maintenance',mobility:'Mobility & fitness'};function targets(){let p=S.profile,w=p.weight/2.20462,b=10*w+6.25*p.height-5*p.age+(p.sex==='male'?5:-161),m=b*p.activity,k=Math.max(1500,Math.round((m+({recomp:-100,bulk:250,cut:-350,maintain:0,mobility:0}[p.goal]))/50)*50),pr=Math.min(Math.round(w*(p.goal==='cut'?2.1:1.9)),Math.floor(k*.35/4)),f=Math.round(k*.27/9);return [k,pr,Math.max(0,Math.round((k-pr*4-f*9)/4)),f]}
 const foods=[['chicken thighs skin on',232,23.3,0,14.7,100,130,'chicken thighs|chicken thigh'],['chicken thighs skinless',179,25,0,8,100,130,'skinless chicken thigh'],['chicken breast',165,31,0,3.6,100,150,'chicken breast|chicken'],['white rice',130,2.7,28.2,.3,158,158,'white rice|rice'],['broccoli',35,2.4,7.2,.4,156,156,'broccoli'],['salmon',208,22,0,13,100,150,'salmon'],['egg',143,12.6,.7,9.5,50,50,'eggs|egg'],['oats dry',389,16.9,66,6.9,80,40,'dry oats|oats'],['banana',89,1.1,23,.3,118,118,'banana'],['greek yogurt',73,10,4,2,245,170,'greek yogurt|yogurt'],['olive oil',884,0,0,100,216,14,'olive oil|oil'],['peanut butter',588,25,20,50,258,16,'peanut butter'],['lean ground beef',217,26,0,12,100,150,'ground beef|beef'],['turkey',170,29,0,6,100,150,'turkey'],['sweet potato',90,2,21,.2,200,150,'sweet potato'],['potato',87,2,20,.1,150,150,'potatoes|potato'],['bread',265,9,49,3.2,100,30,'toast|bread'],['apple',52,.3,14,.2,125,182,'apple'],['protein powder',400,80,8,5,120,30,'protein shake|whey|protein powder'],['pasta',158,5.8,31,.9,140,140,'pasta'],['shrimp',99,24,0,.3,145,150,'shrimp'],['black beans',132,9,24,.5,172,172,'beans'],['almonds',579,21,22,50,143,28,'almonds'],['avocado',160,2,9,15,150,150,'avocado'],['tuna',116,26,0,1,154,120,'tuna'],['milk',50,3.4,5,2,244,244,'milk']];
@@ -179,10 +180,152 @@ let pantry='',dishSearch=''; function matchesRecipe(x){return (!pantry||x.r[2].s
 function prefs(){return {style:'Balanced',tier:'Moderate',budget:100,days:2,pantry:'',...(S.prep||{})}}
 function prepSet(k,v){S.prep={...prefs(),[k]:v};save();render()}
 let plannerSettingsOpen = false;
-function prepControls(){let p=prefs();return `<section><details ${plannerSettingsOpen?'open':''} ontoggle="plannerSettingsOpen=this.open"><summary>Planning settings</summary><label>Discipline & variety<select onchange="prepSet('style',this.value)">${['Strict','Meal prep','Balanced','Variety'].map(v=>`<option ${v===p.style?'selected':''}>${v}</option>`).join('')}</select></label><label>Spending style<select onchange="prepSet('tier',this.value)">${['Budget friendly','Moderate','Splurge'].map(v=>`<option ${v===p.tier?'selected':''}>${v}</option>`).join('')}</select></label><label>Weekly budget (CAD, personal target)<input type="number" min="0" value="${p.budget}" onchange="prepSet('budget',Math.max(0,+this.value||0))"></label><label>Batch cooking sessions<select onchange="prepSet('days',+this.value)">${[1,2,3,4,7].map(v=>`<option ${v===p.days?'selected':''}>${v}</option>`).join('')}</select></label><label>Pantry ingredients (comma separated)<input value="${esc(p.pantry)}" onchange="prepSet('pantry',this.value)"></label><small>Strict prioritizes protein per calorie and repetition. Meal prep repeats batches; balanced mixes batches and fresh meals; variety favors different dishes. Spending style uses ingredient proxies, not store prices. Budget is a reference target, not a guaranteed cap.</small><button class="wide" onclick="if(confirm('Replace seven days starting on selected date?'))regenerateWeek()">Generate 7 days from selected date</button></details></section>`}
+function prepControls(){let p=prefs();return `<section><details ${plannerSettingsOpen?'open':''} ontoggle="plannerSettingsOpen=this.open"><summary>Planning settings</summary><label>Discipline & variety<select onchange="prepSet('style',this.value)">${['Strict','Meal prep','Balanced','Variety'].map(v=>`<option ${v===p.style?'selected':''}>${v}</option>`).join('')}</select></label><label>Spending style<select onchange="prepSet('tier',this.value)">${['Budget friendly','Moderate','Splurge'].map(v=>`<option ${v===p.tier?'selected':''}>${v}</option>`).join('')}</select></label><label>Weekly budget (CAD, personal target)<input type="number" min="0" value="${p.budget}" onchange="prepSet('budget',Math.max(0,+this.value||0))"></label><label>Batch cooking sessions<select onchange="prepSet('days',+this.value)">${[1,2,3,4,7].map(v=>`<option ${v===p.days?'selected':''}>${v}</option>`).join('')}</select></label><label>Pantry ingredients (comma separated)<input value="${esc(p.pantry)}" onchange="prepSet('pantry',this.value)"></label><small>Strict prioritizes protein per calorie and repetition. Meal prep repeats batches; balanced mixes batches and fresh meals; variety favors different dishes. Spending style uses ingredient proxies, not store prices. Budget is a reference target, not a guaranteed cap.</small></details></section>`}
 function costProxy(r){return r[2].reduce((a,[n,g])=>a+g/1000*(/lobster|steak|salmon|shrimp|lamb|scallop|crab/.test(n)?30:/beef|fish|chicken|turkey|cheese|nuts/.test(n)?15:/rice|oat|potato|bean|lentil|flour/.test(n)?4:8),0)}
 function planScore(x,type,p,used){let items=recipeItems(x.r,type,true),v=totals(items),cost=costProxy(x.r),shared=x.r[2].filter(([n])=>used.has(n)||p.pantry.toLowerCase().split(',').map(a=>a.trim()).includes(n)).length;return (p.style==='Strict'?v[1]/Math.max(1,v[0])*150:0)+(p.tier==='Budget friendly'?-cost*2:p.tier==='Splurge'?cost*.6:-cost*.5)+shared*.5+Math.random()*1.5}
 function batchLabel(k,type){let p=prefs(),i=planned(k,type)?.i,prev=new Date((dateSeed(k)-1)*86400000).toISOString().slice(0,10);return planned(prev,type)?.i===i?'Repeat / leftover (if safely stored)':'Prepare fresh or batch'}
+let plannerRange = 'Week';
+let groceryRange = 'Week';
+
+function plannerPeriod(date, range) {
+  const start = new Date(date + 'T12:00:00');
+  if (range === 'Month') start.setDate(1);
+  else start.setDate(start.getDate() - (start.getDay() + 6) % 7);
+  const count = range === 'Month'
+    ? new Date(start.getFullYear(), start.getMonth() + 1, 0).getDate()
+    : 7;
+  return Array.from({length:count}, (_, i) => {
+    const value = new Date(start);
+    value.setDate(value.getDate() + i);
+    return dateKey(value);
+  });
+}
+
+function movePlannerPeriod(direction, range) {
+  const date = new Date(day() + 'T12:00:00');
+  if (range === 'Month') {
+    date.setDate(1);
+    date.setMonth(date.getMonth() + direction);
+  } else {
+    date.setDate(date.getDate() + direction * 7);
+  }
+  selectPlanDate(dateKey(date));
+}
+
+function plannerShortDate(key) {
+  return new Date(key + 'T12:00:00').toLocaleDateString('en-CA', {month:'short',day:'numeric'});
+}
+
+function plannerPeriodHeader(range) {
+  const dates = plannerPeriod(day(), range);
+  const label = range === 'Month'
+    ? new Date(day()+'T12:00:00').toLocaleDateString('en-CA',{month:'long',year:'numeric'})
+    : `${plannerShortDate(dates[0])} – ${plannerShortDate(dates.at(-1))}`;
+  const unit = range.toLowerCase();
+  return `<div class="line"><button class="alt" aria-label="Previous ${unit}" onclick="movePlannerPeriod(-1,'${range}')">‹</button>
+    <b>${label}</b><button class="alt" aria-label="Next ${unit}" onclick="movePlannerPeriod(1,'${range}')">›</button></div>
+    ${dates.includes(today())?'':'<button class="alt" onclick="selectPlanDate(today())">Back to current ${unit}</button>'}`;
+}
+
+function plannerThemes() {
+  return ['Mixed cuisines', ...new Set(recipes
+    .filter(recipe => recipe[4].some(type => type === 'Lunch' || type === 'Dinner'))
+    .map(recipe => recipe[0]))];
+}
+
+function generateThemedWeek() {
+  const dates = plannerPeriod(day(), 'Week');
+  const week = dates[0];
+  const theme = $('plannerTheme').value;
+  if (!plannerThemes().includes(theme)) return;
+  if (S.weekPlans?.[week] && !confirm('Replace the generated recipes for this week? Your manual swaps will stay.')) return;
+
+  const slots = {};
+  const preferences = prefs();
+  const used = new Set();
+  for (const type of mealTypes) {
+    const all = picks(type);
+    const themed = theme === 'Mixed cuisines' ? all : picks(type, theme);
+    const pool = themed.length ? themed : all;
+    if (!pool.length) continue;
+    const remaining = pool.slice();
+    const span = preferences.style === 'Strict' ? (type==='Breakfast'||type==='Snack'?7:Math.ceil(7/preferences.days))
+      : preferences.style === 'Meal prep' ? Math.ceil(7/preferences.days)
+      : preferences.style === 'Balanced' ? (type==='Breakfast'?3:2) : 1;
+    let batch;
+    dates.forEach((date, index) => {
+      const key = date + '|' + type;
+      if ((S.meals[date] || []).some(meal => meal.planSlot === key)) {
+        const logged = planned(date,type);
+        if (logged) slots[key] = logged.i;
+        return;
+      }
+      if (index % span && batch) {
+        slots[key] = batch.i;
+        return;
+      }
+      if (!remaining.length) remaining.push(...pool);
+      const selection = remaining.map(recipe => ({recipe,score:planScore(recipe,type,preferences,used)}))
+        .sort((a,b) => b.score-a.score)[0].recipe;
+      remaining.splice(remaining.indexOf(selection),1);
+      batch = selection;
+      slots[key] = selection.i;
+      selection.r[2].forEach(([name]) => used.add(name));
+    });
+  }
+
+  const previous = S.weekPlans;
+  S.weekPlans = {...previous, [week]:{theme, slots}};
+  if (!save()) {
+    if (previous === undefined) delete S.weekPlans;
+    else S.weekPlans = previous;
+    return;
+  }
+  plannerRange = 'Week';
+  render();
+}
+
+function weeklyThemePanel() {
+  const dates = plannerPeriod(day(), 'Week');
+  const saved = S.weekPlans?.[dates[0]];
+  return `<section><h3>Weekly theme</h3>
+    <p>${plannerShortDate(dates[0])} – ${plannerShortDate(dates.at(-1))} · ${esc(saved?.theme || 'Suggested meals')}</p>
+    <label>Choose a theme<select id="plannerTheme">${plannerThemes().map(theme =>
+      `<option ${saved?.theme===theme?'selected':''}>${esc(theme)}</option>`).join('')}</select></label>
+    <button class="wide" onclick="generateThemedWeek()">${saved?'Update this week’s plan':'Generate this week’s plan'}</button>
+    <small>Meal slots with no recipes in the theme use the full catalog. Recipe swaps are kept when you update the theme.</small>
+  </section>`;
+}
+
+function openPlannerDay(date) {
+  plannerRange = 'Day';
+  selectPlanDate(date);
+  window.scrollTo(0,0);
+}
+
+function plannerSchedule(range) {
+  const dates = plannerPeriod(day(), range);
+  return `<section>${plannerPeriodHeader(range)}</section>${dates.map(date => {
+    const label = new Date(date+'T12:00:00').toLocaleDateString('en-CA',{weekday:'short',month:'short',day:'numeric'});
+    const meals = mealTypes.map(type => {
+      const selection = planned(date, type);
+      return `<div class="line"><small>${type}</small><span>${esc(selection?.r[1] || 'No recipe')}${slotStatus(date,type)==='skipped'?' · Skipped':''}</span></div>`;
+    }).join('');
+    return `<section class="planner-agenda-day"><details ${range==='Week'?'open':''}><summary>${label}</summary>
+      ${meals}<button class="alt wide" onclick="openPlannerDay('${date}')">Edit meals for ${plannerShortDate(date)}</button>
+    </details></section>`;
+  }).join('')}`;
+}
+
+function plannerPlanView() {
+  const controls = `<div class="planner-tabs planner-range">${['Day','Week','Month'].map(range =>
+    `<button class="${plannerRange===range?'':'alt'}" aria-pressed="${plannerRange===range}" onclick="plannerRange='${range}';render()">${range}</button>`).join('')}</div>`;
+  const schedule = plannerRange === 'Day' ? calendarPlanner() : plannerSchedule(plannerRange);
+  return controls + (plannerRange === 'Month' ? '' : weeklyThemePanel()) +
+    '<button class="alt wide" onclick="switchPlanner(\'Groceries\')">View groceries for this ' +
+    (plannerRange === 'Month' ? 'month' : 'week') + '</button>' + schedule + prepControls();
+}
+
 function calendarPlanner() {
   const selected = day();
   const date = new Date(selected + 'T12:00:00');
@@ -267,14 +410,14 @@ function browsePlannerMeal(type) {
   switchPlanner('Recipes');
 }
 
-function switchPlanner(t){plannerTab=t;render();window.scrollTo(0,0)}
+function switchPlanner(t){if(t==='Groceries')groceryRange=plannerRange==='Month'?'Month':'Week';plannerTab=t;render();window.scrollTo(0,0)}
 function openRecipeDetail(i){returnPlanner=plannerTab==='Detail'?returnPlanner:plannerTab;detailIndex=i;plannerTab='Detail';render();window.scrollTo(0,0)}
 function dishPhoto(i){return `<div class="dish-photo" data-dish="${i}"><small>Looking for a dish photograph…</small></div>`}
 async function loadDishPhotos(){for(const el of document.querySelectorAll('[data-dish]')){let i=+el.dataset.dish,r=recipes[i];if(!r)continue;let q=r[1].replace(/ adaptation| inspired/gi,'');let job=photoMemo.get(i);if(!job){job=(async()=>{try{let u=new URL('https://commons.wikimedia.org/w/api.php');u.search=new URLSearchParams({action:'query',generator:'search',gsrsearch:q+' filetype:bitmap',gsrnamespace:'6',gsrlimit:'5',prop:'imageinfo',iiprop:'url|extmetadata',iiurlwidth:'480',format:'json',origin:'*'});let res=await fetch(u);if(!res.ok)throw 0;let data=await res.json();return Object.values(data.query?.pages||{}).sort((a,b)=>a.index-b.index).map(p=>p.imageinfo?.[0]).find(x=>x?.thumburl&&/^(CC BY|CC0|Public domain)/i.test(x.extmetadata?.LicenseShortName?.value||''))||null}catch(e){return null}})();photoMemo.set(i,job)}job.then(x=>{if(!el.isConnected)return;if(!x){el.textContent='Photo unavailable — use the dish photo search.';return}let img=document.createElement('img');img.src=x.thumburl;img.alt='Possible photo match for '+r[1];img.loading='lazy';img.onerror=()=>{el.textContent='Photo unavailable.'};let link=document.createElement('a');link.href=x.descriptionurl;link.target='_blank';link.rel='noopener';link.textContent='Suggested photo • '+x.extmetadata.LicenseShortName.value+' • source & author';el.replaceChildren(img,link)})}}
-function plannerView(){let tabs=[['Calendar','Plan'],['Recipes','Recipes'],['Groceries','Groceries'],['Saved','Saved']];let nav=`<div class="planner-tabs">${tabs.map(([t,label])=>`<button class="${plannerTab===t?'':'alt'}" aria-pressed="${plannerTab===t}" onclick="switchPlanner('${t}')">${label}</button>`).join('')}</div>`;let body='';if(plannerTab==='Calendar')body=calendarPlanner()+prepControls();if(plannerTab==='Recipes'){let p=picks(activeMeal(),cuisine).filter(matchesRecipe),idx=((rotation)%p.length+p.length)%p.length,x=p[idx];body=themedPlanner()+(x?`<section><button class="alt wide" onclick="openRecipeDetail(${x.i})">${dishPhoto(x.i)}<h3>${esc(x.r[1])}</h3>Open recipe →</button></section>`:'')+`<div class="grid">${p.slice(0,24).map(y=>`<button class="alt" onclick="openRecipeDetail(${y.i})">${esc(y.r[1])}</button>`).join('')}</div><small>Showing up to 24 matches; use filters or the browse dropdown for all matches.</small>`}if(plannerTab==='Saved')body=`<section><h3>Saved recipes</h3>${(S.recipeFav||[]).filter(i=>recipes[i]).map(i=>`<button class="alt wide" onclick="openPlanned(${i},'${recipes[i][4][0]}')">${esc(recipes[i][1])}</button>`).join('')||'No saved recipes yet.'}</section>`;if(plannerTab==='Groceries')body=shoppingView();if(plannerTab==='Detail')body=`<button class="alt wide" onclick="switchPlanner(returnPlanner)">← ${tabs.find(([key])=>key===returnPlanner)?.[1]||'Recipes'}</button>${recipeCard({r:recipes[detailIndex],i:detailIndex})}`;return '<h2>Meal planner</h2>'+nav+body}
+function plannerView(){let tabs=[['Calendar','Plan'],['Recipes','Recipes'],['Groceries','Groceries'],['Saved','Saved']];let nav=`<div class="planner-tabs">${tabs.map(([t,label])=>`<button class="${plannerTab===t?'':'alt'}" aria-pressed="${plannerTab===t}" onclick="switchPlanner('${t}')">${label}</button>`).join('')}</div>`;let body='';if(plannerTab==='Calendar')body=plannerPlanView();if(plannerTab==='Recipes'){let p=picks(activeMeal(),cuisine).filter(matchesRecipe),idx=((rotation)%p.length+p.length)%p.length,x=p[idx];body=themedPlanner()+(x?`<section><button class="alt wide" onclick="openRecipeDetail(${x.i})">${dishPhoto(x.i)}<h3>${esc(x.r[1])}</h3>Open recipe →</button></section>`:'')+`<div class="grid">${p.slice(0,24).map(y=>`<button class="alt" onclick="openRecipeDetail(${y.i})">${esc(y.r[1])}</button>`).join('')}</div><small>Showing up to 24 matches; use filters or the browse dropdown for all matches.</small>`}if(plannerTab==='Saved')body=`<section><h3>Saved recipes</h3>${(S.recipeFav||[]).filter(i=>recipes[i]).map(i=>`<button class="alt wide" onclick="openPlanned(${i},'${recipes[i][4][0]}')">${esc(recipes[i][1])}</button>`).join('')||'No saved recipes yet.'}</section>`;if(plannerTab==='Groceries')body=shoppingView();if(plannerTab==='Detail')body=`<button class="alt wide" onclick="switchPlanner(returnPlanner)">← ${tabs.find(([key])=>key===returnPlanner)?.[1]||'Recipes'}</button>${recipeCard({r:recipes[detailIndex],i:detailIndex})}`;return '<h2>Meal planner</h2>'+nav+body}
 function photoLink(r){let q=encodeURIComponent(r[1].replace(/ adaptation| inspired/gi,''));return `<p><a style="color:#a5ef91" target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?search=${q}&title=Special:MediaSearch&type=image">See dish photos on Wikimedia Commons ↗</a></p><small>External photo search; results may vary. Internet required.</small>`}
 
-function recipeCard({r,i}){let items=recipeItems(r),v=totals(items);return `<section id="fullRecipe"><div class="pill">${esc(r[0])} · ${activeMeal()}</div><h3>${esc(r[1])}</h3>${dishPhoto(i)}${photoLink(r)}<b>${v[0]} kcal · ${v[1]} g protein per serving</b><small>Portions are estimates; serving sizes are bounded and may not exactly match your calorie target.</small><p class="muted">Batch: ${totals(items.map(x=>({...x,g:x.g*recipeServings})))[0]} kcal for ${recipeServings} servings. Generic ingredient estimates; check omitted cooking fats, sauces and seasonings.</p><p>${v[2]} g carbs · ${v[3]} g fat per serving</p><label>Servings to prepare <select onchange="recipeServings=+this.value;render();$('fullRecipe').scrollIntoView()">${[1,2,3,4,5,6,8].map(n=>`<option ${n===recipeServings?'selected':''}>${n}</option>`).join('')}</select></label><details open><summary>Ingredients</summary><small>Cooked or ready-to-eat weights unless marked dry. Seasonings listed where included; nutrition estimates apply.</small>${items.map(x=>`<label class="line"><span><input type="checkbox" style="width:auto;margin:0 8px 0 0">${esc(x.name)} <small>(${Math.round(x.k*x.g/100)} kcal/serving)</small></span><b>${x.g*recipeServings} g</b></label>`).join('')}</details><details><summary>Guided cooking, temperatures & timers</summary>${cookGuide(r,i)}</details>${day()<=today()?`<button class="alt wide" onclick="useRecipe(${i})">Log one serving · review first</button>`:''}<button class="alt wide" style="margin-top:8px" onclick="saveRecipe(${i})">Save recipe to favourites</button><button class="alt wide" style="margin-top:8px" onclick="plannerTab='Calendar';swapRecipe(${i});window.scrollTo(0,0)">Use for ${activeMeal()} · ${new Date(day()+'T12:00:00').toLocaleDateString('en-CA',{month:'short',day:'numeric'})}</button></section>`}
+function recipeCard({r,i}){let items=recipeItems(r),v=totals(items);return `<section id="fullRecipe"><div class="pill">${esc(r[0])} · ${activeMeal()}</div><h3>${esc(r[1])}</h3>${dishPhoto(i)}${photoLink(r)}<b>${v[0]} kcal · ${v[1]} g protein per serving</b><small>Portions are estimates; serving sizes are bounded and may not exactly match your calorie target.</small><p class="muted">Batch: ${totals(items.map(x=>({...x,g:x.g*recipeServings})))[0]} kcal for ${recipeServings} servings. Generic ingredient estimates; check omitted cooking fats, sauces and seasonings.</p><p>${v[2]} g carbs · ${v[3]} g fat per serving</p><label>Servings to prepare <select onchange="recipeServings=+this.value;render();$('fullRecipe').scrollIntoView()">${[1,2,3,4,5,6,8].map(n=>`<option ${n===recipeServings?'selected':''}>${n}</option>`).join('')}</select></label><details open><summary>Ingredients</summary><small>Cooked or ready-to-eat weights unless marked dry. Seasonings listed where included; nutrition estimates apply.</small>${items.map(x=>`<label class="line"><span><input type="checkbox" style="width:auto;margin:0 8px 0 0">${esc(x.name)} <small>(${Math.round(x.k*x.g/100)} kcal/serving)</small></span><b>${x.g*recipeServings} g</b></label>`).join('')}</details><details><summary>Guided cooking, temperatures & timers</summary>${cookGuide(r,i)}</details>${day()<=today()?`<button class="alt wide" onclick="useRecipe(${i})">Log one serving · review first</button>`:''}<button class="alt wide" style="margin-top:8px" onclick="saveRecipe(${i})">Save recipe to favourites</button><button class="alt wide" style="margin-top:8px" onclick="swapRecipe(${i},true)">Use for ${activeMeal()} · ${new Date(day()+'T12:00:00').toLocaleDateString('en-CA',{month:'short',day:'numeric'})}</button></section>`}
 function useRecipe(i) {
   if (day() > today()) return;
   if (draft.length && !confirm('Replace the current meal draft?')) return;
@@ -284,7 +427,21 @@ function useRecipe(i) {
   foodOpen('Log','text');
 }
 function saveRecipe(i){S.recipeFav??=[];if(!S.recipeFav.includes(i))S.recipeFav.push(i);save();render()}
-function swapRecipe(i){S.plan??={};(S.manualPlan??={})[day()+'|'+activeMeal()]=i;save();render()}
+function swapRecipe(index, returnToPlan=false) {
+  const date = day();
+  const type = activeMeal();
+  if (!recipes[index]?.[4].includes(type)) return;
+  const key = date+'|'+type;
+  const previous = JSON.stringify(S);
+  (S.manualPlan ??= {})[key] = index;
+  if (S.mealSlots && !(S.meals[date] || []).some(meal => meal.planSlot === key)) delete S.mealSlots[key];
+  if (!save()) {
+    S = JSON.parse(previous);
+    return;
+  }
+  if (returnToPlan) switchPlanner('Calendar');
+  else render();
+}
 function grocery(){let d=new Date(day()+'T12:00:00'),bag={};for(let j=0;j<7;j++){let k=dateKey(d);for(let type of mealTypes){let x=planned(k,type);for(let item of recipeItems(x.r,type,true))bag[item.name]=(bag[item.name]||0)+item.g;}d.setDate(d.getDate()+1)}return Object.entries(bag).sort().map(([n,g])=>`${n}: ${g} g`).join('\n')}
 function planHash(k,type){let h=2166136261;for(let c of k+'|'+type){h=Math.imul(h^c.charCodeAt(0),16777619)}return h>>>0}
 function planned(k,type){let p=picks(type),n=p.length;if(!n)return null;let i=S.plan?.[k+'|'+type],saved=p.find(x=>x.i===i);if(saved)return saved;let seed=dateSeed(k);let stable=p.slice().sort((a,b)=>planHash(String(a.i),type)-planHash(String(b.i),type));let recent=new Set();for(let j=1;j<=6;j++){let d=new Date((seed-j)*86400000).toISOString().slice(0,10),manual=S.plan?.[d+'|'+type];recent.add(manual??stable[((seed-j)%n+n)%n].i)}let start=((seed%n)+n)%n;return Array.from({length:n},(_,j)=>stable[(start+j)%n]).find(x=>!recent.has(x.i))||stable[start]}
@@ -352,7 +509,7 @@ function record(n,k,v){if(v!==''&&(!Number.isFinite(+v)||+v<0)){alert('Enter a n
 
 function updateGoals(){let p={...S.profile};for(let k of ['age','height','weight','activity','days'])p[k]=+$(k).value;for(let k of ['sex','goal'])p[k]=$(k).value;if(!['age','height','weight','activity','days'].every(k=>Number.isFinite(p[k]))||p.age<18||p.age>100||p.height<120||p.height>230||p.weight<80||p.weight>600){alert('Check adult profile values.');return}p.priorities=['legs','chest','back','arms','shoulders','core','flexibility'].filter(n=>$('priority-'+n).checked);if(p.priorities.filter(n=>n!=='flexibility').length>3){alert('Choose up to three strength priorities.');return}if(saveProfile(p))render()}function measure(){let v=Array.from({length:5},(_,i)=>$('m'+i).value);if(!v.some(Boolean))return;if(v.some(x=>x!==''&&(!Number.isFinite(+x)||+x<=0))){alert('Enter positive measurements.');return}S.measure.push({date:day(),v});save();render()}async function checkUpdate(){try{if(navigator.serviceWorker){let r=await navigator.serviceWorker.getRegistration();if(r)await r.update()}location.replace(location.pathname+"?v="+Date.now())}catch(e){alert("Update check failed. Reconnect and try again.")}}function backup(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:'application/json'}));a.download='myfit-backup.json';a.click();URL.revokeObjectURL(a.href)}async function restore(el){try{let x=JSON.parse(await el.files[0].text());if(!validState(x))throw 0;if(!confirm('Replace current records with this backup? Export current data first if needed.'))return;let previous=S;try{localStorage.setItem('myfit-v1',JSON.stringify(x))}catch(e){alert('Restore failed: storage unavailable. Current records unchanged.');return}storageBlocked=false;S=x;S.favorites??=[];S.profile.priorities??=['legs','chest'];save();render()}catch(e){alert('Invalid backup')}}
 function validItem(x){return !!x&&typeof x.name==='string'&&['g','k','p','c','f'].every(k=>typeof x[k]==='number'&&Number.isFinite(x[k])&&x[k]>=0)&&x.g>0;}
-function validState(x){let obj=o=>!!o&&typeof o==='object'&&!Array.isArray(o),num=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b,date=d=>/^\d{4}-\d{2}-\d{2}$/.test(d);if(!obj(x)||!obj(x.profile)||!obj(x.meals)||!obj(x.work)||!Array.isArray(x.measure))return false;let p=x.profile;if(!num(p.age,18,100)||!num(p.height,120,230)||!num(p.weight,80,600)||![1.2,1.375,1.5,1.725].includes(p.activity)||![3,4,5].includes(p.days)||!['male','female'].includes(p.sex)||!['recomp','bulk','cut','maintain','mobility'].includes(p.goal))return false;if(p.priorities!==undefined&&!Array.isArray(p.priorities))return false;return Object.entries(x.meals).every(([d,m])=>date(d)&&Array.isArray(m)&&m.every(y=>obj(y)&&Array.isArray(y.items)&&y.items.every(validItem)))&&Object.values(x.work).every(obj)&&x.measure.every(m=>obj(m)&&date(m.date)&&Array.isArray(m.v))&&['favorites','recipeFav'].every(k=>x[k]===undefined||Array.isArray(x[k]))&&['coachPrefs','dailyCoach','prep','manualPlan','coachPlans','coachDelivered'].every(k=>x[k]===undefined||obj(x[k]))&&(!x.dailyCoach||obj(x.dailyCoach.enabled));}
+function validState(x){let obj=o=>!!o&&typeof o==='object'&&!Array.isArray(o),num=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b,date=d=>/^\d{4}-\d{2}-\d{2}$/.test(d);if(!obj(x)||!obj(x.profile)||!obj(x.meals)||!obj(x.work)||!Array.isArray(x.measure))return false;let p=x.profile;if(!num(p.age,18,100)||!num(p.height,120,230)||!num(p.weight,80,600)||![1.2,1.375,1.5,1.725].includes(p.activity)||![3,4,5].includes(p.days)||!['male','female'].includes(p.sex)||!['recomp','bulk','cut','maintain','mobility'].includes(p.goal))return false;if(p.priorities!==undefined&&!Array.isArray(p.priorities))return false;return Object.entries(x.meals).every(([d,m])=>date(d)&&Array.isArray(m)&&m.every(y=>obj(y)&&Array.isArray(y.items)&&y.items.every(validItem)))&&Object.values(x.work).every(obj)&&x.measure.every(m=>obj(m)&&date(m.date)&&Array.isArray(m.v))&&['favorites','recipeFav'].every(k=>x[k]===undefined||Array.isArray(x[k]))&&['coachPrefs','dailyCoach','prep','manualPlan','coachPlans','coachDelivered','weekPlans','shoppingChecksByRange'].every(k=>x[k]===undefined||obj(x[k]))&&(!x.dailyCoach||obj(x.dailyCoach.enabled));}
 
 // v5 coaching orchestration: shared logs, distinct strategies.
 const strategies=[
@@ -370,7 +527,7 @@ const originalPicks=picks;
 function nutritionScore(r,v,type){let i=activeCoach(),n=r[2].length,plant=r[2].filter(([x])=>/beans|lentil|tofu|peas|spinach|vegetable|carrot|oat|cabbage|broccoli|fruit|tomato|okra/.test(x)).length,k=Math.max(1,v[0]),p=v[1]*4/k,c=v[2]*4/k,f=v[3]*9/k;return [p*100,30-n*3+p*15,c*65+p*35,40-80*Math.abs(p-.28)-50*Math.abs(c-.45),plant*3-35*Math.abs(p-.25)-25*Math.abs(f-.3),35-n*4+plant*2,plant*9+p*15][i]}
 picks=function(type,c='All cuisines'){return originalPicks(type,c).filter(x=>x.r[2].every(([n])=>foods.some(f=>f[0]===n))).map(x=>({...x,rank:nutritionScore(x.r,totals(recipeItems(x.r,type,true)),type)})).sort((a,b)=>b.rank-a.rank||a.i-b.i)};
 function coachPlanKey(k,type){return activeCoach()+'|'+k+'|'+type}
-planned=function(k,type){let a=picks(type);if(!a.length)return null;let manual=S.manualPlan?.[k+'|'+type],saved=a.find(x=>x.i===manual);if(saved)return saved;let generated=a.find(x=>x.i===S.coachPlans?.[coachPlanKey(k,type)]);if(generated)return generated;let n=Math.min(a.length,activeCoach()===1?3:5);return a[((dateSeed(k)%n)+n)%n]};
+planned=function(k,type){let a=picks(type);if(!a.length)return null;let manual=S.manualPlan?.[k+'|'+type],saved=a.find(x=>x.i===manual);if(saved)return saved;let week=S.weekPlans?.[plannerPeriod(k,'Week')[0]], themed=a.find(x=>x.i===week?.slots?.[k+'|'+type]);if(themed)return themed;let generated=a.find(x=>x.i===S.coachPlans?.[coachPlanKey(k,type)]);if(generated)return generated;let n=Math.min(a.length,activeCoach()===1?3:5);return a[((dateSeed(k)%n)+n)%n]};
 const basePlanScore=planScore;
 planScore=function(x,type,p,used){return basePlanScore(x,type,p,used)+nutritionScore(x.r,totals(recipeItems(x.r,type,true)),type)};
 function dailyPrefs(){return S.dailyCoach??={mode:'active',morning:'07:00',meal:'12:00',workout:'17:00',evening:'21:00',quietStart:'22:00',quietEnd:'06:00',enabled:{morning:true,meal:true,workout:true,evening:true}}}
@@ -388,14 +545,60 @@ setInterval(coachTick,15000);document.addEventListener('visibilitychange',()=>{i
 
 function slotStatus(k,t){return S.mealSlots?.[k+'|'+t]||''}
 function toggleSlot(t,status){let k=day()+'|'+t;S.mealSlots??={};if(S.mealSlots[k]===status)delete S.mealSlots[k];else S.mealSlots[k]=status;save();render()}
-const oldSwap=swapRecipe;swapRecipe=function(i){if(S.mealSlots)delete S.mealSlots[day()+'|'+activeMeal()];oldSwap(i)};
 // Shopping-only estimated ingredient yields; do not alter logged nutrition.
 const shoppingBreakdown={'jerk chicken':[['raw chicken, boneless',1.33],['jerk seasoning',.06]],'rice and peas':[['dry rice',.30],['cooked kidney beans',.25],['coconut milk',.18],['thyme',.003],['green onion',.025]]};
-function shoppingBag(){let d=new Date(today()+'T12:00:00'),bag={};for(let j=0;j<7;j++){let k=dateKey(d);for(let t of mealTypes){if(slotStatus(k,t))continue;let x=planned(k,t);if(!x)continue;for(let item of recipeItems(x.r,t,true)){for(let [n,f] of shoppingBreakdown[item.name]||[[item.name,1]])bag[n]=(bag[n]||0)+item.g*f}}d.setDate(d.getDate()+1)}return bag}
+function shoppingBag(dates=plannerPeriod(day(), groceryRange)) {
+  const bag = {};
+  for (const date of dates) {
+    for (const type of mealTypes) {
+      if (slotStatus(date,type) || (S.meals[date] || []).some(meal => meal.planSlot === date+'|'+type)) continue;
+      const selection = planned(date,type);
+      if (!selection) continue;
+      for (const item of recipeItems(selection.r,type,true)) {
+        for (const [name,factor] of shoppingBreakdown[item.name] || [[item.name,1]]) {
+          bag[name] = (bag[name] || 0) + item.g * factor;
+        }
+      }
+    }
+  }
+  return bag;
+}
 function shopGroup(n){return /chicken|turkey|beef|pork|fish|salmon|shrimp|cod|tuna/.test(n)?'Meat & seafood':/egg|yogurt|cheese|milk|paneer/.test(n)&&!n.includes('coconut')?'Dairy & eggs':/banana|berry|berries|broccoli|cucumber|spinach|onion|potato|carrot|tomato|cabbage|pepper|apple|fruit|greens|okra|thyme/.test(n)?'Produce':'Pantry & other'}
 function shopQty(n,g){return n==='egg'?Math.ceil(g/50)+' eggs (approx.)':g>=1000?(g/1000).toFixed(2)+' kg':Math.ceil(g)+' g'}
-function shopCheck(n,g,v){S.shoppingChecks??={};if(v)S.shoppingChecks[n]=g;else delete S.shoppingChecks[n];save()}
-function shoppingView(){let bag=shoppingBag();return `<section><h3>Next seven days · from today</h3><p>Budget target: $${prefs().budget} CAD</p><small>Only planned meals not marked eaten or skipped. Food diary entries do not change this list. Jerk chicken and rice and peas use estimated shopping yields; other items retain recipe weights (cooked unless marked dry). Check pantry and package sizes.</small>${['Produce','Meat & seafood','Dairy & eggs','Pantry & other'].map(group=>{let rows=Object.entries(bag).filter(([n])=>shopGroup(n)===group).sort();return rows.length?`<h3>${group}</h3>`+rows.map(([n,g])=>`<label class="line"><span>${esc(n)} · ${shopQty(n,g)}</span><input type="checkbox" style="width:auto" data-name="${esc(n)}" ${S.shoppingChecks?.[n]===g?'checked':''} onchange="shopCheck(this.dataset.name,${g},this.checked)"></label>`).join(''):''}).join('')}</section>`}
+function shopCheck(name, grams, checked) {
+  const key = groceryRange+'|'+plannerPeriod(day(),groceryRange)[0];
+  const previous = S.shoppingChecksByRange;
+  const checks = {...previous?.[key]};
+  if (checked) checks[name] = grams;
+  else delete checks[name];
+  S.shoppingChecksByRange = {...previous,[key]:checks};
+  if (!save()) {
+    if (previous === undefined) delete S.shoppingChecksByRange;
+    else S.shoppingChecksByRange = previous;
+    render();
+  }
+}
+
+function shoppingView() {
+  const dates = plannerPeriod(day(),groceryRange);
+  const bag = shoppingBag(dates);
+  const checks = S.shoppingChecksByRange?.[groceryRange+'|'+dates[0]];
+  return `<section><h3>Groceries for your meal plan</h3>
+    <div class="planner-tabs planner-range">${['Week','Month'].map(range =>
+      `<button class="${groceryRange===range?'':'alt'}" aria-pressed="${groceryRange===range}" onclick="groceryRange='${range}';render()">${range}</button>`).join('')}</div>
+    ${plannerPeriodHeader(groceryRange)}
+    <button class="alt wide" onclick="plannerRange=groceryRange;switchPlanner('Calendar')">View meals for this ${groceryRange.toLowerCase()}</button>
+    <p>Budget target: $${prefs().budget} CAD</p>
+    <small>Quantities come from the recipes scheduled in this period. Logged and skipped meals are excluded. Most weights are cooked unless marked dry. Check pantry and package sizes.</small>
+    ${['Produce','Meat & seafood','Dairy & eggs','Pantry & other'].map(group => {
+      const rows = Object.entries(bag).filter(([name]) => shopGroup(name) === group).sort();
+      return rows.length ? `<h3>${group}</h3>` + rows.map(([name,grams]) =>
+        `<label class="line"><span>${esc(name)} · ${shopQty(name,grams)}</span><input type="checkbox" style="width:auto" data-name="${esc(name)}"
+          ${checks?.[name]===grams?'checked':''} onchange="shopCheck(this.dataset.name,${grams},this.checked)"></label>`).join('') : '';
+    }).join('') || '<p>No groceries needed for this period.</p>'}
+  </section>`;
+}
+
 const voices=[['GET TO WORK!','Enough talk.','Show me some action.','Time to execute.'],['Listen up.','Mission check.','Stay disciplined.'],['Game time.','Stay ready.','Build momentum.'],['Data check.','Review the evidence.','Let’s assess.'],['Let’s get on track.','Here’s your next step.','Keep it practical.'],['You’ve got this!','Keep showing up!','Small wins count!'],['Move with intention.','Take a moment.','Find your balance.']];
 function beastLevel(){return coachPrefs().language??(coachPrefs().profanity?2:1)}
 function pickLine(a,seed){return a[(planHash(seed,'voice')%a.length)]}
