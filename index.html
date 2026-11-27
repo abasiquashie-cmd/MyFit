@@ -8,6 +8,19 @@ button.wide + .grid{margin-top:12px}
 .scan-actions > button.wide + button.wide{margin-top:0}
 #coachAppearance{background:#0b1518;color:#f4f6f5;border:1px solid #38494c;padding:14px;border-radius:16px}#coachAppearance .roster{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x proximity}#coachAppearance button{background:#182629;color:white;border:1px solid #526164;min-width:0;white-space:normal}#coachAppearance button[aria-pressed=true]{border:2px solid #a4f52b;box-shadow:0 0 0 1px #a4f52b}#coachAppearance .roster button{flex:0 0 105px;scroll-snap-align:start;padding:5px;font-size:12px}#coachAppearance .hero{position:relative;overflow:hidden;border-radius:12px;background:#111;margin:10px 0}#coachAppearance .hero img{width:100%;display:block;aspect-ratio:1.7;object-fit:cover}#coachAppearance .hero h2{color:#a4f52b;text-transform:uppercase;font-style:italic;margin:0;font-size:clamp(22px,6vw,38px)}#coachAppearance .heroText{padding:14px;background:linear-gradient(120deg,#101b1d,#1d3031)}#coachAppearance .looks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}#coachAppearance .looks button{padding:5px}#coachAppearance .confirm{background:#a4f52b;color:#101710;font-weight:900;margin-top:16px}#coachAppearance small{color:#c3cfcc}#coachAppearance img{border-radius:8px}.planner-meal-actions{display:flex;flex-wrap:wrap;gap:8px}.planner-month-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}.planner-month-grid button{min-width:0;padding:8px 2px}.planner-meal small{display:block}.week-strip button{min-width:0}
 .planner-range{grid-template-columns:repeat(3,minmax(0,1fr))}.planner-agenda-day .line span{text-align:right}
+
+.recipe-title{font-size:1.5rem;margin:.35rem 0 1rem}
+#fullRecipe h4{font-size:1.13rem;margin:1.2rem 0 .45rem}
+.recipe-ingredients{padding:0;list-style:none}
+.recipe-ingredients label,.recipe-method label{display:flex!important;gap:.65rem;align-items:baseline;line-height:1.5}
+.recipe-ingredients label{padding:.5rem 0;border-bottom:1px solid #34443b}
+.recipe-ingredients label b{margin-left:auto;white-space:nowrap}
+.recipe-ingredients input,.recipe-method input{flex:none;width:auto;margin:0}
+.recipe-method{padding-left:1.5rem}
+.recipe-method li{padding:.6rem 0 .75rem;border-bottom:1px solid #34443b}
+.recipe-method button{margin:.45rem 0 0 1.5rem;padding:.45rem .7rem}
+.recipe-extra{padding:.75rem 0;border-bottom:1px solid #34443b}
+.recipe-detail-actions{display:grid;gap:.5rem;margin-top:1rem}
 </style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.9.5</small></div><input id="date" type="date" style="width:145px;margin:0"></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
 const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());let S={profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,legs:true},meals:{},work:{},measure:[]};var storageBlocked=false;try{let x=localStorage.getItem('myfit-v1');if(x){let parsed=JSON.parse(x);if(!validState(parsed))throw Error('Invalid saved data');S=parsed}}catch(e){storageBlocked=true;alert('Saved data could not be read. Automatic saving is disabled to protect it. Export or restore a valid backup.')}function save(){if(storageBlocked)return false;try{localStorage.setItem('myfit-v1',JSON.stringify(S));return true}catch(e){alert('Storage unavailable. Export your data before closing.')}}S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};const day=()=>$('date').value;const goals={recomp:'Body recomposition',bulk:'Muscle gain',cut:'Fat loss',maintain:'Maintenance',mobility:'Mobility & fitness'};function targets(){let p=S.profile,w=p.weight/2.20462,b=10*w+6.25*p.height-5*p.age+(p.sex==='male'?5:-161),m=b*p.activity,k=Math.max(1500,Math.round((m+({recomp:-100,bulk:250,cut:-350,maintain:0,mobility:0}[p.goal]))/50)*50),pr=Math.min(Math.round(w*(p.goal==='cut'?2.1:1.9)),Math.floor(k*.35/4)),f=Math.round(k*.27/9);return [k,pr,Math.max(0,Math.round((k-pr*4-f*9)/4)),f]}
 const foods=[['chicken thighs skin on',232,23.3,0,14.7,100,130,'chicken thighs|chicken thigh'],['chicken thighs skinless',179,25,0,8,100,130,'skinless chicken thigh'],['chicken breast',165,31,0,3.6,100,150,'chicken breast|chicken'],['white rice',130,2.7,28.2,.3,158,158,'white rice|rice'],['broccoli',35,2.4,7.2,.4,156,156,'broccoli'],['salmon',208,22,0,13,100,150,'salmon'],['egg',143,12.6,.7,9.5,50,50,'eggs|egg'],['oats dry',389,16.9,66,6.9,80,40,'dry oats|oats'],['banana',89,1.1,23,.3,118,118,'banana'],['greek yogurt',73,10,4,2,245,170,'greek yogurt|yogurt'],['olive oil',884,0,0,100,216,14,'olive oil|oil'],['peanut butter',588,25,20,50,258,16,'peanut butter'],['lean ground beef',217,26,0,12,100,150,'ground beef|beef'],['turkey',170,29,0,6,100,150,'turkey'],['sweet potato',90,2,21,.2,200,150,'sweet potato'],['potato',87,2,20,.1,150,150,'potatoes|potato'],['bread',265,9,49,3.2,100,30,'toast|bread'],['apple',52,.3,14,.2,125,182,'apple'],['protein powder',400,80,8,5,120,30,'protein shake|whey|protein powder'],['pasta',158,5.8,31,.9,140,140,'pasta'],['shrimp',99,24,0,.3,145,150,'shrimp'],['black beans',132,9,24,.5,172,172,'beans'],['almonds',579,21,22,50,143,28,'almonds'],['avocado',160,2,9,15,150,150,'avocado'],['tuna',116,26,0,1,154,120,'tuna'],['milk',50,3.4,5,2,244,244,'milk']];
@@ -387,19 +400,46 @@ let cookTimer=null,cookEnd=0;
 function timerDisplay(){let el=$('cookClock');if(!el)return;let n=Math.max(0,Math.ceil((cookEnd-Date.now())/1000));el.textContent=cookEnd?(n?`${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`:'Time is up! Check your food.'):'No timer running';if(cookEnd&&!n){clearInterval(cookTimer);cookTimer=null;}}
 function startCookTimer(){let n=Number($('cookMinutes').value);if(!Number.isFinite(n)||n<=0||n>180)return;clearInterval(cookTimer);cookEnd=Date.now()+n*60000;timerDisplay();cookTimer=setInterval(timerDisplay,250)}
 function stopCookTimer(){clearInterval(cookTimer);cookEnd=0;timerDisplay()}
-function speakCook(i,j){let step=cookSteps(recipes[i])[j];if('speechSynthesis' in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(step.text+' '+step.tip);u.lang='en-CA';speechSynthesis.speak(u)}else alert('Read aloud is unavailable in this browser.')}
-function cookSteps(r){return r[3].split(/(?<=\.)\s+|;\s*/).filter(Boolean).map(text=>{let a=text.toLowerCase(),tip='',min=0;
-if(/\b(soak|marinate)\b/.test(a)){tip='Keep perishable ingredients refrigerated while soaking or marinating. Follow the ingredient package for soaking time; salt cod may need overnight soaking.'}
-else if(/\b(bake|roast)\b/.test(a)){tip='If no temperature is specified, start with a preheated 180°C (350°F) oven for baking or 200°C (400°F) for roasting vegetables. Check after 15 minutes; thickness and the dish determine total time.';min=15}
-else if(/\b(simmer|stew)\b/.test(a)){tip='Bring liquid to a gentle bubble, then reduce to low or medium-low heat. Check after 10 minutes; continue until the ingredients are tender and cooked through.';min=10}
-else if(/\bboil\b/.test(a)){tip='Bring water to a rolling boil on high heat. Reduce heat as needed to prevent overflow. Check vegetables after 5 minutes; follow package directions for grains, pasta or dried beans.';min=5}
-else if(/\b(fry|sauté|saute|brown|sear|soften|stir-fry)\b/.test(a)){tip='Heat a skillet over medium heat, or medium-high for stir-frying. Stir or turn as needed. Check after 3 minutes; onions should soften and meat must reach its safe internal temperature.';min=3}
-else if(/\b(grill)\b/.test(a)){tip='Preheat grill to medium-high. Turn food as needed and check after 4 minutes; use a thermometer for meat.';min=4}
-else if(/\b(steam|cover)\b/.test(a)){tip='Use gentle steam or low heat if cooking covered. Check after 5 minutes and add a little water if the pan dries out.';min=5}
-else if(/\b(mix|combine|whisk|blend|toss)\b/.test(a)){tip='Measure ingredients first, then mix until evenly combined. Usually 1–3 minutes; no heat unless the recipe calls for it.'}
-else if(/\b(cook|heat|warm)\b/.test(a)){tip='For stovetop cooking, begin over medium heat and check after 5 minutes. Adjust heat and time to the ingredient; follow package directions when applicable.';min=5}
-return {text,tip,min}})}
-function cookGuide(r,i){let steps=cookSteps(r), names=r[2].map(x=>x[0]).join(' '), safety=[];if(/chicken|turkey/.test(names))safety.push('Poultry pieces and ground poultry: 74°C / 165°F.');if(/ground beef|ground pork|ground lamb/.test(names))safety.push('Ground beef, pork or lamb: 71°C / 160°F.');if(/salmon|cod|tilapia|fish|tuna/.test(names))safety.push('Fish: 70°C / 158°F when cooking from raw.');if(/shrimp/.test(names))safety.push('Shrimp: cook until firm and opaque.');if(/egg/.test(names))safety.push('Egg dishes: cook to 74°C / 165°F.');return `<h3>Guided cooking</h3><small>Extra guidance is estimated from the original instructions. Check doneness, not just the clock. Ingredient weights are cooked or ready-to-eat unless marked otherwise; cook raw ingredients separately if required.</small>${safety.length?`<p class="pill">${esc(safety.join(' '))}</p>`:''}<div style="padding:12px;border:1px solid #526b58;border-radius:12px;margin:12px 0"><b id="cookClock">${cookEnd?'Timer running':'No timer running'}</b><label>Timer (minutes)<input id="cookMinutes" type="number" min="1" max="180" value="5"></label><div class="recipe-actions"><button onclick="startCookTimer()">Start timer</button><button class="alt" onclick="stopCookTimer()">Stop timer</button></div><small>Keep the app open; background alerts are not guaranteed.</small></div>${steps.map((x,j)=>`<div style="border-bottom:1px solid #526b58;padding:14px 0"><label><input type="checkbox" style="width:auto;margin-right:8px">Step ${j+1}: ${esc(x.text)}</label>${x.tip?`<p>${esc(x.tip)}</p>`:''}<div class="recipe-actions"><button class="alt" onclick="speakCook(${i},${j})">Read step aloud</button>${x.min?`<button class="alt" onclick="$('cookMinutes').value=${x.min};startCookTimer()">Check in ${x.min} min</button>`:''}</div></div>`).join('')}`}
+function speakCook(i,j) {
+  const step = cookSteps(recipes[i])[j];
+  if (!step) return;
+  if ('speechSynthesis' in window) {
+    speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(step);
+    utterance.lang = 'en-CA';
+    speechSynthesis.speak(utterance);
+  } else alert('Read aloud is unavailable in this browser.');
+}
+
+function cookSteps(recipe) {
+  return recipe[3].split(/(?<=[.!?])\s+|;\s*|\n+/)
+    .map(text => text.trim())
+    .filter(Boolean)
+    .map(text => {
+      const sentence = text[0].toUpperCase() + text.slice(1);
+      return /[.!?]$/.test(sentence) ? sentence : sentence + '.';
+    });
+}
+
+function cookGuide(r,i) {
+  let steps=cookSteps(r), names=r[2].map(x=>x[0]).join(' '), safety=[];if(/chicken|turkey/.test(names))safety.push('Poultry pieces and ground poultry: 74°C / 165°F.');if(/ground beef|ground pork|ground lamb/.test(names))safety.push('Ground beef, pork or lamb: 71°C / 160°F.');if(/salmon|cod|tilapia|fish|tuna/.test(names))safety.push('Fish: 70°C / 158°F when cooking from raw.');if(/shrimp/.test(names))safety.push('Shrimp: cook until firm and opaque.');if(/egg/.test(names))safety.push('Egg dishes: cook to 74°C / 165°F.');
+  return `<h4>Method</h4>
+    <ol class="recipe-method">
+      ${steps.map((step,j)=>`<li>
+        <label><input type="checkbox"><span>${esc(step)}</span></label>
+        <button class="alt" aria-label="Read step ${j+1} aloud" onclick="speakCook(${i},${j})">Read aloud</button>
+      </li>`).join('')}
+    </ol>
+    ${safety.length?`<details class="recipe-extra"><summary>Food safety notes</summary>
+      <ul>${safety.map(note=>`<li>${esc(note)}</li>`).join('')}</ul></details>`:''}
+    <details class="recipe-extra" ${cookEnd?'open':''}><summary>Kitchen timer</summary>
+      <p id="cookClock" role="status">${cookEnd?'Timer running':'No timer running'}</p>
+      <label>Minutes<input id="cookMinutes" type="number" min="1" max="180" value="5"></label>
+      <div class="recipe-detail-actions"><button onclick="startCookTimer()">Start timer</button>
+        <button class="alt" onclick="stopCookTimer()">Stop timer</button></div>
+      <small>Keep MyFit open to follow the countdown.</small>
+    </details>`;
+}
 let plannerTab='Calendar',detailIndex=0,returnPlanner='Recipes',monthView=false;const photoMemo=new Map();
 function browsePlannerMeal(type) {
   mealType = type;
@@ -417,7 +457,37 @@ async function loadDishPhotos(){for(const el of document.querySelectorAll('[data
 function plannerView(){let tabs=[['Calendar','Plan'],['Recipes','Recipes'],['Groceries','Groceries'],['Saved','Saved']];let nav=`<div class="planner-tabs">${tabs.map(([t,label])=>`<button class="${plannerTab===t?'':'alt'}" aria-pressed="${plannerTab===t}" onclick="switchPlanner('${t}')">${label}</button>`).join('')}</div>`;let body='';if(plannerTab==='Calendar')body=plannerPlanView();if(plannerTab==='Recipes'){let p=picks(activeMeal(),cuisine).filter(matchesRecipe),idx=((rotation)%p.length+p.length)%p.length,x=p[idx];body=themedPlanner()+(x?`<section><button class="alt wide" onclick="openRecipeDetail(${x.i})">${dishPhoto(x.i)}<h3>${esc(x.r[1])}</h3>Open recipe →</button></section>`:'')+`<div class="grid">${p.slice(0,24).map(y=>`<button class="alt" onclick="openRecipeDetail(${y.i})">${esc(y.r[1])}</button>`).join('')}</div><small>Showing up to 24 matches; use filters or the browse dropdown for all matches.</small>`}if(plannerTab==='Saved')body=`<section><h3>Saved recipes</h3>${(S.recipeFav||[]).filter(i=>recipes[i]).map(i=>`<button class="alt wide" onclick="openPlanned(${i},'${recipes[i][4][0]}')">${esc(recipes[i][1])}</button>`).join('')||'No saved recipes yet.'}</section>`;if(plannerTab==='Groceries')body=shoppingView();if(plannerTab==='Detail')body=`<button class="alt wide" onclick="switchPlanner(returnPlanner)">← ${tabs.find(([key])=>key===returnPlanner)?.[1]||'Recipes'}</button>${recipeCard({r:recipes[detailIndex],i:detailIndex})}`;return '<h2>Meal planner</h2>'+nav+body}
 function photoLink(r){let q=encodeURIComponent(r[1].replace(/ adaptation| inspired/gi,''));return `<p><a style="color:#a5ef91" target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?search=${q}&title=Special:MediaSearch&type=image">See dish photos on Wikimedia Commons ↗</a></p><small>External photo search; results may vary. Internet required.</small>`}
 
-function recipeCard({r,i}){let items=recipeItems(r),v=totals(items);return `<section id="fullRecipe"><div class="pill">${esc(r[0])} · ${activeMeal()}</div><h3>${esc(r[1])}</h3>${dishPhoto(i)}${photoLink(r)}<b>${v[0]} kcal · ${v[1]} g protein per serving</b><small>Portions are estimates; serving sizes are bounded and may not exactly match your calorie target.</small><p class="muted">Batch: ${totals(items.map(x=>({...x,g:x.g*recipeServings})))[0]} kcal for ${recipeServings} servings. Generic ingredient estimates; check omitted cooking fats, sauces and seasonings.</p><p>${v[2]} g carbs · ${v[3]} g fat per serving</p><label>Servings to prepare <select onchange="recipeServings=+this.value;render();$('fullRecipe').scrollIntoView()">${[1,2,3,4,5,6,8].map(n=>`<option ${n===recipeServings?'selected':''}>${n}</option>`).join('')}</select></label><details open><summary>Ingredients</summary><small>Cooked or ready-to-eat weights unless marked dry. Seasonings listed where included; nutrition estimates apply.</small>${items.map(x=>`<label class="line"><span><input type="checkbox" style="width:auto;margin:0 8px 0 0">${esc(x.name)} <small>(${Math.round(x.k*x.g/100)} kcal/serving)</small></span><b>${x.g*recipeServings} g</b></label>`).join('')}</details><details><summary>Guided cooking, temperatures & timers</summary>${cookGuide(r,i)}</details>${day()<=today()?`<button class="alt wide" onclick="useRecipe(${i})">Log one serving · review first</button>`:''}<button class="alt wide" style="margin-top:8px" onclick="saveRecipe(${i})">Save recipe to favourites</button><button class="alt wide" style="margin-top:8px" onclick="swapRecipe(${i},true)">Use for ${activeMeal()} · ${new Date(day()+'T12:00:00').toLocaleDateString('en-CA',{month:'short',day:'numeric'})}</button></section>`}
+function recipeCard({r,i}) {
+  const items = recipeItems(r);
+  const [calories, protein, carbs, fat] = totals(items);
+  return `<section id="fullRecipe">
+    <small>${esc(r[0])} · ${activeMeal()}</small>
+    <h3 class="recipe-title">${esc(r[1])}</h3>
+    <label>Servings to prepare
+      <select onchange="recipeServings=+this.value;render();$('fullRecipe').scrollIntoView()">
+        ${[1,2,3,4,5,6,8].map(n=>`<option ${n===recipeServings?'selected':''}>${n}</option>`).join('')}
+      </select>
+    </label>
+    <h4>Ingredients for ${recipeServings} ${recipeServings===1?'serving':'servings'}</h4>
+    <p class="muted">Weights are cooked or ready to eat unless marked otherwise.</p>
+    <ul class="recipe-ingredients">
+      ${items.map(item=>`<li><label>
+        <input type="checkbox"><span>${esc(item.name)}</span><b>${item.g*recipeServings} g</b>
+      </label></li>`).join('')}
+    </ul>
+    ${cookGuide(r,i)}
+    <details class="recipe-extra"><summary>Nutrition per serving</summary>
+      <p>${calories} kcal · ${protein} g protein · ${carbs} g carbs · ${fat} g fat</p>
+      <small>Estimated from the listed ingredients and portions.</small>
+    </details>
+    <details class="recipe-extra"><summary>Dish photos</summary>${dishPhoto(i)}${photoLink(r)}</details>
+    <div class="recipe-detail-actions">
+      <button class="wide" onclick="swapRecipe(${i},true)">Use for ${activeMeal()} · ${plannerShortDate(day())}</button>
+      ${day()<=today()?`<button class="alt wide" onclick="useRecipe(${i})">Log one serving · review first</button>`:''}
+      <button class="alt wide" onclick="saveRecipe(${i})">Save recipe to favourites</button>
+    </div>
+  </section>`;
+}
 function useRecipe(i) {
   if (day() > today()) return;
   if (draft.length && !confirm('Replace the current meal draft?')) return;
