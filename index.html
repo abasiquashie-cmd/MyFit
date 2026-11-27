@@ -423,7 +423,7 @@ function clock58(){document.querySelectorAll('[data-clock58]').forEach(el=>el.te
 let previousWindow58=current58();setInterval(()=>{let next=current58();if(next!==previousWindow58){if(tab==='Food'&&foodPage==='Today'||tab==='Home'&&entryMode!=='live'){if(!['INPUT','SELECT','TEXTAREA'].includes(document.activeElement?.tagName)){smartType='';render();previousWindow58=next}}else previousWindow58=next}},15000);
 
 
-// v5.8.3: individual voice profiles, device-native synthesis.
+// v5.9: individual voice profiles, device-native synthesis.
 const voiceProfiles582=[
 ['en-US','m',1.04,.82],['en-JM','m',.98,.88],['en-US','f',.98,.88],['en-US','f',1.09,1.05],
 ['en-CA','m',.94,.79],['en-JM','m',.96,.87],['en-GB','f',1.02,.92],['en-US','f',.95,.86],
@@ -444,7 +444,7 @@ function voiceOptions582(){let i=previewCoach??activeCoach(),j=previewLook??avat
 const avatar582=avatarPanel;avatarPanel=function(){return avatar582().replace('<h3>About ',voiceOptions582()+'<h3>About ')};
 const rhythm582=rhythmPanel58;rhythmPanel58=function(){return rhythm582().replace('</p>','</p><button class="alt wide" onclick="speakCoach()">🔊 Hear your coach</button>')};
 
-// v5.8.3 Voice Studio: browser voice inventory and explicit assignment.
+// v5.9 Voice Studio: browser voice inventory and explicit assignment.
 function studio583(){return S.voiceStudio583??={labels:{},tuning:{}}}
 function slot583(){let i=previewCoach??activeCoach(),j=previewLook??avatarChoice(coachPrefs(),i);return [i,j,i*4+j]}
 function english583(){return voiceList582().filter(v=>/^en(?:-|$)/i.test(v.lang))}
@@ -462,5 +462,21 @@ function studioInner583(){let [i,j,k]=slot583(),vs=english583(),p=voiceProfiles5
 function refreshStudio583(){let el=document.getElementById('studio583');if(el)el.innerHTML=studioInner583()}
 voiceOptions582=function(){return `<div id="studio583">${studioInner583()}</div>`};
 window.speechSynthesis?.addEventListener?.('voiceschanged',refreshStudio583);
+
+
+// v5.9 usability pass: optional voice fallback and nonblocking status.
+function voiceNotice59(msg){let e=document.getElementById('voiceNotice59');if(!e){e=document.createElement('div');e.id='voiceNotice59';e.setAttribute('role','status');e.style.cssText='position:fixed;bottom:85px;left:12px;right:12px;z-index:9999;background:#20352b;color:#fff;padding:12px;border-radius:12px;pointer-events:none';document.body.appendChild(e)}e.textContent=msg;clearTimeout(voiceNotice59.timer);voiceNotice59.timer=setTimeout(()=>e.remove(),4500)}
+function allVoices59(){try{return Array.from(window.speechSynthesis?.getVoices()||[])}catch(e){return []}}
+english583=function(){return allVoices59().filter(v=>/^en(?:[-_]|$)/i.test(v.lang||''))};
+studioSpeak583=function(text,v,rate=1,pitch=1){if(!window.speechSynthesis||!window.SpeechSynthesisUtterance)return voiceNotice59('Speech is unavailable on this device. You can still read your coach message.');let u=new SpeechSynthesisUtterance(text);if(v){u.voice=v;u.lang=v.lang}else u.lang='en-US';u.rate=rate;u.pitch=pitch;u.onerror=e=>{if(!['interrupted','canceled'].includes(e.error))voiceNotice59('Voice playback unavailable. Your coach message is still on screen.')};try{speechSynthesis.cancel();utterance582=u;speechSynthesis.speak(u)}catch(e){voiceNotice59('Unable to play speech.')}};
+speak582=function(text,i=activeCoach(),j=avatarChoice(coachPrefs(),i)){let k=i*4+j,p=voiceProfiles582[k],v=voicePick582(i,j),t=studio583().tuning[k]||{},serious=/stop painful|assess symptoms|reducing intensity|seek professional/i.test(text);if(!v)voiceNotice59('Using device default voice. Individual voice unavailable.');studioSpeak583(text,v,Math.max(.65,Math.min(1.4,(t.rate??p[2])*(serious?.88:1))),t.pitch??p[3])};
+studioReport583=function(){let vs=allVoices59(),el=document.getElementById('voiceReport583');if(el){el.hidden=false;el.value='MyFit voice diagnostic\nSpeech API: '+Boolean(window.speechSynthesis)+'\nAll voices: '+vs.length+'\nEnglish voices: '+english583().length+'\n'+vs.map(v=>`${v.name} | ${v.lang} | ${v.voiceURI}`).join('\n')}};
+const studioBase59=studioInner583;studioInner583=function(){return studioBase59().replace('No verified voice','Device default (fallback)').replace('No English voices detected yet. Try refreshing in Chrome.','No selectable English voices detected. Basic speech still works using your device default.')};
+voiceOptions582=function(){return `<div class="grid"><button class="alt" onclick="previewVoice582()">🔊 Hear this coach</button><button onclick="confirmCoachSelection()">Select this coach</button></div><details><summary>Advanced voice settings</summary><div id="studio583">${studioInner583()}</div></details>`};
+// Preserve meal slot for planned meals and avoid stale slot on new draft.
+const planned59=plannedEat;plannedEat=function(type){let d=day(),before=(S.meals[d]||[]).length;planned59(type);let a=S.meals[d]||[];if(a.length>before&&d===today()){a[a.length-1].rhythmSlot=current58();save();render()}};
+
+// Keep historical nutrition views from advertising current-day suggestions.
+const foodView59=foodView;foodView=function(a,t){let h=foodView59(a,t);if(foodPage==='Today'&&day()!==today())h=h.replace(/<button[^>]*onclick="nutritionAsk\(\)"[^>]*>[^<]*<\/button>/g,'').replace(/<button[^>]*onclick="smartLog\(\)"[^>]*>[^<]*<\/button>/g,'');return h};
 
 render();let lastDay=today(),lastMeal=autoMeal();setInterval(()=>{let now=today(),mt=autoMeal();if(now!==lastDay){if(day()===lastDay){$('date').value=now;calendarOffset=0;if(tab!=='Food'&&tab!=='Goals')render()}lastDay=now}if(mt!==lastMeal){lastMeal=mt;if(tab==='Planner'&&mealType==='Auto')render()}},30000);</script><script>if("serviceWorker" in navigator && location.protocol==="https:"){navigator.serviceWorker.register("./sw.js").catch(console.warn)}</script></html>
