@@ -24,7 +24,9 @@ button.wide + .grid{margin-top:12px}
 #recordDate{font-size:.75rem}#recordDate[hidden]{display:none}#recordDate input{display:block;margin:2px 0 0;width:145px}.week-day{width:100%;display:block;text-align:left;margin-top:8px}.week-day[aria-current=date]{border:1px solid #a5ef91}.week-meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;margin-top:7px;font-weight:400}.week-meals small{display:block}.daily-disclosure{margin:12px 0;padding:12px;border:1px solid #42564a;border-radius:12px}.daily-disclosure>summary{cursor:pointer;font-weight:700}
 .briefing-identity{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:12px 0}.briefing-portrait{width:50px;flex:none}.briefing-identity button{margin-left:auto}
 .workout-example{padding:.75rem 0;border-bottom:1px solid #42564a}.workout-example summary{cursor:pointer}.workout-example summary small{display:block;margin:.2rem 0 0 1rem}
-</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.7</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
+.shopping-have{white-space:nowrap;flex-shrink:0}.shopping-have input{margin:0 .15rem 0 0;vertical-align:middle}
+.live-exercise-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}.live-exercise-heading h3{margin:0}.live-exercise-heading button{white-space:nowrap}
+</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.9</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
 const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());let S={profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,legs:true},meals:{},work:{},measure:[]};var storageBlocked=false;try{let x=localStorage.getItem('myfit-v1');if(x){let parsed=JSON.parse(x);if(!validState(parsed))throw Error('Invalid saved data');S=parsed}}catch(e){storageBlocked=true;alert('Saved data could not be read. Automatic saving is disabled to protect it. Export or restore a valid backup.')}function save(){if(storageBlocked)return false;try{localStorage.setItem('myfit-v1',JSON.stringify(S));return true}catch(e){alert('Storage unavailable. Export your data before closing.')}}S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};let plannerDate = '';
 const day = () => tab === 'Planner' ? plannerDate || today() : ['Home','Coach'].includes(tab) ? today() : $('date').value;
 function openMainTab(next) {
@@ -1147,10 +1149,32 @@ function shopCheck(name, grams, checked) {
   }
 }
 
+function saveShoppingQuantity() {
+  const dates = plannerPeriod(day(),groceryRange);
+  const key = groceryRange+'|'+dates[0];
+  const name = $('shoppingAdjustItem').value;
+  const grams = shoppingBag(dates)[name];
+  if (!Number.isFinite(grams)) return;
+  const quantity = $('shoppingAdjustQty').value.trim().slice(0,60);
+  const previous = S.shoppingAdjustments;
+  const entries = {...previous?.[key]};
+  if (quantity) entries[name] = {grams,quantity};
+  else delete entries[name];
+  S.shoppingAdjustments = {...previous,[key]:entries};
+  if (!save()) {
+    if (previous===undefined) delete S.shoppingAdjustments;
+    else S.shoppingAdjustments=previous;
+    return;
+  }
+  render();
+}
+
 function shoppingView() {
   const dates = plannerPeriod(day(),groceryRange);
   const bag = shoppingBag(dates);
-  const checks = S.shoppingChecksByRange?.[groceryRange+'|'+dates[0]];
+  const key = groceryRange+'|'+dates[0];
+  const checks = S.shoppingChecksByRange?.[key];
+  const adjustments = S.shoppingAdjustments?.[key];
   return `<section><h3>Groceries for your meal plan</h3>
     <div class="planner-tabs planner-range">${['Week','Month'].map(range =>
       `<button class="${groceryRange===range?'':'alt'}" aria-pressed="${groceryRange===range}" onclick="groceryRange='${range}';render()">${range}</button>`).join('')}</div>
@@ -1158,11 +1182,18 @@ function shoppingView() {
     <button class="alt wide" onclick="plannerRange=groceryRange;switchPlanner('Calendar')">View meals for this ${groceryRange.toLowerCase()}</button>
     <p>Budget target: $${prefs().budget} CAD</p>
     <small>Whole items and packages are rounded up for this plan. Sizes and yields vary. Meat weights follow the recipe, so allow for cooking loss when buying raw meat for cooked portions.</small>
+    ${Object.keys(bag).length?`<details class="daily-disclosure"><summary>Adjust a shopping quantity</summary>
+      <label>Ingredient<select id="shoppingAdjustItem"><option value="">Choose an ingredient</option>${Object.keys(bag).sort().map(name=>`<option>${esc(name)}</option>`).join('')}</select></label>
+      <label>Amount to buy<input id="shoppingAdjustQty" maxlength="60" placeholder="e.g. 1 bag"></label>
+      <small>Leave blank to restore the planned amount. If a recipe change affects this ingredient, MyFit shows the new planned amount.</small>
+      <button class="alt wide" onclick="saveShoppingQuantity()">Save shopping amount</button>
+    </details>`:''}
     ${['Produce','Meat & seafood','Dairy & eggs','Pantry & other'].map(group => {
       const rows = Object.entries(bag).filter(([name]) => shopGroup(name) === group).sort();
       return rows.length ? `<h3>${group}</h3>` + rows.map(([name,grams]) =>
-        `<label class="line"><span>${esc(name)} · ${shopQty(name,grams)}</span><input type="checkbox" style="width:auto" data-name="${esc(name)}"
-          ${checks?.[name]===grams?'checked':''} onchange="shopCheck(this.dataset.name,${grams},this.checked)"></label>`).join('') : '';
+        `<label class="line"><span>${esc(name)} · ${adjustments?.[name]?.grams===grams?esc(adjustments[name].quantity):shopQty(name,grams)}</span>
+          <small class="shopping-have"><input type="checkbox" style="width:auto" data-name="${esc(name)}"
+          ${checks?.[name]===grams?'checked':''} onchange="shopCheck(this.dataset.name,${grams},this.checked)"> Already have</small></label>`).join('') : '';
     }).join('') || '<p>No groceries needed for this period.</p>'}
   </section>`;
 }
@@ -1484,8 +1515,94 @@ function entryCommit(date,name,rows,replace=false){if(!/^\d{4}-\d{2}-\d{2}$/.tes
 function entrySave(){let n=entryExercise,d=entryMode==='live'?today():day(),r={load:Number($('entryLoad').value),reps:Number($('entryReps').value),effort:Number($('entryEffort').value)},count=entryMode==='live'?1:Number($('entryCount').value);if(['entryLoad','entryReps','entryEffort'].some(k=>$(k).value.trim()==='')||!setDetailValid(r)||!Number.isInteger(count)||count<1||count>30)return alert('Check weight, reps, effort and sets.');let replace=entryMode==='past'&&$('entryReplace').checked;if(replace&&!confirm('Replace detailed sets for this exercise and date?'))return;if(!entryCommit(d,n,Array.from({length:count},()=>({...r})),replace))return alert('Not saved. Check date and storage.');if(entryMode==='live')restUntil=Date.now()+90000;entryNotice='✓ Saved to workout history';render();$('entryLoad').value=r.load;$('entryReps').value=r.reps;$('entryEffort').value=r.effort;}
 let entryWorkout = '';
 
+function sessionSwaps(state,date,session) {
+  return state.workoutSwaps?.[date+'|'+session] || {};
+}
+
+function applyWorkoutSwaps(plan,state,date,session) {
+  const swaps = sessionSwaps(state,date,session);
+  return plan.map(row => {
+    const [name,sets,range] = row.split('|');
+    return swaps[name] ? [swaps[name].name,sets,swaps[name].range || range].join('|') : row;
+  });
+}
+
+function availableLiveSwaps() {
+  const session = entryWorkout || workout();
+  const swaps = sessionSwaps(S,today(),session);
+  const original = Object.keys(swaps).find(name=>swaps[name].name===entryExercise) || entryExercise;
+  if (loggedSetCount(S,today()+'|'+entryExercise)) return [];
+  const basePlan = coachExerciseList(session).map(row=>row.split('|'));
+  const base = basePlan.find(([name])=>name===original) || basePlan.find(([name])=>
+    exerciseAlternatives[name]?.some(([,alternate])=>alternate===original));
+  if (!base) return [];
+  const gym = trainingEquipment();
+  const reserved = new Set(livePlan().map(row=>row[0]));
+  return (exerciseAlternatives[base[0]] || []).flatMap(([needs,alternative]) => {
+    const candidate = alternative || base[0];
+    if (reserved.has(candidate) || loggedSetCount(S,today()+'|'+candidate) ||
+        (needs&&!needs.split('+').every(item=>gym.gear.includes(item))) ||
+        !gymAllows(candidate,gym.restrictions)) return [];
+    return [{original,candidate,range:candidate==='Pull-up'?'3–5':base[2]}];
+  });
+}
+
+function swapLiveExercise() {
+  const choice = availableLiveSwaps().find(option=>option.candidate===$('liveSwapChoice').value);
+  if (!choice) return;
+  const key = today()+'|'+(entryWorkout||workout());
+  const before = S.workoutSwaps;
+  const next = {...sessionSwaps(S,today(),entryWorkout||workout())};
+  if (choice.original===choice.candidate) delete next[choice.original];
+  else next[choice.original] = {name:choice.candidate,range:choice.range};
+  S.workoutSwaps = {...before,[key]:next};
+  if (!save()) {
+    if (before===undefined) delete S.workoutSwaps;
+    else S.workoutSwaps=before;
+    return;
+  }
+  chooseLiveExercise(choice.candidate);
+}
+
+let finishedWorkout = null;
+function finishLiveWorkout() {
+  finishedWorkout = {date:today(),session:entryWorkout||workout(),plan:livePlan(),extras:liveExtras()};
+  entryMode='';
+  restUntil=0;
+  tab='WorkoutRecap';
+  render();
+  window.scrollTo(0,0);
+}
+
+function workoutRecapPanel() {
+  if (!finishedWorkout) return '';
+  const {date,session,plan,extras} = finishedWorkout;
+  const count = name => loggedSetCount(S,date+'|'+name);
+  const swapped = sessionSwaps(S,date,session);
+  const improvements = new Map(strengthProgress(workoutHistory(S))
+    .filter(row=>row.date===date&&row.previous&&row.current.load>row.previousLoad)
+    .map(row=>[row.name,`+${Math.round((row.current.load-row.previousLoad)*100)/100} lb at ${row.current.reps} reps vs. the last comparable session`]));
+  const completed = plan.filter(([name,sets])=>count(name)>=Number(sets)).length;
+  return `<section><h2>Workout recap</h2>
+    <p>${esc(names[session])} · ${completed} of ${plan.length} planned exercises completed</p>
+    ${plan.map(([name,target,range])=>{
+      const done = count(name);
+      const original = Object.keys(swapped).find(key=>swapped[key]?.name===name);
+      return `<div class="line"><div><b>${esc(name)}</b>
+        ${original?`<small> · Swapped for ${esc(original)}</small>`:''}
+        ${improvements.has(name)?`<br><small>${esc(improvements.get(name))}</small>`:''}</div>
+        <small>${done?`${done}/${target} ${/\b(?:min|sec)\b/.test(range)?'rounds':'sets'}`:'Skipped'}</small></div>`;
+    }).join('')}
+    ${extras.filter(name=>!plan.some(row=>row[0]===name)&&count(name)).map(name=>
+      `<div class="line"><b>${esc(name)}</b><small>${count(name)} extra sets</small></div>`).join('')}
+    <button class="wide" onclick="openMainTab('Home')">Done</button>
+    <button class="alt wide" onclick="openWorkoutLog()">View workout history</button>
+  </section>`;
+}
+
 function livePlan() {
-  return exerciseList(entryWorkout || workout()).map(row => row.split('|'));
+  const session=entryWorkout||workout();
+  return applyWorkoutSwaps(exerciseList(session),S,today(),session).map(row=>row.split('|'));
 }
 
 function liveExtras() {
@@ -1730,6 +1847,12 @@ function exerciseExample(name) {
   return `<p>${esc(instruction)}</p>${video}${variation}${formReminder}${photos?`<p><a href="${photos}" target="_blank" rel="noopener noreferrer">See exercise photos (ACE)</a></p>`:''}`;
 }
 
+function toggleLiveSwap(button) {
+  const panel = $('liveSwapPanel');
+  panel.hidden = !panel.hidden;
+  button.setAttribute('aria-expanded',String(!panel.hidden));
+}
+
 function liveEntryPanel() {
   const session = entryWorkout || workout();
   const gym = trainingEquipment();
@@ -1751,6 +1874,8 @@ function liveEntryPanel() {
   const previous = priorSet ? `${priorSet.load} lb × ${priorSet.reps}` :
     prior?.r.weight!==''&&prior?.r.weight!=null&&prior?.r.reps ? `${prior.r.weight} lb × ${prior.r.reps}` : '';
   const next = plan.find(([name,sets])=>name!==entryExercise&&count(name)<Number(sets));
+  const swapChoices = selected ? availableLiveSwaps() : [];
+  const doneCount = plan.filter(([name,sets])=>count(name)>=Number(sets)).length;
   const catalog = [...new Set([
     ...Object.values(ex).flat().map(row=>row.split('|')[0]),
     ...Object.values(exerciseAlternatives).flatMap(options=>options.map(([,name])=>name).filter(Boolean)),
@@ -1769,6 +1894,25 @@ function liveEntryPanel() {
     <button class="wide" onclick="entrySave()">Save completed set</button>
     <p id="entryRest"></p><button class="alt" onclick="restUntil=0;updateEntryRest()">Skip rest timer</button>`) : '';
   return `<section id="entryPanel"><h2>Live workout</h2>
+    <div class="live-exercise-heading"><h3>${esc(entryExercise||names[session])}</h3>
+      ${selected?'<button class="alt" aria-controls="liveSwapPanel" aria-expanded="false" onclick="toggleLiveSwap(this)">Swap exercise</button>':''}
+    </div>
+    ${selected?`<div class="daily-disclosure" id="liveSwapPanel" hidden>
+      ${swapChoices.length?`<label>Available alternatives<select id="liveSwapChoice">${options(swapChoices.map(option=>option.candidate))}</select></label>
+        <button class="alt wide" onclick="swapLiveExercise()">Use this exercise today</button>`
+        :`<p>${count(entryExercise)?'This exercise already has sets or rounds recorded today. Add a different exercise if you want to switch now.':'No alternatives match your My Gym settings and this workout.'}</p>`}
+      <button class="alt" onclick="profileSection598('Gym')">Edit My Gym</button>
+    </div>`:''}
+    <p class="muted">${esc(names[session])} · ${doneCount}/${plan.length} exercises complete</p>
+    ${next?`<p><small>Up next: ${esc(next[0])}</small></p>`:''}
+    ${selected?`<p><b>Coach’s target:</b> ${esc(target)} ${timed?'rounds':'sets'} × ${esc(range)}${timed||range.includes('/')?'':' reps'}</p>`:''}
+    ${entryExercise?`<details class="daily-disclosure"><summary>How to do it · ${esc(entryExercise)}</summary>${exerciseExample(entryExercise)}</details>`:''}
+    ${gym.notes||gym.restrictions.length?`<details><summary>My Gym · movement preferences and notes</summary>${gymSummary(gym)}</details>`:''}
+    ${!timed&&previous?`<small>Last session · ${esc(prior.date)} · ${esc(previous)}</small>`:''}
+    ${completion}
+    <p role="status">${esc(entryNotice)}</p>
+    ${next && (!target||count(entryExercise)>=Number(target))?`<button class="wide" onclick="chooseLiveExercise(this.dataset.exercise)" data-exercise="${esc(next[0])}">Next exercise · ${esc(next[0])}</button>`:''}
+    <details class="daily-disclosure"><summary>Workout queue</summary>
     <label>Workout<select id="liveWorkoutType" onchange="selectLiveWorkout(this.value)">
       ${Object.entries(names).map(([key,label])=>`<option value="${key}" ${session===key?'selected':''}>${esc(label)}${key===workout()?' · Scheduled today':''}</option>`).join('')}
     </select></label>
@@ -1776,19 +1920,14 @@ function liveEntryPanel() {
       ${plan.length?`<optgroup label="Coach’s recommendations">${options(plannedNames)}</optgroup>`:''}
       ${extras.length?`<optgroup label="Your added exercises">${options(extras)}</optgroup>`:''}
     </select></label>`:'<p>No exercises scheduled for recovery. Choose another workout or add an exercise.</p>'}
-    ${selected?`<p><b>Coach’s target:</b> ${esc(target)} ${timed?'rounds':'sets'} × ${esc(range)}${timed||range.includes('/')?'':' reps'}</p>`:''}
-    ${entryExercise?`<details class="daily-disclosure"><summary>How to do it · ${esc(entryExercise)}</summary>${exerciseExample(entryExercise)}</details>`:''}
-    ${gym.notes||gym.restrictions.length?`<details><summary>My Gym · movement preferences and notes</summary>${gymSummary(gym)}</details>`:''}
-    ${!timed&&previous?`<small>Last session · ${esc(prior.date)} · ${esc(previous)}</small>`:''}
-    ${completion}
-    <p role="status">${esc(entryNotice)}</p>
-    ${next?`<button class="alt wide" onclick="chooseLiveExercise(this.dataset.exercise)" data-exercise="${esc(next[0])}">Next recommended: ${esc(next[0])}</button>`:''}
+      <ol>${plan.map(([name,target])=>`<li>${esc(name)} · ${count(name)}/${esc(target)} recorded</li>`).join('')}</ol>
+    </details>
     <details><summary>Add exercise</summary>
       <label>Choose an exercise<select id="extraExerciseCatalog"><option value="">Select an exercise</option>${options(catalog)}</select></label>
       <label>Or enter your own<input id="extraExerciseName" maxlength="80"></label>
       <button class="alt wide" onclick="addLiveExercise()">Add to this workout</button>
     </details>
-    <button class="alt wide" onclick="entryMode='';restUntil=0;render()">Finish / exit workout</button>
+    <button class="alt wide" onclick="finishLiveWorkout()">Finish workout</button>
   </section>`;
 }
 
@@ -1808,7 +1947,7 @@ render=function(){entryRender();let nav=$('nav').querySelector('button');if(nav)
 
 // Unified read-only training plan and history-derived accountability.
 function loggedSetCount(state,key){let a=state.setDetails?.[key];return Array.isArray(a)&&a.length?a.length:state.detailUnified?.[key]?0:Math.max(0,Number(state.work?.[key]?.sets)||0)}
-function trainingStatus(state,date,plan){let planned=plan.filter(x=>/^\d+(?:[–-]\d+)?$/.test(x.split('|')[2]));let target=0,done=0;for(let x of planned){let [n,c]=x.split('|');target+=+c;done+=Math.min(+c,loggedSetCount(state,date+'|'+n))}let actual=[...new Set([...Object.keys(state.work||{}),...Object.keys(state.setDetails||{})])].filter(k=>k.startsWith(date+'|')).reduce((a,k)=>a+loggedSetCount(state,k),0);return {target,done,actual,kind:!target?'unscheduled':done===target?'complete':actual?'partial':'unlogged'}}
+function trainingStatus(state,date,plan){const session=schedule()[(new Date(date+'T12:00:00').getDay()+6)%7];let planned=applyWorkoutSwaps(plan,state,date,session).filter(x=>/^\d+(?:[–-]\d+)?(?:\/side)?$/.test(x.split('|')[2]));let target=0,done=0;for(let x of planned){let [n,c]=x.split('|');target+=+c;done+=Math.min(+c,loggedSetCount(state,date+'|'+n))}let actual=[...new Set([...Object.keys(state.work||{}),...Object.keys(state.setDetails||{})])].filter(k=>k.startsWith(date+'|')).reduce((a,k)=>a+loggedSetCount(state,k),0);return {target,done,actual,kind:!target?'unscheduled':done===target?'complete':actual?'partial':'unlogged'}}
 function logMetrics(row){let a=row.a;if(a.length)return {reps:a.reduce((n,r)=>n+r.reps,0),volume:detailSummary(a).volume,best:Math.max(...a.map(r=>r.load))};let r=row.r;return +r.sets>0&&+r.reps>0&&r.weight!==''&&r.weight!=null&&Number.isFinite(+r.weight)?{reps:+r.sets*+r.reps,volume:+r.sets*+r.reps*+r.weight,best:+r.weight}:null}
 const originalLogPanel=workoutLogPanel;workoutLogPanel=function(){let rows=workoutHistory(S);let summary=rows.filter(r=>loggedSetCount(S,r.date+'|'+r.name)>0);return originalLogPanel().replace('<h2>Workout log</h2>',`<h2>Workout log &amp; progression</h2><p>${new Set(summary.map(r=>r.date)).size} training days · ${summary.reduce((n,r)=>n+loggedSetCount(S,r.date+'|'+r.name),0)} recorded sets</p><small>Calculated from saved workouts, not planned sets.</small>`).replace('</summary>', '</summary>')+`<section id="exerciseProgress"><h3>Exercise progression</h3>${[...new Set(summary.map(r=>r.name))].map(n=>{let history=summary.filter(r=>r.name===n).map(r=>({date:r.date,m:logMetrics(r)})).filter(r=>r.m);if(!history.length)return '';let latest=history[0],previous=history[1];return `<details><summary>${esc(n)} · ${latest.m.volume.toLocaleString()} lb volume</summary><p>${esc(latest.date)}: ${latest.m.reps} reps · heaviest recorded load ${latest.m.best} lb</p>${previous?`<p>Previous (${esc(previous.date)}): ${previous.m.volume.toLocaleString()} lb volume · ${previous.m.reps} reps</p>`:'<p>Baseline recorded.</p>'}<small>Volume is not a direct measure of strength. Bodyweight work excludes body mass.</small></details>`}).join('')||'<p>Record a workout to see progression.</p>'}</section>`};
 const previousAccountability=accountability;accountability=function(date=today(),event='daily'){let w=schedule()[(new Date(date+'T12:00:00').getDay()+6)%7],t=trainingStatus(S,date,exerciseList(w)),msg=previousAccountability(date,event);if(t.target){msg+=' '+(t.kind==='complete'?`All ${t.target} planned strength sets recorded.`:t.kind==='partial'?`${t.done}/${t.target} planned strength sets recorded (${t.actual} total sets). Finish or adjust your plan if appropriate.`:date<today()||date===today()&&new Date().getHours()>=20?'No sets saved. If you trained, log the session; otherwise reschedule if appropriate.':`${t.target} planned strength sets awaiting recording.`)}return msg};
@@ -2031,11 +2170,10 @@ function placeDailyControls() {
       quick.insertAdjacentHTML('beforeend','<button class="alt" onclick="waterChange(250)">Add water · 250 ml</button>');
       const workout = [...quick.querySelectorAll('button')].find(button => button.textContent.trim() === 'Workout');
       const action = next.querySelector('button[onclick="dashboardStart()"]');
-      if (workout) workout.setAttribute('onclick',"openMainTab('Workout')");
-      if (workout && action) {
-        workout.textContent = action.textContent;
+      if (workout) {
+        workout.textContent = 'Live Workout';
         workout.setAttribute('onclick','dashboardStart()');
-        action.remove();
+        if (action) action.remove();
       }
       coach.before(quick,next);
       quick.parentElement.append(coach);
@@ -2130,6 +2268,7 @@ render = function() {
   if (tab === 'Coach') arrangeCoach();
   if (tab === 'Workout' && entryMode !== 'past') $('app').firstElementChild?.insertAdjacentHTML('afterend',trainingEquipmentPanel());
   if (tab === 'Progress') groupProgress();
+  if (tab === 'WorkoutRecap') $('app').innerHTML=workoutRecapPanel();
   if (tab === 'Data') $('app').insertAdjacentHTML('beforeend',dataBackupPanel());
   if (tab === 'Gym') $('app').insertAdjacentHTML('beforeend',myGymPanel());
   if (tab === 'Review') $('app').insertAdjacentHTML('beforeend',programReviewPanel());
