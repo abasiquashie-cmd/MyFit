@@ -27,8 +27,145 @@ button.wide + .grid{margin-top:12px}
 .shopping-have{white-space:nowrap;flex-shrink:0}.shopping-have input{margin:0 .15rem 0 0;vertical-align:middle}
 .live-exercise-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}.live-exercise-heading h3{margin:0}.live-exercise-heading button{white-space:nowrap}
 .planner-area{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.planner-workout-day{display:grid;width:100%;grid-template-columns:minmax(76px,.85fr) minmax(0,1.45fr) auto;gap:8px;text-align:left;align-items:center;padding:10px;margin-top:6px}.planner-workout-day[aria-pressed=true]{border:1px solid #a5ef91}.planner-workout-day span{font-size:.8rem;white-space:nowrap}.planner-workout-month{max-height:22rem;overflow:auto}
-</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.11</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
-const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());let S={profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,legs:true},meals:{},work:{},measure:[]};var storageBlocked=false;try{let x=localStorage.getItem('myfit-v1');if(x){let parsed=JSON.parse(x);if(!validState(parsed))throw Error('Invalid saved data');S=parsed}}catch(e){storageBlocked=true;alert('Saved data could not be read. Automatic saving is disabled to protect it. Export or restore a valid backup.')}function save(){if(storageBlocked)return false;try{localStorage.setItem('myfit-v1',JSON.stringify(S));return true}catch(e){alert('Storage unavailable. Export your data before closing.')}}S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};let plannerDate = '';
+.secretary-buttons{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}#secretaryOverlay{position:fixed;z-index:5;left:50%;bottom:72px;transform:translateX(-50%);width:min(94vw,550px);padding:16px;border:2px solid #a5ef91;border-radius:16px;background:#17231c;box-shadow:0 6px 30px #0009}#secretaryOverlay h2,#secretaryOverlay p{margin:6px 0}
+.profile-header-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 12px}.profile-header-actions button{min-width:0;overflow-wrap:anywhere}
+</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.13</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><div class="profile-header-actions"><button class="alt" onclick="checkUpdate()">Check for updates</button>
+<button class="alt" id="activeProfileButton" onclick="profileSection598('Profiles')" aria-label="Switch profile">Switch profile</button></div><div id="app"></div></main><nav id="nav"></nav><script>
+const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());
+const profileDirectoryKey = 'myfit-profile-directory-v1';
+const originalProfileId = 'original';
+let activeProfileId = originalProfileId;
+let profileDirectoryInvalid = false;
+
+function defaultProfileDirectory() {
+  return {active:originalProfileId,profiles:[{id:originalProfileId,label:'Profile 1'}]};
+}
+
+function readProfileDirectory() {
+  const raw = localStorage.getItem(profileDirectoryKey);
+  if (!raw) return defaultProfileDirectory();
+  const directory = JSON.parse(raw);
+  if (!directory || !Array.isArray(directory.profiles) ||
+      !directory.profiles.every(record=>record&&typeof record.id==='string'&&/^[a-z0-9-]+$/.test(record.id)&&typeof record.label==='string') ||
+      new Set(directory.profiles.map(record=>record.id)).size!==directory.profiles.length ||
+      !directory.profiles.some(record=>record.id===directory.active)) throw Error('Invalid profile directory');
+  return directory;
+}
+
+function profileStorageKey(key,id=activeProfileId) {
+  return id===originalProfileId ? key : key+':'+id;
+}
+
+function freshUserState() {
+  return {profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,
+    legs:true,priorities:['legs','chest']},meals:{},work:{},measure:[],favorites:[]};
+}
+
+let S = freshUserState();
+let storageBlocked = false;
+try {
+  activeProfileId = readProfileDirectory().active;
+} catch (_) {
+  profileDirectoryInvalid = true;
+}
+try {
+  if (profileDirectoryInvalid) throw Error('Invalid profile directory');
+  const saved = localStorage.getItem(profileStorageKey('myfit-v1'));
+  if (saved) {
+    const parsed = JSON.parse(saved);
+    if (!validState(parsed)) throw Error('Invalid saved data');
+    S = parsed;
+  }
+} catch (_) {
+  storageBlocked = true;
+  alert('Saved profile data could not be read. Saving is disabled to protect it.');
+}
+
+function save() {
+  if (storageBlocked) return false;
+  try {
+    localStorage.setItem(profileStorageKey('myfit-v1'),JSON.stringify(S));
+    return true;
+  } catch (_) {
+    alert('Storage unavailable. Export your data before closing.');
+    return false;
+  }
+}
+
+function readProfilePreference(key) {
+  try {return localStorage.getItem(profileStorageKey(key))} catch (_) {return null}
+}
+
+function writeProfilePreference(key,value) {
+  try {localStorage.setItem(profileStorageKey(key),value)} catch (_) {}
+}
+
+function profileDisplayName(record) {
+  if (record.id===activeProfileId) return S.profile.name||record.label;
+  try {
+    const raw = localStorage.getItem(profileStorageKey('myfit-v1',record.id));
+    return JSON.parse(raw)?.profile?.name || record.label;
+  } catch (_) {return record.label}
+}
+
+function openProfileInBrowser(id,create=false) {
+  if (profileDirectoryInvalid) return alert('The saved profile list could not be read.');
+  try {
+    const directory = readProfileDirectory();
+    if (create) {
+      id = globalThis.crypto.randomUUID?.() || 'profile-'+Date.now()+'-'+Math.random().toString(36).slice(2);
+      directory.profiles.push({id,label:'Profile '+(directory.profiles.length+1)});
+    }
+    if (!directory.profiles.some(record=>record.id===id)) return;
+    localStorage.setItem(profileDirectoryKey,JSON.stringify({...directory,active:id}));
+  } catch (_) {
+    alert('Could not change profiles. Check browser storage and try again.');
+    return;
+  }
+  location.reload();
+}
+
+function userProfilesPanel() {
+  let directory;
+  try {directory=readProfileDirectory()} catch (_) {return '<section><h2>Profiles</h2><p>The saved profile list could not be read.</p></section>'}
+  return `<section><h2>Profiles</h2><p>Each profile has separate records in this browser. Anyone using this browser can switch profiles.</p>
+    ${directory.profiles.map(record=>`<div class="line"><b>${esc(profileDisplayName(record))}</b>
+      ${record.id===activeProfileId?'<small>Current</small>':`<button class="alt" data-profile-id="${esc(record.id)}" onclick="openProfileInBrowser(this.dataset.profileId)">Switch</button>`}</div>`).join('')}
+    <button class="wide" onclick="openProfileInBrowser(null,true)">Create new profile</button>
+  </section>`;
+}
+
+function requestSkipOrientation() {
+  if (secretaryTour?.enrollment) {
+    secretaryTour=null;
+    cancelSecretaryAudio();
+    tab='Home';
+  }
+  const setup = setup596();
+  if (setup.completed) return;
+  setup.showSkipSafety = true;
+  render();
+}
+
+function skipOrientation() {
+  cancelSecretaryAudio();
+  const setup = setup596();
+  const before = {...setup};
+  Object.assign(setup,{paused:true,skipped:true,showSkipSafety:false});
+  if (!save()) {Object.assign(setup,before);return;}
+  tab='Home';
+  render();
+}
+
+function skipOrientationPanel() {
+  return `<section><h2>Before you skip</h2>
+    <p>Set up your profile, equipment and movement limits before relying on workout recommendations. If you’re new to an exercise, start light, watch the form demo, and ask a qualified trainer to check your technique. If an exercise causes pain, stop.</p>
+    <button class="wide" onclick="skipOrientation()">I understand · skip orientation</button>
+    <button class="alt" onclick="setup596().showSkipSafety=false;render()">Back to orientation</button>
+  </section>`;
+}
+
+S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};let plannerDate = '';
 const day = () => tab === 'Planner' ? plannerDate || today() : ['Home','Coach'].includes(tab) ? today() : $('date').value;
 function openMainTab(next) {
   if (next === 'Food' || next === 'Workout') $('date').value = today();
@@ -56,10 +193,10 @@ function resetBarcodeLookup() {
   stopBarcode();
   $('lookupResults').textContent = '';
 }
-function barcodeCache(){try{return JSON.parse(localStorage.getItem('myfit-barcode-cache')||'{}')||{}}catch(e){return {}}}
+function barcodeCache(){try{return JSON.parse(readProfilePreference('myfit-barcode-cache')||'{}')||{}}catch(e){return {}}}
 function barcodeResult(x,out,code){out.innerHTML=`<p><b>${esc(x.name)}</b><br><small>${esc(x.source)} · ${esc(code)}</small></p><label>Amount (${esc(x.unit)})<input id="barcodeAmount" type="number" min="0.1" step="any" value="${x.serving||100}"></label><p id="barcodePreview"></p><button class="wide" id="barcodeAdd">Add to meal draft</button><small>Compare with the package label before saving.</small>`;let amount=$('barcodeAmount'),preview=$('barcodePreview');let update=()=>{let g=Number(amount.value);preview.textContent=g>0?`${Math.round(x.k*g/100)} kcal · ${(x.p*g/100).toFixed(1)} g protein · ${(x.c*g/100).toFixed(1)} g carbs · ${(x.f*g/100).toFixed(1)} g fat`: 'Enter a positive amount.'};amount.oninput=update;update();$('barcodeAdd').onclick=()=>{let g=Number(amount.value);if(!Number.isFinite(g)||g<=0)return;draft.push({...x,g,barcode:code});drawDraft();out.textContent='Added to meal draft. Review and save below.'}}
 function legacyBarcodeManual(){let out=$('lookupResults');if(!out)return;out.innerHTML=`<p>Enter values from the package for one serving.</p><label>Product name<input id="bcName"></label><label>Serving weight (g or mL)<input id="bcWeight" type="number" min="0.1" step="any"></label><label>Unit<select id="bcUnit"><option>g</option><option>mL</option></select></label>${[['k','Calories'],['p','Protein (g)'],['c','Carbs (g)'],['f','Fat (g)']].map(([k,n])=>`<label>${n}<input id="bc_${k}" type="number" min="0" step="any"></label>`).join('')}<button class="wide" id="bcSave">Review label values</button>`;$('bcSave').onclick=()=>{let name=$('bcName').value.trim(),g=Number($('bcWeight').value),unit=$('bcUnit').value,vals=['k','p','c','f'].map(k=>$('bc_'+k).value);if(!name||!Number.isFinite(g)||g<=0||vals.some(v=>v===''||!Number.isFinite(+v)||+v<0))return alert('Complete all label fields, including zero values.');let [k,p,c,f]=vals.map(v=>+v*100/g),code=$('lookup').value.trim(),x={name,k,p,c,f,unit,serving:g,source:'Package label · manual'};if(/^\d{8,14}$/.test(code))cacheBarcode(code,x);barcodeResult(x,out,code)}}
-function cacheBarcode(code,x){try{let c=barcodeCache();c[code]=x;let keys=Object.keys(c);while(keys.length>300)delete c[keys.shift()];localStorage.setItem('myfit-barcode-cache',JSON.stringify(c))}catch(e){}}
+function cacheBarcode(code,x){try{let c=barcodeCache();c[code]=x;let keys=Object.keys(c);while(keys.length>300)delete c[keys.shift()];writeProfilePreference('myfit-barcode-cache',JSON.stringify(c))}catch(e){}}
 async function barcodeLookup(){stopBarcode();let run=barcodeRun,code=$('lookup').value.trim(),out=$('lookupResults');if(!/^\d{8,14}$/.test(code)){out.textContent='Enter 8–14 barcode digits.';return}let cached=barcodeCache()[code];if(cached){barcodeResult({...cached,source:cached.source+' · cached'},out,code);return}if(!navigator.onLine){out.textContent='Offline. This product is not cached. Enter package label values below.';return}out.textContent='Looking up barcode…';let codes=[...new Set([code,code.length===12?'0'+code:code.length===13&&code.startsWith('0')?code.slice(1):code])],failed=false,incomplete=false,errors=[];for(let candidateCode of codes){for(let base of ['https://world.openfoodfacts.org/api/v2/product/','https://world.openfoodfacts.org/api/v0/product/']){if(run!==barcodeRun||!out.isConnected)return;try{let controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000),r;try{r=await fetch(base+candidateCode+'.json',{signal:controller.signal,credentials:'omit',cache:'no-store'});let jtext=await r.text();r={status:r.status,ok:r.ok,json:async()=>JSON.parse(jtext)}}finally{clearTimeout(timeout)};if(r.status===404)continue;if(!r.ok)throw Error('HTTP '+r.status);let j=await r.json(),x=j.product,n=x?.nutriments;if(Number(j.status)!==1)continue;let vals=['energy-kcal_100g','proteins_100g','carbohydrates_100g','fat_100g'].map(k=>n?.[k]);if(vals[0]==null&&n?.energy_100g!=null)vals[0]=Number(n.energy_100g)/4.184;if(!vals.every(v=>v!=null&&v!==''&&Number.isFinite(+v)&&+v>=0)){incomplete=true;if(run===barcodeRun&&out.isConnected){labelForm(x,vals);return}continue}let unit=x.serving_quantity_unit==='ml'?'mL':'g',serving=Number(x.serving_quantity);if(!Number.isFinite(serving)||serving<=0||!['g','ml'].includes(x.serving_quantity_unit))serving=100;let [k,p,c,f]=vals.map(Number),item={name:[x.brands,x.product_name_en||x.product_name||code].filter(Boolean).join(' · '),k,p,c,f,unit,serving,source:'Open Food Facts · '+(x.countries_tags?.includes('en:canada')?'Canada listed':'market not confirmed')};if(run!==barcodeRun||!out.isConnected)return;cacheBarcode(code,item);barcodeResult(item,out,code);return}catch(e){failed=true;errors.push(String(e.message||e).slice(0,120))}}}if(run===barcodeRun&&out.isConnected)out.textContent=incomplete?'Product found, but nutrition is incomplete. Enter package label values.':failed?'Lookup failed: '+[...new Set(errors)].join('; ')+'. Open the database directly or enter label values.':'Product not found in Open Food Facts. Enter package label values.'}
 function openBarcodeDirect(){let code=$('lookup')?.value.trim();if(/^\d{8,14}$/.test(code))window.open('https://world.openfoodfacts.org/api/v2/product/'+code+'.json','_blank','noopener');else alert('Enter barcode digits first.')}
 async function startBarcode(){stopBarcode();let run=barcodeRun,v=$('barcodeVideo'),out=$('lookupResults');if(!v)return;let alive=()=>run===barcodeRun&&v.isConnected;let found=code=>{if(!alive())return;$('lookup').value=String(code);barcodeLookup()};try{if(!navigator.mediaDevices?.getUserMedia)throw Error('Camera requires HTTPS and browser permission.');out.textContent='Opening camera…';v.hidden=false;$('barcodeStop').hidden=false;if('BarcodeDetector' in window){let formats=await BarcodeDetector.getSupportedFormats();let supported=['ean_13','ean_8','upc_a','upc_e','itf'].filter(x=>formats.includes(x));if(supported.length){let detector=new BarcodeDetector({formats:supported});let stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'}},audio:false});if(!alive()){stream.getTracks().forEach(t=>t.stop());return}barcodeStream=stream;v.srcObject=stream;await v.play();out.textContent='Aim at the barcode in good light.';while(alive()){let hits=await detector.detect(v);if(hits.length){found(hits[0].rawValue);return}await new Promise(r=>setTimeout(r,150))}return}}out.textContent='Loading compatible barcode scanner…';let z=await import('https://cdn.jsdelivr.net/npm/@zxing/browser@0.1.5/+esm');if(!alive())return;let reader=new z.BrowserMultiFormatReader();let controls=await reader.decodeFromConstraints({video:{facingMode:{ideal:'environment'}},audio:false},v,(result,error,ctrl)=>{if(result&&alive()){ctrl.stop();found(result.getText())}});if(!alive()){controls.stop();return}barcodeReader=controls;out.textContent='Aim at the barcode in good light.'}catch(e){if(alive()){stopBarcode();out.textContent='Camera scanner unavailable: '+String(e.message||e)+'. Enter digits manually.'}}}
@@ -116,7 +253,7 @@ function cancelPhoto(){photoRun++;photoBusy=false;let s=$('photoStatus');if(s)s.
 function quickLabels(){return ['whole fried fish','breaded fried fish','grilled fish','cooked spinach','fried chicken thighs','grilled chicken breast','fried rice','white rice','fried eggs','toast','bacon','fried plantain','fried pork chop','pasta','pizza','salad','potatoes','beef stew','curry chicken','shrimp','oatmeal','broccoli','banana','sandwich','soup','roti','callaloo','not food'].filter(n=>n==='not food'||findLocal(n))}
 function photoImage(img,region){let [x,y,w,h]=region,c=document.createElement('canvas'),sw=img.naturalWidth*w,sh=img.naturalHeight*h,scale=Math.min(224/sw,224/sh);c.width=Math.max(1,Math.round(sw*scale));c.height=Math.max(1,Math.round(sh*scale));c.getContext('2d').drawImage(img,x*img.naturalWidth,y*img.naturalHeight,sw,sh,0,0,c.width,c.height);return c.toDataURL('image/jpeg',.85)}
 async function identifyPhoto(){let img=$('mealPhoto'),status=$('photoStatus');if(!img||img.hidden||!img.src){status.textContent='Choose a photo first.';return}if(photoBusy)return;let run=++photoRun,url=img.src,mode=$('photoMode')?.value||'smart',alive=()=>run===photoRun&&status.isConnected&&img.src===url;photoBusy=true;let began=performance.now();status.textContent='Preparing AI scan…';let work=async()=>{try{if(!alive())return;await img.decode();if(!alive())return;let key=mode+'|'+photoImage(img,[0,0,1,1]);if(photoCache.has(key)){showPhotoResults(status,photoCache.get(key),0);return}status.textContent='Loading AI model (first use needs internet)…';visionJob??=(async()=>{let m=await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.7.2');m.env.allowLocalModels=false;return m.pipeline('zero-shot-image-classification','Xenova/clip-vit-base-patch32',{device:'wasm',dtype:'q8'})})();let model=await visionJob;if(!alive())return;let hits=new Map();async function scan(region,labels,step){if(!alive())return;status.textContent=step;let result=await model(photoImage(img,region),labels);if(!alive())return;for(let r of result.slice(0,6))if(r.label!=='not food')hits.set(r.label,Math.max(hits.get(r.label)||0,r.score));return result}let first=await scan([0,0,1,1],quickLabels(),'Step 1: quick meal scan…');if(!alive())return;let ranked=[...hits].sort((a,b)=>b[1]-a[1]);let distinct=new Set(ranked.filter(x=>x[1]>=.08).map(x=>photoGroup(x[0])));if(mode==='deep'){let labels=photoLabels().slice(0,100);await scan([0,0,.65,1],labels,'Step 2 of 3: left region…');await scan([.35,0,.65,1],labels,'Step 3 of 3: right region…')}else if(mode==='smart'&&(distinct.size<2||!ranked.length||ranked[0][1]<.35)){let labels=quickLabels();await scan([.35,0,.65,1],labels,'Step 2: checking possible side dishes…')}if(!alive())return;let groups=new Map();for(let [n,score] of [...hits].sort((a,b)=>b[1]-a[1])){let g=photoGroup(n);if(!groups.has(g))groups.set(g,{g,score,ns:[]});groups.get(g).ns.push(n)}let data=[...groups.values()].slice(0,8);photoCache.set(key,data);if(photoCache.size>6)photoCache.delete(photoCache.keys().next().value);showPhotoResults(status,data,(performance.now()-began)/1000)}catch(e){visionJob=undefined;if(alive())status.textContent='Photo AI unavailable. Use text or voice, or retry. '+String(e.message||e).slice(0,150)}finally{if(run===photoRun)photoBusy=false}};photoQueue=photoQueue.catch(()=>{}).then(work);await photoQueue}
-function showPhotoResults(status,data,seconds){status.textContent=(seconds?`Scan completed in ${seconds.toFixed(1)} s. `:'Reused previous scan. ')+'Review suggested foods; portions are assumed, not measured.';let box=document.createElement('div'),more=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Other possible foods';more.append(summary);let rows=[];let prefs={};try{prefs=JSON.parse(localStorage.getItem('myfit-photo-prefs')||'{}')}catch(e){};let update=()=>{let items=rows.filter(r=>r.check.checked).map(r=>{let f=findLocal(r.sel.value);return f?preparation({name:f[0],g:smartPortion(r.portion.value,f,f[6]),k:f[1],p:f[2],c:f[3],f:f[4]},r.sel.value):null}).filter(Boolean);let v=totals(items);total.textContent=`${v[0]} kcal · ${v[1]} g protein · ${v[2]} g carbs · ${v[3]} g fat`};for(let [i,{g,ns,score}] of data.entries()){let row=document.createElement('div');row.style.cssText='padding:8px 0;border-bottom:1px solid #34443b';let check=document.createElement('input');check.type='checkbox';check.style.width='auto';check.checked=i===0||i===1&&score>=.08;let sel=document.createElement('select');for(let n of ns)sel.add(new Option(n,n));if(ns.includes(prefs[g]?.name))sel.value=prefs[g].name;let portion=document.createElement('select');for(let n of ['medium','small','large'])portion.add(new Option(n,n));if(['medium','small','large'].includes(prefs[g]?.portion))portion.value=prefs[g].portion;let label=document.createElement('label');label.append(check,document.createTextNode(' '+g));let controls=document.createElement('div');controls.style.cssText='display:grid;grid-template-columns:2fr 1fr;gap:6px';controls.append(sel,portion);row.append(label,controls);(i<2?box:more).append(row);rows.push({g,check,sel,portion});for(let el of [check,sel,portion])el.onchange=update}if(data.length>2)box.append(more);let total=document.createElement('b');total.style.display='block';box.append(total);let go=document.createElement('button');go.className='wide';go.textContent='Review nutrition & log';go.onclick=()=>{let selected=rows.filter(r=>r.check.checked);if(!selected.length)return alert('Select at least one food.');let field=$('mealtext');if(field.value.trim()&&!confirm('Replace current meal description?'))return;for(let r of selected)prefs[r.g]={name:r.sel.value,portion:r.portion.value};try{localStorage.setItem('myfit-photo-prefs',JSON.stringify(prefs))}catch(e){}field.value=selected.map(r=>r.portion.value+' '+r.sel.value).join(', ');parse()};box.append(go);status.append(box);update();status.scrollIntoView({block:'start',behavior:'smooth'})}
+function showPhotoResults(status,data,seconds){status.textContent=(seconds?`Scan completed in ${seconds.toFixed(1)} s. `:'Reused previous scan. ')+'Review suggested foods; portions are assumed, not measured.';let box=document.createElement('div'),more=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Other possible foods';more.append(summary);let rows=[];let prefs={};try{prefs=JSON.parse(readProfilePreference('myfit-photo-prefs')||'{}')}catch(e){};let update=()=>{let items=rows.filter(r=>r.check.checked).map(r=>{let f=findLocal(r.sel.value);return f?preparation({name:f[0],g:smartPortion(r.portion.value,f,f[6]),k:f[1],p:f[2],c:f[3],f:f[4]},r.sel.value):null}).filter(Boolean);let v=totals(items);total.textContent=`${v[0]} kcal · ${v[1]} g protein · ${v[2]} g carbs · ${v[3]} g fat`};for(let [i,{g,ns,score}] of data.entries()){let row=document.createElement('div');row.style.cssText='padding:8px 0;border-bottom:1px solid #34443b';let check=document.createElement('input');check.type='checkbox';check.style.width='auto';check.checked=i===0||i===1&&score>=.08;let sel=document.createElement('select');for(let n of ns)sel.add(new Option(n,n));if(ns.includes(prefs[g]?.name))sel.value=prefs[g].name;let portion=document.createElement('select');for(let n of ['medium','small','large'])portion.add(new Option(n,n));if(['medium','small','large'].includes(prefs[g]?.portion))portion.value=prefs[g].portion;let label=document.createElement('label');label.append(check,document.createTextNode(' '+g));let controls=document.createElement('div');controls.style.cssText='display:grid;grid-template-columns:2fr 1fr;gap:6px';controls.append(sel,portion);row.append(label,controls);(i<2?box:more).append(row);rows.push({g,check,sel,portion});for(let el of [check,sel,portion])el.onchange=update}if(data.length>2)box.append(more);let total=document.createElement('b');total.style.display='block';box.append(total);let go=document.createElement('button');go.className='wide';go.textContent='Review nutrition & log';go.onclick=()=>{let selected=rows.filter(r=>r.check.checked);if(!selected.length)return alert('Select at least one food.');let field=$('mealtext');if(field.value.trim()&&!confirm('Replace current meal description?'))return;for(let r of selected)prefs[r.g]={name:r.sel.value,portion:r.portion.value};try{writeProfilePreference('myfit-photo-prefs',JSON.stringify(prefs))}catch(e){}field.value=selected.map(r=>r.portion.value+' '+r.sel.value).join(', ');parse()};box.append(go);status.append(box);update();status.scrollIntoView({block:'start',behavior:'smooth'})}
 
 function smartPortion(s,f,g){if(/\b(kg|kilograms?|g|grams?|oz|ounces?)\b/.test(s))return g;return Math.round(g*(/\bsmall\b/.test(s)?.75:/\blarge\b/.test(s)?1.35:1))}
 function preparation(x,s){let raw= /\b(raw|dry|uncooked)\b/.test(s),method=(s.match(/\b(deep fried|deep-fried|pan fried|pan-fried|air fried|air-fried|fried|grilled|baked|boiled|roasted|steamed)\b/)||[])[0]||'';x.method=method;if(preparedProfiles.some(f=>f[0]===x.name)&&!['cooked fish','spinach'].includes(x.name)){x.source='Prepared food estimate · typical cooking fat included';x.uncertainty=.25;x.assumption='Edible cooked portion; typical recipe and oil. Adjust grams if needed.';return x}x.weightBasis=raw?'raw':'standard';if(raw&&rawNutrition[x.name]){[x.k,x.p,x.c,x.f]=rawNutrition[x.name];x.source='Generic raw/dry estimate'}else if(raw){x.review='Raw weight requested; verify nutrition basis manually.'}if(method&&/fried/.test(method)&&!raw&&!/^fried |^breaded fried |^unbreaded fried /.test(x.name)){let oil=/air/.test(method)?2:/deep/.test(method)?10:6;x.k+=oil*9;x.f+=oil;x.source='Estimated with typical retained frying oil';x.uncertainty=.3;x.assumption='Typical oil allowance included; breading not included unless recognized.';}return x}
@@ -131,8 +268,8 @@ function foodOpen(page,method='text'){if(typeof photoBusy!=='undefined'&&photoBu
 function foodStart(method){foodOpen('Log',method);if(method==='camera'||method==='gallery')$(method==='camera'?'mealCameraInput':'mealGalleryInput').click();if(method==='voice')voice()}
 function foodRows(date){return (S.meals[date]||[]).map((m,i)=>`<div class="line"><div><b>${esc(m.items.map(x=>x.name).join(', '))}</b><br><small>${totals(m.items)[0]} kcal · ${totals(m.items)[1]} g protein</small></div><button class="alt" onclick="editFood('${date}',${i})">Edit</button><button class="alt" onclick="deleteMeal('${date}',${i})">×</button></div>`).join('')||'<p class="muted">No meals logged.</p>'}
 function editFood(date,i){foodEdit={date,i};draft=JSON.parse(JSON.stringify(S.meals[date][i].items));foodOpen('Log','text')}
-function foodView(a,t){let nav=`<div class="foodtabs">${['Today','Diary','Saved','Settings'].map(n=>`<button class="${foodPage===n?'':'alt'}" onclick="foodOpen('${n}')">${n}</button>`).join('')}</div>`;if(foodPage==='Today')return `<h2>Daily nutrition</h2>${nav}<section><small>Calories remaining (estimated target)</small><div class="metric" style="color:#a5ef91">${t[0]-a[0]} kcal</div>${bars(a,t)}</section><h3>Log a meal</h3><div class="grid">${[['camera','📷 Take photo'],['gallery','🖼 Gallery'],['voice','🎙 Speak'],['text','⌨ Type meal'],['barcode','▥ Barcode'],['search','⌕ Search food']].map(([m,n])=>`<button class="alt" onclick="foodStart('${m}')">${n}</button>`).join('')}</div>${draft.length?'<button class="wide" onclick="foodOpen(&quot;Log&quot;)">Resume meal draft</button>':''}<section><h3>Today’s meals</h3>${foodRows(day())}</section>`;if(foodPage==='Diary'){let d=diaryDate||day();return `<h2>Food diary</h2>${nav}<section><label>Date<input type="date" value="${esc(d)}" onchange="diaryDate=this.value;render()"></label>${bars(totals((S.meals[d]||[]).flatMap(m=>m.items)),t)}${foodRows(d)}</section>`}if(foodPage==='Saved')return `<h2>Saved meals</h2>${nav}<section>${S.favorites.map((f,i)=>`<div class="line"><button class="alt" onclick="useFavorite(${i})">${esc(f.name)}</button><button class="alt" onclick="S.favorites.splice(${i},1);save();render()">Remove</button></div>`).join('')||'Save a meal after estimating it.'}</section>`;if(foodPage==='Settings')return `<h2>Food settings</h2>${nav}<section><label>Default AI scan<select onchange="localStorage.setItem('myfit-scan-mode',this.value)">${['smart','quick','deep'].map(n=>`<option ${n===(localStorage.getItem('myfit-scan-mode')||'smart')?'selected':''}>${n}</option>`).join('')}</select></label><button class="alt" onclick="tab='Goals';render()">Edit nutrition goals</button></section>`;let isPhoto=['camera','gallery'].includes(foodMethod),isLookup=['search','barcode'].includes(foodMethod);return `<button class="alt" onclick="foodOpen('Today')">← Food dashboard</button><h2>${isPhoto?'Snap & Track':isLookup?(foodMethod==='barcode'?'Snap & Track · Barcode':'Canadian food lookup'):'Describe your meal'}</h2><div class="food-method-menu"><button class="alt" onclick="foodStart('camera')"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h-4L8 7H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>Snap meal</button><button class="alt" onclick="foodStart('gallery')"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>Gallery</button><button class="alt" onclick="foodOpen('Log','text')"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a4 4 0 0 0 8 0V2M7 2v20M21 2v20M21 2c-4 3-5 7-5 11h5"/></svg>Manual</button><button class="alt" onclick="foodOpen('Log','barcode')">Barcode</button><button class="alt" onclick="foodOpen('Log','search')">Search food</button><button class="alt" onclick="foodStart('voice')">Voice</button></div><section><div ${isPhoto||isLookup?'hidden':''}><textarea id="mealtext" placeholder="Describe foods and portions"></textarea><button onclick="parse()">Estimate nutrition</button> <button class="alt" onclick="voice()">🎙 Voice</button><div id="voiceStatus"></div></div><div ${isPhoto?'':'hidden'}><div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0"><button type="button" class="alt" style="flex:1" onclick="document.getElementById('mealCameraInput').click()">📷 Take photo</button><button type="button" class="alt" style="flex:1" onclick="document.getElementById('mealGalleryInput').click()">🖼 Choose photo</button></div><input id="mealCameraInput" type="file" accept="image/*" capture="environment" hidden style="display:none" onchange="photoPreview(this);this.value=''"><input id="mealGalleryInput" type="file" accept="image/*" hidden style="display:none" onchange="photoPreview(this);this.value=''"><img id="mealPhoto" hidden style="width:100%;max-height:230px;object-fit:contain;border-radius:12px"><label>Scan preference</label><select id="photoMode"><option value="smart">Smart scan</option><option value="quick">Quick scan</option><option value="deep">Deep scan (slower)</option></select><p id="photoStatus" class="muted">Snap your meal. Review the suggested foods before logging.</p><div class="scan-actions" style="display:grid;gap:16px;margin:12px 0 16px"><button class="wide" onclick="identifyPhoto()">Scan my meal</button><button class="wide" style="background:transparent;color:#c5d6c9;border:1px solid #64796b" onclick="cancelPhoto()">Cancel scan</button></div><small>The first scan needs internet and may take longer. Smart scan is recommended. Deep scan checks more of the photo. Review food names and estimated portions before saving.</small></div><div ${isLookup?'':'hidden'}><h3>${foodMethod==='barcode'?'Scan packaged food':'🇨🇦 Canadian food lookup'}</h3>${foodMethod==='barcode'?`<button class="wide" onclick="startBarcode()">▥ Scan barcode with camera</button><video id="barcodeVideo" hidden playsinline muted style="width:100%;max-height:260px;object-fit:contain;margin:12px 0;border-radius:12px"></video><button id="barcodeStop" hidden class="alt wide" onclick="stopBarcode();$('lookupResults').textContent='Scanner stopped.'">Stop camera</button><label>Or enter barcode digits</label>`:''}<input id="lookup" ${foodMethod==='barcode'?'inputmode="numeric" placeholder="UPC / EAN barcode" oninput="resetBarcodeLookup()"':'placeholder="Food name or barcode digits"'}>${foodMethod==='barcode'?'':'<button class="alt" onclick="canadaSearch()">Search Health Canada</button>'} <button class="alt" onclick="barcodeLookup()">Barcode lookup</button> <button class="alt" onclick="openBarcodeDirect()">Open database directly</button>${foodMethod==='barcode'?'<button class="alt wide" onclick="stopBarcode();barcodeManual()">Enter package label values</button>':''}<div id="lookupResults" class="muted"></div><small>Online lookup sends only your search or barcode to the selected service. Generic estimates are not restaurant-specific.</small></div><div id="draft"></div></section>`}
-function render(){let t=targets(),a=sum(),w=workout();$('nav').innerHTML=['Home','Food','Workout','Coach','Planner','Goals','Progress'].map((n,i)=>`<button class="${tab===n?'active':''}" onclick="openMainTab('${n}')"><span>${['⌂','◉','◆','✦','▦','◎','↗'][i]}</span>${n}</button>`).join('');let h='';if(tab==='Home')h=`<div class="pill">${goals[S.profile.goal]}</div><h2>Your daily overview</h2><section><div class="ring" style="--p:${Math.min(100,a[0]/t[0]*100)}%"><div><span class="metric">${a[0]}</span><small>of ${t[0]} kcal</small></div></div><center>${t[0]-a[0]} kcal remaining</center>${bars(a,t)}<button class="wide" onclick="dashboardFood('text')">+ Log a meal</button></section><section><small>TODAY'S TRAINING</small><h2>${names[w]}</h2><button onclick="dashboardStart()">Start live workout</button></section>`;if(tab==='Home')h+=`<section><h3>MyFit Coach</h3><p class="muted">Your daily briefing, meal suggestions and weekly review.</p><button class="wide" onclick="tab='Coach';render()">Open MyFit Coach</button></section>`;if(tab==='Coach')h=`<h2>MyFit Coach</h2><section>${coach(a,t)}</section>`;if(tab==='Food')h=foodView(a,t);if(tab==='Workout')h=`<h2>Training</h2><section>${schedule().map((x,i)=>`<div class="line"><small>${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][i]}</small><b>${names[x]}</b></div>`).join('')}</section><section><h3>${names[w]}</h3><small>Warm up first. Leave 1–3 reps in reserve. No barbell back squats.</small>${exerciseList(w).map((x,i)=>{let [n,s,r]=x.split('|');let key=day()+'|'+n,log=S.work[key]||{};return `<div class="line"><div><b>${n}</b><br><small>${s} sets × ${r}</small></div><input aria-label="Weight in pounds" type="number" min="0" placeholder="lb" value="${esc(log.weight||'')}" onchange="record('${n}','weight',this.value)"><input aria-label="Sets completed" type="number" min="0" max="${s}" placeholder="sets" value="${esc(log.sets||'')}" onchange="record('${n}','sets',this.value)"></div>`}).join('')||'Take an easy walk and recover.'}<div class="line"><button onclick="restTimer(90)">90 sec rest</button><button class="alt" onclick="restTimer(120)">2 min</button><b id="timer">Ready</b></div><p class="muted">Enter weight and completed sets; entries save automatically. For mobility, leave weight blank.</p></section>`;if(tab==='Profile')h=`<h2>Edit profile & program</h2><section><label>Primary goal<select id="goal">${Object.entries(goals).map(([k,v])=>`<option value="${k}" ${S.profile.goal===k?'selected':''}>${v}</option>`)}</select></label>${[['age','Age'],['height','Height (cm)'],['weight','Weight (lb)']].map(([k,n])=>`<label>${n}<input id="${k}" type="number" value="${S.profile[k]}"></label>`).join('')}<label>Sex used for calorie estimate<select id="sex"><option value="male" ${S.profile.sex==='male'?'selected':''}>Male</option><option value="female" ${S.profile.sex==='female'?'selected':''}>Female</option></select></label><label>Activity<select id="activity">${[[1.2,'Sedentary'],[1.375,'Light'],[1.5,'Moderate'],[1.725,'Very active']].map(([v,n])=>`<option value="${v}" ${S.profile.activity==v?'selected':''}>${n}</option>`)}</select></label><label>Preferred lifting days<select id="days">${[3,4,5].map(v=>`<option ${S.profile.days==v?'selected':''}>${v}</option>`)}</select></label><h3>Muscle priorities</h3><small>Choose up to three strength priorities plus flexibility.</small>${['legs','chest','back','arms','shoulders','core','flexibility'].map(n=>`<label class="line">${n}<input type="checkbox" style="width:22px" id="priority-${n}" ${S.profile.priorities.includes(n)?'checked':''}></label>`).join('')}<button class="wide" onclick="updateGoals()">Apply goals & regenerate plan</button><p class="muted">Calorie estimates are provisional. Training follows your selected lifting days. Back squats excluded.</p></section><section>${bars([0,0,0,0],t)}</section>`;if(tab==='Planner')h=plannerView();if(tab==='Progress')h=`<section id="bodyMeasurementEntry">${['Weight (lb)','Waist (in)','Chest (in)','Thigh (in)','Arm (in)'].map((n,i)=>`<label>${n}<input type="number" min="0" step="0.1" id="m${i}"></label>`).join('')}<button onclick="measure()">Save measurements</button></section><section id="bodyMeasurementTrends"><h3>Measurement trends</h3>${charts()}<h3>History</h3>${S.measure.map(m=>`<div class="line"><small>${esc(m.date)}</small><span>${m.v.map((v,i)=>v?['Weight','Waist','Chest','Thigh','Arm'][i]+': '+esc(v):'').filter(Boolean).join(' · ')}</span></div>`).join('')||'No measurements yet.'}</section>`;$('app').innerHTML=h;if(tab==='Coach')window.scrollTo(0,0);if(tab==='Planner')loadDishPhotos();if(tab==='Food'){if($('photoMode'))$('photoMode').value=localStorage.getItem('myfit-scan-mode')||'smart';drawDraft()}}
+function foodView(a,t){let nav=`<div class="foodtabs">${['Today','Diary','Saved','Settings'].map(n=>`<button class="${foodPage===n?'':'alt'}" onclick="foodOpen('${n}')">${n}</button>`).join('')}</div>`;if(foodPage==='Today')return `<h2>Daily nutrition</h2>${nav}<section><small>Calories remaining (estimated target)</small><div class="metric" style="color:#a5ef91">${t[0]-a[0]} kcal</div>${bars(a,t)}</section><h3>Log a meal</h3><div class="grid">${[['camera','📷 Take photo'],['gallery','🖼 Gallery'],['voice','🎙 Speak'],['text','⌨ Type meal'],['barcode','▥ Barcode'],['search','⌕ Search food']].map(([m,n])=>`<button class="alt" onclick="foodStart('${m}')">${n}</button>`).join('')}</div>${draft.length?'<button class="wide" onclick="foodOpen(&quot;Log&quot;)">Resume meal draft</button>':''}<section><h3>Today’s meals</h3>${foodRows(day())}</section>`;if(foodPage==='Diary'){let d=diaryDate||day();return `<h2>Food diary</h2>${nav}<section><label>Date<input type="date" value="${esc(d)}" onchange="diaryDate=this.value;render()"></label>${bars(totals((S.meals[d]||[]).flatMap(m=>m.items)),t)}${foodRows(d)}</section>`}if(foodPage==='Saved')return `<h2>Saved meals</h2>${nav}<section>${S.favorites.map((f,i)=>`<div class="line"><button class="alt" onclick="useFavorite(${i})">${esc(f.name)}</button><button class="alt" onclick="S.favorites.splice(${i},1);save();render()">Remove</button></div>`).join('')||'Save a meal after estimating it.'}</section>`;if(foodPage==='Settings')return `<h2>Food settings</h2>${nav}<section><label>Default AI scan<select onchange="writeProfilePreference('myfit-scan-mode',this.value)">${['smart','quick','deep'].map(n=>`<option ${n===(readProfilePreference('myfit-scan-mode')||'smart')?'selected':''}>${n}</option>`).join('')}</select></label><button class="alt" onclick="tab='Goals';render()">Edit nutrition goals</button></section>`;let isPhoto=['camera','gallery'].includes(foodMethod),isLookup=['search','barcode'].includes(foodMethod);return `<button class="alt" onclick="foodOpen('Today')">← Food dashboard</button><h2>${isPhoto?'Snap & Track':isLookup?(foodMethod==='barcode'?'Snap & Track · Barcode':'Canadian food lookup'):'Describe your meal'}</h2><div class="food-method-menu"><button class="alt" onclick="foodStart('camera')"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h-4L8 7H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg>Snap meal</button><button class="alt" onclick="foodStart('gallery')"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>Gallery</button><button class="alt" onclick="foodOpen('Log','text')"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a4 4 0 0 0 8 0V2M7 2v20M21 2v20M21 2c-4 3-5 7-5 11h5"/></svg>Manual</button><button class="alt" onclick="foodOpen('Log','barcode')">Barcode</button><button class="alt" onclick="foodOpen('Log','search')">Search food</button><button class="alt" onclick="foodStart('voice')">Voice</button></div><section><div ${isPhoto||isLookup?'hidden':''}><textarea id="mealtext" placeholder="Describe foods and portions"></textarea><button onclick="parse()">Estimate nutrition</button> <button class="alt" onclick="voice()">🎙 Voice</button><div id="voiceStatus"></div></div><div ${isPhoto?'':'hidden'}><div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0"><button type="button" class="alt" style="flex:1" onclick="document.getElementById('mealCameraInput').click()">📷 Take photo</button><button type="button" class="alt" style="flex:1" onclick="document.getElementById('mealGalleryInput').click()">🖼 Choose photo</button></div><input id="mealCameraInput" type="file" accept="image/*" capture="environment" hidden style="display:none" onchange="photoPreview(this);this.value=''"><input id="mealGalleryInput" type="file" accept="image/*" hidden style="display:none" onchange="photoPreview(this);this.value=''"><img id="mealPhoto" hidden style="width:100%;max-height:230px;object-fit:contain;border-radius:12px"><label>Scan preference</label><select id="photoMode"><option value="smart">Smart scan</option><option value="quick">Quick scan</option><option value="deep">Deep scan (slower)</option></select><p id="photoStatus" class="muted">Snap your meal. Review the suggested foods before logging.</p><div class="scan-actions" style="display:grid;gap:16px;margin:12px 0 16px"><button class="wide" onclick="identifyPhoto()">Scan my meal</button><button class="wide" style="background:transparent;color:#c5d6c9;border:1px solid #64796b" onclick="cancelPhoto()">Cancel scan</button></div><small>The first scan needs internet and may take longer. Smart scan is recommended. Deep scan checks more of the photo. Review food names and estimated portions before saving.</small></div><div ${isLookup?'':'hidden'}><h3>${foodMethod==='barcode'?'Scan packaged food':'🇨🇦 Canadian food lookup'}</h3>${foodMethod==='barcode'?`<button class="wide" onclick="startBarcode()">▥ Scan barcode with camera</button><video id="barcodeVideo" hidden playsinline muted style="width:100%;max-height:260px;object-fit:contain;margin:12px 0;border-radius:12px"></video><button id="barcodeStop" hidden class="alt wide" onclick="stopBarcode();$('lookupResults').textContent='Scanner stopped.'">Stop camera</button><label>Or enter barcode digits</label>`:''}<input id="lookup" ${foodMethod==='barcode'?'inputmode="numeric" placeholder="UPC / EAN barcode" oninput="resetBarcodeLookup()"':'placeholder="Food name or barcode digits"'}>${foodMethod==='barcode'?'':'<button class="alt" onclick="canadaSearch()">Search Health Canada</button>'} <button class="alt" onclick="barcodeLookup()">Barcode lookup</button> <button class="alt" onclick="openBarcodeDirect()">Open database directly</button>${foodMethod==='barcode'?'<button class="alt wide" onclick="stopBarcode();barcodeManual()">Enter package label values</button>':''}<div id="lookupResults" class="muted"></div><small>Online lookup sends only your search or barcode to the selected service. Generic estimates are not restaurant-specific.</small></div><div id="draft"></div></section>`}
+function render(){let t=targets(),a=sum(),w=workout();$('nav').innerHTML=['Home','Food','Workout','Coach','Planner','Goals','Progress'].map((n,i)=>`<button class="${tab===n?'active':''}" onclick="openMainTab('${n}')"><span>${['⌂','◉','◆','✦','▦','◎','↗'][i]}</span>${n}</button>`).join('');let h='';if(tab==='Home')h=`<div class="pill">${goals[S.profile.goal]}</div><h2>Your daily overview</h2><section><div class="ring" style="--p:${Math.min(100,a[0]/t[0]*100)}%"><div><span class="metric">${a[0]}</span><small>of ${t[0]} kcal</small></div></div><center>${t[0]-a[0]} kcal remaining</center>${bars(a,t)}<button class="wide" onclick="dashboardFood('text')">+ Log a meal</button></section><section><small>TODAY'S TRAINING</small><h2>${names[w]}</h2><button onclick="dashboardStart()">Start live workout</button></section>`;if(tab==='Home')h+=`<section><h3>MyFit Coach</h3><p class="muted">Your daily briefing, meal suggestions and weekly review.</p><button class="wide" onclick="tab='Coach';render()">Open MyFit Coach</button></section>`;if(tab==='Coach')h=`<h2>MyFit Coach</h2><section>${coach(a,t)}</section>`;if(tab==='Food')h=foodView(a,t);if(tab==='Workout')h=`<h2>Training</h2><section>${schedule().map((x,i)=>`<div class="line"><small>${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][i]}</small><b>${names[x]}</b></div>`).join('')}</section><section><h3>${names[w]}</h3><small>Warm up first. Leave 1–3 reps in reserve. No barbell back squats.</small>${exerciseList(w).map((x,i)=>{let [n,s,r]=x.split('|');let key=day()+'|'+n,log=S.work[key]||{};return `<div class="line"><div><b>${n}</b><br><small>${s} sets × ${r}</small></div><input aria-label="Weight in pounds" type="number" min="0" placeholder="lb" value="${esc(log.weight||'')}" onchange="record('${n}','weight',this.value)"><input aria-label="Sets completed" type="number" min="0" max="${s}" placeholder="sets" value="${esc(log.sets||'')}" onchange="record('${n}','sets',this.value)"></div>`}).join('')||'Take an easy walk and recover.'}<div class="line"><button onclick="restTimer(90)">90 sec rest</button><button class="alt" onclick="restTimer(120)">2 min</button><b id="timer">Ready</b></div><p class="muted">Enter weight and completed sets; entries save automatically. For mobility, leave weight blank.</p></section>`;if(tab==='Profile')h=`<h2>Edit profile & program</h2><section><label>Primary goal<select id="goal">${Object.entries(goals).map(([k,v])=>`<option value="${k}" ${S.profile.goal===k?'selected':''}>${v}</option>`)}</select></label>${[['age','Age'],['height','Height (cm)'],['weight','Weight (lb)']].map(([k,n])=>`<label>${n}<input id="${k}" type="number" value="${S.profile[k]}"></label>`).join('')}<label>Sex used for calorie estimate<select id="sex"><option value="male" ${S.profile.sex==='male'?'selected':''}>Male</option><option value="female" ${S.profile.sex==='female'?'selected':''}>Female</option></select></label><label>Activity<select id="activity">${[[1.2,'Sedentary'],[1.375,'Light'],[1.5,'Moderate'],[1.725,'Very active']].map(([v,n])=>`<option value="${v}" ${S.profile.activity==v?'selected':''}>${n}</option>`)}</select></label><label>Preferred lifting days<select id="days">${[3,4,5].map(v=>`<option ${S.profile.days==v?'selected':''}>${v}</option>`)}</select></label><h3>Muscle priorities</h3><small>Choose up to three strength priorities plus flexibility.</small>${['legs','chest','back','arms','shoulders','core','flexibility'].map(n=>`<label class="line">${n}<input type="checkbox" style="width:22px" id="priority-${n}" ${S.profile.priorities.includes(n)?'checked':''}></label>`).join('')}<button class="wide" onclick="updateGoals()">Apply goals & regenerate plan</button><p class="muted">Calorie estimates are provisional. Training follows your selected lifting days. Back squats excluded.</p></section><section>${bars([0,0,0,0],t)}</section>`;if(tab==='Planner')h=plannerView();if(tab==='Progress')h=`<section id="bodyMeasurementEntry">${['Weight (lb)','Waist (in)','Chest (in)','Thigh (in)','Arm (in)'].map((n,i)=>`<label>${n}<input type="number" min="0" step="0.1" id="m${i}"></label>`).join('')}<button onclick="measure()">Save measurements</button></section><section id="bodyMeasurementTrends"><h3>Measurement trends</h3>${charts()}<h3>History</h3>${S.measure.map(m=>`<div class="line"><small>${esc(m.date)}</small><span>${m.v.map((v,i)=>v?['Weight','Waist','Chest','Thigh','Arm'][i]+': '+esc(v):'').filter(Boolean).join(' · ')}</span></div>`).join('')||'No measurements yet.'}</section>`;$('app').innerHTML=h;if(tab==='Coach')window.scrollTo(0,0);if(tab==='Planner')loadDishPhotos();if(tab==='Food'){if($('photoMode'))$('photoMode').value=readProfilePreference('myfit-scan-mode')||'smart';drawDraft()}}
 const recipes=[
 ['Mexican','Chicken burrito bowl',[['chicken breast',150],['white rice',140],['black beans',80],['salsa',40],['avocado',40]],'Season chicken with cumin, paprika and lime; cook through. Warm rice and beans, assemble and top with salsa and avocado.'],
 ['Mexican','Shrimp fajita tacos',[['shrimp',170],['tortilla',90],['bell pepper',120],['onion',60],['olive oil',5],['salsa',40]],'Sauté peppers and onion in oil, add shrimp and cook until opaque. Fill warm tortillas and top with salsa.'],
@@ -495,6 +632,19 @@ function generateThemedWeek() {
   if (!plannerThemes().includes(theme)) return;
   if (S.weekPlans?.[week] && !confirm('Replace the generated recipes for this week? Your manual swaps will stay.')) return;
 
+  const slots = buildThemedWeekSlots(dates,theme);
+  const previous = S.weekPlans;
+  S.weekPlans = {...previous, [week]:{theme, slots}};
+  if (!save()) {
+    if (previous === undefined) delete S.weekPlans;
+    else S.weekPlans = previous;
+    return;
+  }
+  plannerRange = 'Week';
+  render();
+}
+
+function buildThemedWeekSlots(dates,theme) {
   const slots = {};
   const preferences = prefs();
   const used = new Set();
@@ -537,15 +687,7 @@ function generateThemedWeek() {
     });
   }
 
-  const previous = S.weekPlans;
-  S.weekPlans = {...previous, [week]:{theme, slots}};
-  if (!save()) {
-    if (previous === undefined) delete S.weekPlans;
-    else S.weekPlans = previous;
-    return;
-  }
-  plannerRange = 'Week';
-  render();
+  return slots;
 }
 
 function weeklyThemePanel() {
@@ -878,12 +1020,12 @@ function recipeMeasure(name, grams, units) {
 
 let recipeUnits = 'grams';
 try {
-  if (localStorage.getItem('myfit-recipe-units') === 'kitchen') recipeUnits = 'kitchen';
+  if (readProfilePreference('myfit-recipe-units') === 'kitchen') recipeUnits = 'kitchen';
 } catch (_) {}
 
 function changeRecipeUnits(units) {
   recipeUnits = units === 'kitchen' ? 'kitchen' : 'grams';
-  try {localStorage.setItem('myfit-recipe-units',recipeUnits)} catch (_) {}
+  try {writeProfilePreference('myfit-recipe-units',recipeUnits)} catch (_) {}
   $('recipeMeasureHint').hidden = recipeUnits !== 'kitchen';
   for (const measure of $('fullRecipe').querySelectorAll('[data-recipe-grams]')) {
     measure.textContent = recipeMeasure(measure.dataset.ingredient,+measure.dataset.recipeGrams,recipeUnits);
@@ -1058,7 +1200,7 @@ function startingProfileFrom(profile) {
     weight:profile.baseline597?.v?.[0] || draft?.weight || profile.weight};
 }
 
-function updateGoals(){let p={...S.profile};for(let k of ['age','height','weight','activity','days'])p[k]=+$(k).value;for(let k of ['sex','goal'])p[k]=$(k).value;if(!['age','height','weight','activity','days'].every(k=>Number.isFinite(p[k]))||p.age<18||p.age>100||p.height<120||p.height>230||p.weight<80||p.weight>600){alert('Check adult profile values.');return}p.priorities=['legs','chest','back','arms','shoulders','core','flexibility'].filter(n=>$('priority-'+n).checked);if(p.priorities.filter(n=>n!=='flexibility').length>3){alert('Choose up to three strength priorities.');return}if(saveProfile(p))render()}function measure(){let v=Array.from({length:5},(_,i)=>$('m'+i).value);if(!v.some(Boolean))return;if(v.some(x=>x!==''&&(!Number.isFinite(+x)||+x<=0))){alert('Enter positive measurements.');return}S.measure.push({date:day(),v});save();render()}async function checkUpdate(){try{if(navigator.serviceWorker){let r=await navigator.serviceWorker.getRegistration();if(r)await r.update()}location.replace(location.pathname+"?v="+Date.now())}catch(e){alert("Update check failed. Reconnect and try again.")}}function backup(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:'application/json'}));a.download='myfit-backup.json';a.click();URL.revokeObjectURL(a.href)}async function restore(el){try{let x=JSON.parse(await el.files[0].text());if(!validState(x))throw 0;if(!confirm('Replace current records with this backup? Export current data first if needed.'))return;let previous=S;try{localStorage.setItem('myfit-v1',JSON.stringify(x))}catch(e){alert('Restore failed: storage unavailable. Current records unchanged.');return}storageBlocked=false;S=x;S.favorites??=[];S.profile.priorities??=['legs','chest'];save();render()}catch(e){alert('Invalid backup')}}
+function updateGoals(){let p={...S.profile};for(let k of ['age','height','weight','activity','days'])p[k]=+$(k).value;for(let k of ['sex','goal'])p[k]=$(k).value;if(!['age','height','weight','activity','days'].every(k=>Number.isFinite(p[k]))||p.age<18||p.age>100||p.height<120||p.height>230||p.weight<80||p.weight>600){alert('Check adult profile values.');return}p.priorities=['legs','chest','back','arms','shoulders','core','flexibility'].filter(n=>$('priority-'+n).checked);if(p.priorities.filter(n=>n!=='flexibility').length>3){alert('Choose up to three strength priorities.');return}if(saveProfile(p))render()}function measure(){let v=Array.from({length:5},(_,i)=>$('m'+i).value);if(!v.some(Boolean))return;if(v.some(x=>x!==''&&(!Number.isFinite(+x)||+x<=0))){alert('Enter positive measurements.');return}S.measure.push({date:day(),v});save();render()}async function checkUpdate(){try{if(navigator.serviceWorker){let r=await navigator.serviceWorker.getRegistration();if(r)await r.update()}location.replace(location.pathname+"?v="+Date.now())}catch(e){alert("Update check failed. Reconnect and try again.")}}function backup(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:'application/json'}));a.download='myfit-backup.json';a.click();URL.revokeObjectURL(a.href)}async function restore(el){if(profileDirectoryInvalid)return alert('The saved profile list could not be read.');try{let x=JSON.parse(await el.files[0].text());if(!validState(x))throw 0;if(!confirm('Replace this profile’s records with this backup? Export current data first if needed.'))return;let previous=S;try{localStorage.setItem(profileStorageKey('myfit-v1'),JSON.stringify(x))}catch(e){alert('Restore failed: storage unavailable. Current records unchanged.');return}storageBlocked=false;S=x;S.favorites??=[];S.profile.priorities??=['legs','chest'];save();render()}catch(e){alert('Invalid backup')}}
 function validItem(x){return !!x&&typeof x.name==='string'&&['g','k','p','c','f'].every(k=>typeof x[k]==='number'&&Number.isFinite(x[k])&&x[k]>=0)&&x.g>0;}
 function validState(x){let obj=o=>!!o&&typeof o==='object'&&!Array.isArray(o),num=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b,date=d=>/^\d{4}-\d{2}-\d{2}$/.test(d);if(!obj(x)||!obj(x.profile)||!obj(x.meals)||!obj(x.work)||!Array.isArray(x.measure))return false;let p=x.profile;if(!num(p.age,18,100)||!num(p.height,120,230)||!num(p.weight,80,600)||![1.2,1.375,1.5,1.725].includes(p.activity)||![3,4,5].includes(p.days)||!['male','female'].includes(p.sex)||!['recomp','bulk','cut','maintain','mobility'].includes(p.goal))return false;if(p.priorities!==undefined&&!Array.isArray(p.priorities))return false;return Object.entries(x.meals).every(([d,m])=>date(d)&&Array.isArray(m)&&m.every(y=>obj(y)&&Array.isArray(y.items)&&y.items.every(validItem)))&&Object.values(x.work).every(obj)&&x.measure.every(m=>obj(m)&&date(m.date)&&Array.isArray(m.v))&&['favorites','recipeFav'].every(k=>x[k]===undefined||Array.isArray(x[k]))&&['coachPrefs','dailyCoach','prep','manualPlan','coachPlans','coachDelivered','weekPlans','shoppingChecksByRange'].every(k=>x[k]===undefined||obj(x[k]))&&(!x.dailyCoach||obj(x.dailyCoach.enabled));}
 
@@ -1397,7 +1539,7 @@ function gymSettingsFields(gym,onboarding=false) {
     ${Object.entries(gymRestrictions).map(([key,label])=>
       `<label><input data-training-restriction type="checkbox" value="${key}" style="width:auto"
         ${gym.restrictions.includes(key)?'checked':''} ${onboarding?'onchange="saveOrientationGymDraft()"':''}> ${label}</label>`).join('')}
-    <label>Accessibility or other limitations
+    <label>Injuries, accessibility, or other limitations
       <textarea id="trainingNotes" maxlength="800" ${onboarding?'oninput="saveOrientationGymDraft()"':''}>${esc(gym.notes)}</textarea>
     </label>
     <small>Movement preferences change recommendations. Written notes are kept for your coach review.</small>`;
@@ -2130,15 +2272,218 @@ function saveCommit595(){const el=$('trainingTime595');if(!el||!validTime58(el.v
 const events595=dailyEvents;dailyEvents=function(date=day()){const r=rhythm(),w=schedule()[(new Date(date+'T12:00:00').getDay()+6)%7],st=trainingStatus(S,date,exerciseList(w)),rec=recoveryAdvice(S.recovery?.[date]);return events595(date).map(e=>({...e,time:e.k==='workout'?(r.commit[date]||r.work):e.k==='morning'?r.wake:e.k==='evening'?r.review:e.time}));};
 
 
-function setup596(){return S.setup596??={step:0,draft:{coach:activeCoach()*4+avatarChoice(coachPrefs(),activeCoach()),goal:S.profile.goal,age:S.profile.age,height:S.profile.height,weight:S.profile.weight,sex:S.profile.sex,activity:S.profile.activity,days:S.profile.days,time:rhythm().work,budget:'',equipment:'gym',duration:60,limitations:'',diet:''}}}
+const orientationOrder = [1,3,2,5,4,0,6];
+const secretaryTabs = [
+  ['Home','Dashboard','Start a live workout, log food, or add water here. The rings show your progress today.'],
+  ['Food','Food','Use Quick log to enter a meal, scan a barcode, or take a photo. Your entries appear in the Food log.'],
+  ['Workout','Workout','Start a live workout or log a past one. During a session, tap How to do it for a demo, or Swap exercise for an alternative.'],
+  ['Planner','Planner','Meals is for your recipes and groceries. Workouts shows your training and recovery days.'],
+  ['Coach','Coach','Read or listen to your daily briefing here. Customize coach lets you choose a different coach or voice.'],
+  ['Profile','Profile','Edit your goals, review progress, or update equipment and movement preferences in My Gym. Data and backup is here too.']
+];
+const orientationInstructions = {
+  3:'Let’s create your profile. Optional measurements give you a starting point to compare against later.',
+  2:'Choose the goal you want your coach to work toward.',
+  5:'Tell us where you train and check the equipment you can use. Select movements to avoid and add any injuries or other limitations you want recorded.',
+  4:'Choose the dietary filters you need. You can also record a grocery budget, allergies, or other food notes.',
+  0:'Now choose your coach. Tap a coach to see the selection before continuing.',
+  6:'Your coach will use your profile, My Gym settings, and dietary filters to set up your program and prepare a starter meal week.'
+};
+let secretaryTour = null;
+let secretaryTimer = null;
+let secretaryTurn = 0;
+
+function secretaryCanSpeak() {
+  return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
+}
+
+function speakSecretary(text, ended) {
+  if (!secretaryCanSpeak()) return false;
+  speechSynthesis.cancel();
+  const spoken = new SpeechSynthesisUtterance(text);
+  spoken.lang = 'en-CA';
+  spoken.rate = 0.92;
+  if (ended) spoken.onend = ended;
+  speechSynthesis.speak(spoken);
+  return true;
+}
+
+function cancelSecretaryAudio() {
+  clearTimeout(secretaryTimer);
+  secretaryTurn++;
+  if (secretaryCanSpeak()) speechSynthesis.cancel();
+}
+
+function startSecretaryTour(mode, enrollment) {
+  cancelSecretaryAudio();
+  if (enrollment) setupField596('secretaryMode',mode);
+  secretaryTour = {mode,enrollment,index:0,returnTab:tab};
+  showSecretaryTab();
+}
+
+function showSecretaryTab() {
+  cancelSecretaryAudio();
+  const tour = secretaryTour;
+  if (!tour) return;
+  if (!secretaryTabs[tour.index]) return stopSecretaryTour(true);
+  const [page,label,instruction] = secretaryTabs[tour.index];
+  tab = page;
+  render();
+  window.scrollTo(0,0);
+  const token = secretaryTurn;
+  const next = () => {if (token===secretaryTurn && secretaryTour===tour) advanceSecretaryTour()};
+  const spoken = tour.mode==='voice' && speakSecretary(label+'. '+instruction,next);
+  secretaryTimer = setTimeout(next,spoken ? 25000 : 10000);
+}
+
+function advanceSecretaryTour() {
+  if (!secretaryTour) return;
+  secretaryTour.index++;
+  showSecretaryTab();
+}
+
+function pauseSecretaryTour() {
+  if (!secretaryTour) return;
+  if (secretaryTour.paused) {
+    secretaryTour.paused=false;
+    showSecretaryTab();
+    return;
+  }
+  cancelSecretaryAudio();
+  secretaryTour.paused=true;
+  renderSecretaryTour();
+}
+
+function stopSecretaryTour(complete=false) {
+  const tour = secretaryTour;
+  if (!tour) return;
+  secretaryTour = null;
+  cancelSecretaryAudio();
+  tab = tour.returnTab;
+  if (tour.enrollment) {
+    tab='Home';
+    if (complete) return setupGo596(3);
+    setup596().paused=true;
+    save();
+  }
+  render();
+}
+
+function renderSecretaryTour() {
+  $('secretaryOverlay')?.remove();
+  document.querySelector('main').inert=!!secretaryTour;
+  $('nav').inert=!!secretaryTour;
+  if (!secretaryTour) return;
+  const {index,paused,enrollment} = secretaryTour;
+  const [,label,text] = secretaryTabs[index];
+  document.body.insertAdjacentHTML('beforeend',`<aside id="secretaryOverlay" role="dialog" aria-modal="true" aria-label="MyFit secretary tour">
+    <div aria-live="polite"><small>MyFit secretary · ${index+1} of ${secretaryTabs.length}</small>
+      <h2>${label}</h2><p>${text}</p></div>
+    <div class="secretary-buttons"><button onclick="advanceSecretaryTour()">${index+1===secretaryTabs.length?'Finish tour':'Next tab'}</button>
+      <button class="alt" onclick="pauseSecretaryTour()">${paused?'Resume tour':'Pause tour'}</button>
+      <button class="alt" onclick="stopSecretaryTour()">Stop orientation</button>
+      ${enrollment?'<button class="alt" onclick="requestSkipOrientation()">Skip orientation</button>':''}</div>
+  </aside>`);
+  $('secretaryOverlay').querySelector('button').focus({preventScroll:true});
+}
+
+function orientationMove(direction) {
+  const current = setup596().step;
+  if (direction>0 && !validateOrientationStep(current)) return;
+  const next = orientationOrder[orientationOrder.indexOf(current)+direction];
+  if (next!==undefined) setupGo596(next);
+}
+
+function validateOrientationStep(step) {
+  const d = setup596().draft;
+  if (step===3 && (!String(d.name||'').trim() || +d.age<18 || +d.age>100 ||
+      +d.height<120 || +d.height>230 || +d.weight<80 || +d.weight>600 ||
+      ![d.age,d.height,d.weight].every(value=>Number.isFinite(+value)) ||
+      [0,1,2,3].some(i=>d['baseline'+i]&&(!Number.isFinite(+d['baseline'+i])||+d['baseline'+i]<=0)))) {
+    alert('Check your name, age, height, weight and any starting measurements.');
+    return false;
+  }
+  if (step===5 && (!validTime58(d.time)||![3,4,5].includes(+d.days))) {
+    alert('Choose your training days and usual training time.');
+    return false;
+  }
+  if (step===4 && d.budget!==''&&(!Number.isFinite(+d.budget)||+d.budget<0)) {
+    alert('Enter a non-negative budget or leave it blank.');
+    return false;
+  }
+  return true;
+}
+
+function setupDietFilters(d) {
+  return `<h3>Dietary preferences</h3>${[['dairyFree','Dairy-free'],['vegan','Vegan'],['glutenFree','Gluten-free ingredients'],['includePork','Include pork']].map(([key,label])=>
+    `<label><input type="checkbox" style="width:auto" ${d[key]?'checked':''} onchange="setupField596('${key}',this.checked)"> ${label}</label>`).join('')}
+    <small>Filters screen recipe ingredients. Written allergy and food notes are saved for review.</small>`;
+}
+
+function helpPanel() {
+  return `<section><h2>MyFit Help</h2>
+    <div class="secretary-buttons"><button onclick="startSecretaryTour('voice',false)">Play voice tour</button>
+      <button class="alt" onclick="startSecretaryTour('text',false)">Play text tour</button></div>
+    ${!setup596().completed?'<button class="alt wide" onclick="setupOpen596()">Resume orientation</button>':''}
+    ${secretaryTabs.map(([page,label,text])=>`<details class="daily-disclosure">
+      <summary>${label}</summary><p>${text}</p><button class="alt" onclick="openMainTab('${page}')">Open ${label}</button></details>`).join('')}
+    <details class="daily-disclosure"><summary>Back up or restore records</summary>
+      <p>Export a JSON copy of your records before switching devices.</p>
+      <button class="alt" onclick="profileSection598('Data')">Open Data &amp; backup</button>
+    </details>
+  </section>`;
+}
+
+function orientationReadyPanel() {
+  const d = setup596().draft;
+  const coach = character58();
+  return `<section><h2>Your coach is ready</h2><div class="briefing-identity">
+    <div class="briefing-portrait">${avatarArt(activeCoach(),avatarChoice(coachPrefs(),activeCoach()))}</div><b>${esc(coach[0])}</b></div>
+    <p id="orientationHandoffLine">I’ll use your saved goal, schedule and My Gym setup for your workouts. Your meal plan is in Planner.</p>
+    <button class="alt" onclick="speak582($('orientationHandoffLine').textContent)">Hear your coach</button>
+    ${d.diet?`<p><b>Food notes:</b> ${esc(d.diet)}</p>`:''}
+    <button class="wide" onclick="plannerArea='Workouts';plannerDate=today();openMainTab('Planner')">See workout schedule</button>
+    <button class="alt wide" onclick="plannerArea='Meals';plannerTab='Calendar';plannerRange='Week';plannerDate=today();openMainTab('Planner')">See meal plan</button>
+    <button class="alt wide" onclick="openMainTab('Home')">Go to Dashboard</button>
+  </section>`;
+}
+
+function setup596(){return S.setup596??={step:1,draft:{coach:activeCoach()*4+avatarChoice(coachPrefs(),activeCoach()),goal:S.profile.goal,age:S.profile.age,height:S.profile.height,weight:S.profile.weight,sex:S.profile.sex,activity:S.profile.activity,days:S.profile.days,time:rhythm().work,budget:'',equipment:'gym',duration:60,limitations:'',diet:''}}}
 function setupField596(k,v){setup596().draft[k]=v;save()}
-function setupGo596(n){setup596().step=n;save();render();window.scrollTo(0,0)}
-function setupOpen596(){setup596().paused=false;save();tab='Home';render()}
-function setupPause596(){setup596().paused=true;save();render()}
-const tour596=[['Home','Dashboard','Your daily targets and next activity.'],['Workout','Training','Log sets, reps and weights; review your training history.'],['Food','Nutrition','Log meals, scan labels, estimate meals from photos and track water.'],['Planner','Planner','Review your upcoming routine.'],['Progress','Progress','Review your recorded measurements and results.']];
-function setupTour596(t){setup596().paused=true;save();tab=t;render()}
-function setupFinish596(){let o=setup596(),d=o.draft;if(!String(d.name||'').trim())return alert('Enter your name in the starting point step.');if([0,1,2,3].some(i=>d['baseline'+i]&&(!Number.isFinite(+d['baseline'+i])||+d['baseline'+i]<=0)))return alert('Enter positive measurements.');if(!validTime58(d.time)||!goals[d.goal]||![3,4,5].includes(+d.days))return alert('Review your training settings.');if(![d.age,d.height,d.weight].every(x=>x!==''&&Number.isFinite(+x))||+d.age<18||+d.age>100||+d.height<120||+d.height>230||+d.weight<80||+d.weight>600)return alert('Review your physical assessment.');if(d.budget!==''&&(!Number.isFinite(+d.budget)||+d.budget<0))return alert('Review your budget.');let old=JSON.stringify(S);Object.assign(S.profile,{goal:d.goal,age:+d.age,height:+d.height,weight:+d.weight,sex:d.sex,activity:+d.activity,days:+d.days});let i=Math.floor(+d.coach/4),j=+d.coach%4;Object.assign(coachPrefs(),{style:i,auto:false,intensity:coachStyles[i][2]});(coachPrefs().avatars??={})[i]=j;rhythm().work=d.time;S.profile.name=String(d.name).trim();S.profile.startingProfile={age:+d.age,height:+d.height,weight:+d.weight};S.profile.trainingEquipment=normalizeGym(d.equipment,d.trainingGear,d.movementRestrictions,d.limitations);logGymChange(S.profile.trainingEquipment);S.profile.baseline597={date:today(),v:[String(d.weight),...[0,1,2,3].map(i=>String(d['baseline'+i]||''))]};S.measure.push(S.profile.baseline597);o.completed=true;o.paused=false;o.approved=today();if(!save()){S=JSON.parse(old);return}tab='Home';render()}
-function setupHTML596(){let o=setup596(),d=o.draft,n=o.step,i=Math.floor(+d.coach/4),j=+d.coach%4,c=character58(i,j);let field=(k,label,type='text',attrs='')=>`<label>${label}<input type="${type}" ${attrs} value="${esc(String(d[k]??''))}" oninput="setupField596('${k}',this.value)"></label>`,sel=(k,label,opts)=>`<label>${label}<select onchange="setupField596('${k}',this.value)">${opts.map(([v,l])=>`<option value="${esc(String(v))}" ${String(d[k])===String(v)?'selected':''}>${esc(l)}</option>`).join('')}</select></label>`;let body=[()=>roster597(d),()=>tourHTML597(),()=>sel('goal','What are we working toward?',Object.entries(goals)),()=>field('name','Your name')+field('age','Age','number','min="18" max="100"')+field('height','Height (cm)','number')+field('weight','Weight (lb)','number')+sel('sex','Sex used for calorie estimate',[['male','Male'],['female','Female']])+sel('activity','Activity level',[[1.2,'Sedentary'],[1.375,'Light'],[1.5,'Moderate'],[1.725,'Very active']])+['Waist','Chest','Thigh','Arm'].map((x,i)=>field('baseline'+i,x+' (in, optional)','number','min="0" step="0.1"')).join(''),()=>field('budget','Weekly grocery budget (optional)','number','min="0"')+field('diet','Food preferences and allergies (optional)'),()=>sel('days','Training days per week',[[3,'3 days'],[4,'4 days'],[5,'5 days']])+field('time','Usual training time','time')+gymSettingsFields(normalizeGym(d.equipment,d.trainingGear,d.movementRestrictions,d.limitations),true)+field('duration','Session duration (minutes)','number','min="10" max="180"'),()=>review597(d)][n]();return `<section><small>CONSULTATION · STEP ${n+1} OF 7</small><h2>${['Meet your coach','Your MyFit tour','Your goals','Your starting point','Nutrition consultation','Training consultation','Review your program'][n]}</h2><div style="display:flex;gap:12px;align-items:center"><img src="${coachPortraits[i][j]}" style="width:76px;border-radius:12px" alt=""><div><b>${esc(c[0])}</b><p>${esc(c[4])}</p></div></div>${body}<button class="wide" onclick="${n===6?'setupFinish596()':`setupGo596(${n+1})`}">${n===6?'Approve & begin':'Continue'}</button>${n?`<button class="alt wide" onclick="setupGo596(${n-1})">Back</button>`:''}<button class="alt wide" onclick="setupPause596()">Pause setup</button></section>`}
+function setupGo596(n) {
+  cancelSecretaryAudio();
+  setup596().step=n;
+  save();
+  render();
+  window.scrollTo(0,0);
+  if (setup596().draft.secretaryMode==='voice' && orientationInstructions[n]) speakSecretary(orientationInstructions[n]);
+}
+function setupOpen596(){setup596().showSkipSafety=false;setup596().paused=false;save();tab='Home';render()}
+function setupPause596(){cancelSecretaryAudio();setup596().paused=true;save();render()}
+function setupFinish596(showHandoff=false){let o=setup596(),d=o.draft;if(o.completed)return;cancelSecretaryAudio();if(!String(d.name||'').trim())return alert('Enter your name in the starting point step.');if([0,1,2,3].some(i=>d['baseline'+i]&&(!Number.isFinite(+d['baseline'+i])||+d['baseline'+i]<=0)))return alert('Enter positive measurements.');if(!validTime58(d.time)||!goals[d.goal]||![3,4,5].includes(+d.days))return alert('Review your training settings.');if(![d.age,d.height,d.weight].every(x=>x!==''&&Number.isFinite(+x))||+d.age<18||+d.age>100||+d.height<120||+d.height>230||+d.weight<80||+d.weight>600)return alert('Review your physical assessment.');if(d.budget!==''&&(!Number.isFinite(+d.budget)||+d.budget<0))return alert('Review your budget.');let old=JSON.stringify(S);Object.assign(S.profile,{goal:d.goal,age:+d.age,height:+d.height,weight:+d.weight,sex:d.sex,activity:+d.activity,days:+d.days});let i=Math.floor(+d.coach/4),j=+d.coach%4;Object.assign(coachPrefs(),{style:i,auto:false,intensity:coachStyles[i][2]});(coachPrefs().avatars??={})[i]=j;rhythm().work=d.time;S.profile.name=String(d.name).trim();S.profile.startingProfile={age:+d.age,height:+d.height,weight:+d.weight};S.profile.trainingEquipment=normalizeGym(d.equipment,d.trainingGear,d.movementRestrictions,d.limitations);logGymChange(S.profile.trainingEquipment);S.profile.baseline597={date:today(),v:[String(d.weight),...[0,1,2,3].map(i=>String(d['baseline'+i]||''))]};S.measure.push(S.profile.baseline597);
+  S.prep={...prefs(),...Object.fromEntries(['dairyFree','vegan','glutenFree','includePork'].filter(key=>d[key]!==undefined).map(key=>[key,d[key]===true]))};
+  if (d.budget!=='') S.prep.budget=+d.budget;
+  S.profile.dietaryNotes=String(d.diet||'').slice(0,800);
+  const dates=plannerPeriod(today(),'Week');
+  if (!S.weekPlans?.[dates[0]]) {
+    const theme='Mixed cuisines';
+    (S.weekPlans??={})[dates[0]]={theme,slots:buildThemedWeekSlots(dates,theme)};
+  }
+  o.completed=true;o.skipped=false;o.paused=false;o.approved=today();if(!save()){S=JSON.parse(old);return}tab=showHandoff?'SetupReady':'Home';render()}
+function setupHTML596(){let o=setup596();if(o.showSkipSafety)return skipOrientationPanel();let d=o.draft,n=o.step,i=Math.floor(+d.coach/4),j=+d.coach%4,c=character58(i,j);let field=(k,label,type='text',attrs='')=>`<label>${label}<input type="${type}" ${attrs} value="${esc(String(d[k]??''))}" oninput="setupField596('${k}',this.value)"></label>`,sel=(k,label,opts)=>`<label>${label}<select onchange="setupField596('${k}',this.value)">${opts.map(([v,l])=>`<option value="${esc(String(v))}" ${String(d[k])===String(v)?'selected':''}>${esc(l)}</option>`).join('')}</select></label>`;let body=[()=>roster597(d),()=>tourHTML597(),()=>sel('goal','What are we working toward?',Object.entries(goals)),()=>field('name','Your name')+field('age','Age','number','min="18" max="100"')+field('height','Height (cm)','number')+field('weight','Weight (lb)','number')+sel('sex','Sex used for calorie estimate',[['male','Male'],['female','Female']])+sel('activity','Activity level',[[1.2,'Sedentary'],[1.375,'Light'],[1.5,'Moderate'],[1.725,'Very active']])+['Waist','Chest','Thigh','Arm'].map((x,i)=>field('baseline'+i,x+' (in, optional)','number','min="0" step="0.1"')).join(''),()=>field('budget','Weekly grocery budget (optional)','number','min="0"')+setupDietFilters(d)+field('diet','Allergies and food notes (optional)','text','maxlength="800"'),()=>sel('days','Training days per week',[[3,'3 days'],[4,'4 days'],[5,'5 days']])+field('time','Usual training time','time')+gymSettingsFields(normalizeGym(d.equipment,d.trainingGear,d.movementRestrictions,d.limitations),true)+field('duration','Session duration (minutes)','number','min="10" max="180"'),()=>review597(d)][n]();const title=['Meet your coach','Welcome to MyFit','Your goals','Create your profile','Dietary preferences','Set up My Gym','Meet your program'][n];
+  return `<section><small>ORIENTATION · STEP ${orientationOrder.indexOf(n)+1} OF ${orientationOrder.length}</small><h2>${title}</h2>
+    <div class="secretary-buttons"><button class="alt" onclick="setupPause596()">Stop orientation</button>
+      <button class="alt" onclick="requestSkipOrientation()">Skip orientation</button></div>
+    ${orientationInstructions[n]?`<p><b>MyFit secretary</b> · ${orientationInstructions[n]}</p>
+      <button class="alt" onclick="speakSecretary(orientationInstructions[${n}])">Hear instructions</button>`:''}
+    ${[0,6].includes(n)?`<div class="briefing-identity"><div class="briefing-portrait">${avatarArt(i,j)}</div><b>${esc(c[0])}</b></div>`:''}
+    ${body}
+    <div class="secretary-buttons">
+      ${n===1?'<button class="alt" onclick="setupField596(\'secretaryMode\',\'text\');orientationMove(1)">Skip tour and set up</button>':
+      `<button onclick="${n===6?'setupFinish596(true)':'orientationMove(1)'}">${n===6?'Save my program':'Continue'}</button>
+      <button class="alt" onclick="orientationMove(-1)">Back</button>`}
+    </div></section>`;
+}
 function routine596() {
   const r = rhythm();
   return `<section><details><summary>Training time settings</summary>
@@ -2150,17 +2495,43 @@ function routine596() {
   </details></section>`;
 }
 function routineSave596(all){let v=$('routineTime596').value;if(!validTime58(v))return;let r=rhythm();if(all){r.work=v;delete r.commit[today()]}else r.commit[today()]=v;if(save())render()}
-const prior596=render;render=function(){prior596();let o=setup596(),app=$('app');if(tab==='Home'&&entryMode!=='live'&&!o.completed&&!o.paused){app.innerHTML=setupHTML596();return}if(tab==='Home'&&entryMode!=='live'&&!o.completed)app.insertAdjacentHTML('afterbegin','<section><button class="wide" onclick="setupOpen596()">Resume coach consultation</button></section>');if(tab==='Coach'&&o.completed)app.insertAdjacentHTML('afterbegin','<section><small>Program active · Your coach can change without resetting your routine.</small></section>')};
+const prior596=render;render=function(){prior596();let o=setup596(),app=$('app');if(!secretaryTour&&tab==='Home'&&entryMode!=='live'&&!o.completed&&!o.paused){app.innerHTML=setupHTML596();return}if(!secretaryTour&&tab==='Home'&&entryMode!=='live'&&!o.completed)app.insertAdjacentHTML('afterbegin',o.skipped?
+ '<section><p>Complete your profile to personalize the default targets and workouts.</p><button class="alt wide" onclick="setupOpen596()">Complete profile setup</button></section>':
+ '<section><button class="wide" onclick="setupOpen596()">Resume orientation</button></section>');if(tab==='Coach'&&o.completed)app.insertAdjacentHTML('afterbegin','<section><small>Program active · Your coach can change without resetting your routine.</small></section>')};
 
 
-function roster597(d){return `<p>Choose your coach by personality and style.</p>${coachStyles.map((x,i)=>`<h3>${esc(x[0])}</h3><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">${[0,1,2,3].map(j=>{let k=i*4+j,c=character58(i,j);return `<button class="alt" aria-pressed="${+d.coach===k}" style="padding:8px;white-space:normal;${+d.coach===k?'border:2px solid #a5ef91':''}" onclick="setupField596('coach',${k});render()"><img src="${coachPortraits[i][j]}" alt="" style="width:100%;max-width:130px;display:block;margin:auto;border-radius:8px"><b>${esc(c[0])}</b><br><small>${esc(c[3])}</small>${+d.coach===k?'<br>Selected ✓':''}</button>`}).join('')}</div>`).join('')}`}
+function roster597(d) {
+  const style = Math.floor(+d.coach/4);
+  const look = +d.coach%4;
+  return `<label>Coaching style<select onchange="setupField596('coach',+this.value*4);render()">
+    ${coachStyles.map(([label],i)=>`<option value="${i}" ${i===style?'selected':''}>${esc(label)}</option>`).join('')}
+  </select></label>
+  <div class="grid">${[0,1,2,3].map(j=>{
+    const coach = character58(style,j);
+    return `<button class="alt" aria-pressed="${j===look}" onclick="setupField596('coach',${style*4+j});render()">
+      ${avatarArt(style,j)}<b>${esc(coach[0])}</b><br><small>${esc(coach[3])}</small>
+    </button>`;
+  }).join('')}</div>
+  <button class="alt" onclick="speak582(character58(${style},${look})[4],${style},${look},true)">Hear selected coach</button>`;
+}
 const lessons597={Home:'The three rings compare recorded calories, planned training sets and water with daily targets. Tap a ring for details. An empty ring means nothing has been logged, not that you failed.',Workout:'Record actual load, reps and sets. Comparing similar sessions helps us judge strength progress without guessing. Rest between sets and stop painful movements.',Food:'Calories estimate energy intake; protein supports muscle repair, carbohydrates fuel activity and fats support normal body functions. Photo estimates are approximate; check portions and ingredients.',Planner:'Use the calendar to see planned meals and activities. Your usual training time stays in place unless you change it.',Progress:'Weight trends help assess energy balance; waist, chest, thigh and arm measurements show changes in size. They cannot directly measure muscle or fat. Use consistent conditions and look at trends rather than single readings. Saved workout logs show actual performance.'};
-function tourHTML597(){return `<p>Let me explain what we track and why it matters.</p>${tour596.map(([t,a])=>`<section><h3>${a}</h3><p>${lessons597[t]}</p><button class="alt wide" onclick="setupTour596('${t}')">Explore ${a}</button></section>`).join('')}<button class="alt wide" onclick="setupGo596(2)">Skip tour</button>`}
-function review597(d){let days=+d.days,plan=days===3?['full','mobility','full','rest','full','mobility','rest']:days===4?['lower','upper','mobility','posterior','upper','mobility','rest']:['lower','push','mobility','pull','posterior','full','rest'];let w=+d.weight/2.20462,m=(10*w+6.25*+d.height-5*+d.age+(d.sex==='male'?5:-161))*+d.activity,k=Math.max(1500,Math.round((m+({recomp:-100,bulk:250,cut:-350,maintain:0,mobility:0}[d.goal]||0))/50)*50);let reason={bulk:'a modest energy surplus to support muscle gain',cut:'a moderate energy deficit to support fat loss',recomp:'a small energy deficit while maintaining resistance training',maintain:'estimated maintenance energy',mobility:'estimated maintenance energy'}[d.goal];return `<h3>Why this training routine?</h3><p>${days===3?'Full-body sessions spread practice across three days.':days===4?'Upper and lower sessions distribute training across four days.':'Five sessions distribute work across movement groups.'} Recovery days separate demanding sessions.</p>${plan.map((x,i)=>`<div class="line"><small>${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][i]}</small><b>${esc(names[x])}</b></div>`).join('')}<h3>Why these nutrition targets?</h3><p>For ${esc(goals[d.goal])}, we start with ${reason}. Estimated daily target: ${Number.isFinite(k)?k:'Review assessment'} kcal. Protein supports recovery; carbs fuel training; fats support normal function.</p><p>Budget: ${esc(String(d.budget||'Not set'))} per week. Affordable staples can help manage cost, but recipes are not yet priced or automatically filtered for allergies.</p><p>Equipment, limitations and duration are recorded; the existing exercise templates are not yet tailored to them. Review suitability before training.</p><p>Usual training time: ${esc(fmt58(d.time))}. Your routine stays in place until you change it.</p>`}
+function tourHTML597() {
+  return `<p>I’m your MyFit secretary. I’ll show you around the app, then help you set up your profile and choose a coach.</p>
+    <div class="secretary-buttons"><button onclick="startSecretaryTour('voice',true)">Start voice tour</button>
+      <button class="alt" onclick="startSecretaryTour('text',true)">Start text tour</button></div>`;
+}
+
+function review597(d) {
+  return `<h3>Your setup</h3>
+    <p>${esc(goals[d.goal])} · ${esc(d.days)} training days per week · ${esc(fmt58(d.time))}</p>
+    ${gymSummary(normalizeGym(d.equipment,d.trainingGear,d.movementRestrictions,d.limitations))}
+    ${d.diet?`<p><b>Food notes:</b> ${esc(d.diet)}</p>`:''}
+    <p>Your coach will use this setup for exercise recommendations. MyFit will generate a starter week using your dietary filters if you don’t have a plan for this week yet.</p>`;
+}
 let edit597=false;
 function profileEdit597(){edit597=true;render()}
 function profileName597(){let v=$('profileName597').value.trim();if(!v)return alert('Enter your name.');if(saveProfile({...S.profile,name:v})){edit597=false;render()}}
-const render597=render;render=function(){render597();let o=setup596(),app=$('app');let nav=$('nav');if(nav&&!nav.querySelector('[data-profile597]'))nav.insertAdjacentHTML('beforeend',`<button data-profile597 class="${tab==='Profile'?'active':''}" onclick="edit597=false;tab='Profile';render()"><span>♙</span>Profile</button>`);if(!o.completed&&o.paused&&o.step===1&&lessons597[tab])app.insertAdjacentHTML('afterbegin',`<section><h3>Your coach explains</h3><p>${lessons597[tab]}</p><button class="wide" onclick="setupOpen596()">Return to orientation</button></section>`);if(tab==='Goals')app.innerHTML=`<section><h2>Your goals</h2><p>${esc(goals[S.profile.goal])}</p><button class="alt wide" onclick="tab='Profile';edit597=true;render()">Review or edit profile & program</button></section>`;if(tab==='Profile'){if(!edit597){let p=S.profile,b=p.baseline597;app.innerHTML=`<section><h2>My profile</h2><h3>${esc(p.name||'Your profile')}</h3><p>Height: ${p.height} cm · Profile weight: ${p.weight} lb</p><p>Goal: ${esc(goals[p.goal])}</p><h3>Starting measurements</h3>${b?b.v.map((v,i)=>v?`<p>${['Weight (lb)','Waist (in)','Chest (in)','Thigh (in)','Arm (in)'][i]}: ${esc(v)}</p>`:'').join(''):'<p>No onboarding baseline recorded.</p>'}<button class="wide" onclick="profileEdit597()">Edit profile & program</button><button class="alt wide" onclick="tab='Progress';render()">View progress journal</button></section>`}else app.insertAdjacentHTML('afterbegin',`<section><label>Name<input id="profileName597" value="${esc(S.profile.name||'')}"></label><button class="alt wide" onclick="profileName597()">Save name</button><button class="alt wide" onclick="edit597=false;render()">Close editor</button></section>`)}if(tab==='Progress')app.insertAdjacentHTML('afterbegin',`<section><h3>Understanding your progress</h3><p>${lessons597.Progress}</p><small>New journal entries do not overwrite your starting measurements or profile weight.</small></section>`)};
+const render597=render;render=function(){render597();let o=setup596(),app=$('app');let nav=$('nav');if(nav&&!nav.querySelector('[data-profile597]'))nav.insertAdjacentHTML('beforeend',`<button data-profile597 class="${tab==='Profile'?'active':''}" onclick="edit597=false;tab='Profile';render()"><span>♙</span>Profile</button>`);if(!o.completed&&o.paused&&o.step===1&&lessons597[tab])app.insertAdjacentHTML('afterbegin',`<section><h3>Your coach explains</h3><p>${lessons597[tab]}</p><button class="wide" onclick="setupOpen596()">Return to orientation</button></section>`);if(tab==='Goals')app.innerHTML=`<section><h2>Your goals</h2><p>${esc(goals[S.profile.goal])}</p><button class="alt wide" onclick="tab='Profile';edit597=true;render()">Review or edit profile & program</button></section>`;if(tab==='Profile'){if(!edit597){let p=S.profile,b=p.baseline597;app.innerHTML=`<section><h2>My profile</h2><h3>${esc(p.name||'Your profile')}</h3><p>${!o.completed&&!p.name?'Profile setup is incomplete. Default settings are in use.':`Height: ${p.height} cm · Profile weight: ${p.weight} lb`}</p><p>Goal: ${esc(goals[p.goal])}</p><h3>Starting measurements</h3>${b?b.v.map((v,i)=>v?`<p>${['Weight (lb)','Waist (in)','Chest (in)','Thigh (in)','Arm (in)'][i]}: ${esc(v)}</p>`:'').join(''):'<p>No onboarding baseline recorded.</p>'}<button class="wide" onclick="profileEdit597()">Edit profile & program</button><button class="alt wide" onclick="tab='Progress';render()">View progress journal</button></section>`}else app.insertAdjacentHTML('afterbegin',`<section><label>Name<input id="profileName597" value="${esc(S.profile.name||'')}"></label><button class="alt wide" onclick="profileName597()">Save name</button><button class="alt wide" onclick="edit597=false;render()">Close editor</button></section>`)}if(tab==='Progress')app.insertAdjacentHTML('afterbegin',`<section><h3>Understanding your progress</h3><p>${lessons597.Progress}</p><small>New journal entries do not overwrite your starting measurements or profile weight.</small></section>`)};
 
 function profileSection598(t){edit597=false;if(t==='Progress')$('date').value=today();tab=t;render()}
 
@@ -2216,12 +2587,12 @@ function profileGoalsPanel() {
   </section>`;
 }
 
-const render598=render;render=function(){render598();let nav=$('nav'),app=$('app');if(nav){for(let b of [...nav.querySelectorAll('button')]){let text=b.textContent.trim();if(/Goals$|Progress$/.test(text))b.remove();else if(/Profile$/.test(text)){b.classList.toggle('active',['Profile','Goals','Progress','Data','Gym','Review'].includes(tab));}}}if(!['Profile','Goals','Progress','Data','Gym','Review'].includes(tab))return;let sub=`<section style="padding:10px"><h2>My fitness profile</h2><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px">${[['Profile','Overview'],['Goals','Goals'],['Progress','Progression'],['Gym','My Gym'],['Data','Data &amp; backup']].map(([t,n])=>`<button class="${tab===t?'':'alt'}" aria-pressed="${tab===t}" style="padding:9px 3px" onclick="profileSection598('${t}')">${n}</button>`).join('')}</div></section>`;app.insertAdjacentHTML('afterbegin',sub);if(tab==='Progress')$('workoutHistory').insertAdjacentHTML('beforebegin',strengthProgressPanel());if(tab==='Goals'){let t=targets();app.insertAdjacentHTML('beforeend',`<section><h3>Daily nutrition goals</h3><div class="line"><span>Calories</span><b>${t[0]} kcal</b></div>${['Protein','Carbohydrates','Fat'].map((n,i)=>`<div class="line"><span>${n}</span><b>${t[i+1]} g</b></div>`).join('')}<p class="muted">Targets are estimated from your profile and primary goal.</p></section>`+profileGoalsPanel())} };
+const render598=render;render=function(){render598();let nav=$('nav'),app=$('app');if(nav){for(let b of [...nav.querySelectorAll('button')]){let text=b.textContent.trim();if(/Goals$|Progress$/.test(text))b.remove();else if(/Profile$/.test(text)){b.classList.toggle('active',['Profile','Goals','Progress','Data','Gym','Review','Help','Profiles'].includes(tab));}}}if(!['Profile','Goals','Progress','Data','Gym','Review','Help','Profiles'].includes(tab))return;let sub=`<section style="padding:10px"><h2>My fitness profile</h2><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px">${[['Profile','Overview'],['Goals','Goals'],['Progress','Progression'],['Gym','My Gym'],['Data','Data &amp; backup'],['Help','Help'],['Profiles','Switch profile']].map(([t,n])=>`<button class="${tab===t?'':'alt'}" aria-pressed="${tab===t}" style="padding:9px 3px" onclick="profileSection598('${t}')">${n}</button>`).join('')}</div></section>`;app.insertAdjacentHTML('afterbegin',sub);if(tab==='Progress')$('workoutHistory').insertAdjacentHTML('beforebegin',strengthProgressPanel());if(tab==='Goals'){let t=targets();app.insertAdjacentHTML('beforeend',`<section><h3>Daily nutrition goals</h3><div class="line"><span>Calories</span><b>${t[0]} kcal</b></div>${['Protein','Carbohydrates','Fat'].map((n,i)=>`<div class="line"><span>${n}</span><b>${t[i+1]} g</b></div>`).join('')}<p class="muted">Targets are estimated from your profile and primary goal.</p></section>`+profileGoalsPanel())} };
 let coachCustomizeOpen = false;
 
 function dataBackupPanel() {
   return `<section><h2>Data &amp; backup</h2>
-    <p>Export a copy of your food, workout, and profile records.</p>
+    <p>Export a copy of the current profile’s food, workout, and settings.</p>
     <button onclick="backup()">Export JSON</button>
     <label>Restore backup<input type="file" accept=".json" onchange="restore(this)"></label>
   </section>`;
@@ -2329,8 +2700,14 @@ render = function() {
   functionalLayoutRender();
   $('recordDate').hidden = !['Food','Workout','Progress'].includes(tab);
   $('date').max = today();
+  let current;
+  try {current=readProfileDirectory().profiles.find(record=>record.id===activeProfileId)} catch (_) {}
+  $('activeProfileButton').textContent=current?profileDisplayName(current):'Switch profile';
   if (tab === 'Coach') arrangeCoach();
   if (tab === 'Progress') groupProgress();
+  if (tab === 'Profiles') $('app').insertAdjacentHTML('beforeend',userProfilesPanel());
+  if (tab === 'Help') $('app').insertAdjacentHTML('beforeend',helpPanel());
+  if (tab === 'SetupReady') $('app').innerHTML=orientationReadyPanel();
   if (tab === 'WorkoutRecap') $('app').innerHTML=workoutRecapPanel();
   if (tab === 'Data') $('app').insertAdjacentHTML('beforeend',dataBackupPanel());
   if (tab === 'Gym') $('app').insertAdjacentHTML('beforeend',myGymPanel());
@@ -2339,10 +2716,11 @@ render = function() {
     const first = $('app').firstElementChild;
     if (first) first.insertAdjacentHTML('afterend',programReviewPrompt());
   }
-  if (tab==='Profile'&&!edit597) {
+  if (tab==='Profile'&&!edit597&&setup596().completed) {
     const start=startingProfile();
     $('app').insertAdjacentHTML('beforeend',`<section><h3>Starting profile</h3><p>Age ${esc(start.age)} · ${esc(start.height)} cm · ${esc(start.weight)} lb</p></section>`);
   }
   placeDailyControls();
+  renderSecretaryTour();
 };
 render();let lastDay=today(),lastMeal=autoMeal();setInterval(()=>{let now=today(),mt=autoMeal();if(now!==lastDay){if(day()===lastDay){$('date').value=now;calendarOffset=0;if(tab!=='Food'&&tab!=='Goals')render()}lastDay=now}if(mt!==lastMeal){lastMeal=mt;if(tab==='Planner'&&mealType==='Auto')render()}},30000);</script><script>if("serviceWorker" in navigator && location.protocol==="https:"){navigator.serviceWorker.register("./sw.js").catch(console.warn)}</script></html>
