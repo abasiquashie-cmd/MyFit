@@ -422,4 +422,26 @@ const rhythmRender58=render;render=function(){rhythmRender58();let app=$('app');
 function clock58(){document.querySelectorAll('[data-clock58]').forEach(el=>el.textContent=new Date().toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}))}setInterval(clock58,15000);
 let previousWindow58=current58();setInterval(()=>{let next=current58();if(next!==previousWindow58){if(tab==='Food'&&foodPage==='Today'||tab==='Home'&&entryMode!=='live'){if(!['INPUT','SELECT','TEXTAREA'].includes(document.activeElement?.tagName)){smartType='';render();previousWindow58=next}}else previousWindow58=next}},15000);
 
+
+// v5.8.2: individual voice profiles, device-native synthesis.
+const voiceProfiles582=[
+['en-US','m',1.04,.82],['en-JM','m',.98,.88],['en-US','f',.98,.88],['en-US','f',1.09,1.05],
+['en-CA','m',.94,.79],['en-JM','m',.96,.87],['en-GB','f',1.02,.92],['en-US','f',.95,.86],
+['en-CA','m',1.10,1.02],['en-US','m',1.12,.94],['en-JM','f',1.08,1.06],['en-US','f',1.01,1.02],
+['en-US','m',.92,.91],['en-SG','m',.95,1.02],['en-IN','f',.94,1.02],['en-CA','f',.96,.95],
+['en-US','m',1.00,.93],['en-CA','m',.99,1.04],['en-US','f',1.03,1.03],['en-CA','f',.97,1.08],
+['en-US','m',1.12,1.10],['en-US','m',1.08,1.14],['en-US','f',1.15,1.15],['en-GB','f',1.08,1.12],
+['en-NZ','m',.85,.92],['en-US','m',.83,.80],['en-IN','f',.85,1.05],['en-CA','f',.86,1.02]];
+function voiceList582(){return window.speechSynthesis?.getVoices()||[]}
+function voiceKey582(i,j){return i*4+j}
+function voicePick582(i,j){let k=voiceKey582(i,j),p=voiceProfiles582[k],vs=voiceList582(),custom=S.voice582?.[k];if(custom){let v=vs.find(v=>v.voiceURI===custom);if(v)return v}let male=/\b(male|daniel|david|mark|alex|fred|george|guy|ryan|james|aaron|tom|oliver|arthur|liam)\b/i,female=/\b(female|samantha|zira|karen|moira|tessa|susan|sarah|jenny|aria|emma|ava|victoria|sonia|hazel|kate|natasha)\b/i;return vs.filter(v=>/^en(?:-|$)/i.test(v.lang)).map(v=>{let name=v.name,gender=(p[1]==='m'?male:female).test(name),opposite=(p[1]==='m'?female:male).test(name);return {v,score:(gender?70:opposite?-100:0)+(v.lang.toLowerCase()===p[0].toLowerCase()?35:0)+(/natural|neural|enhanced|premium|google/i.test(name)?15:0)+(v.localService?2:0)}}).sort((a,b)=>b.score-a.score)[0]?.v}
+let utterance582=null;
+function speak582(text,i=activeCoach(),j=avatarChoice(coachPrefs(),i),preview=false){if(!window.speechSynthesis||!window.SpeechSynthesisUtterance)return alert('Voice coaching is unavailable in this browser.');let p=voiceProfiles582[voiceKey582(i,j)],v=voicePick582(i,j),u=new SpeechSynthesisUtterance(text),serious=/stop painful|assess symptoms|reducing intensity|seek professional/i.test(text),praise=/planned sets recorded/i.test(text);if(v)u.voice=v;u.lang=v?.lang||'en-US';u.rate=Math.max(.75,Math.min(1.2,p[2]*(serious?.88:praise?1.04:1)));u.pitch=Math.max(.65,Math.min(1.3,p[3]+(serious?-.05:praise?.04:0)));u.onerror=e=>{if(!['interrupted','canceled'].includes(e.error))alert('Voice playback unavailable. Try another installed voice in Coach settings.')};speechSynthesis.cancel();utterance582=u;speechSynthesis.speak(u)}
+speakCoach=function(){speak582(message58())};
+function previewVoice582(){let i=previewCoach??activeCoach(),j=previewLook??avatarChoice(coachPrefs(),i),c=character58(i,j);speak582(c[4]+'. I am '+c[0]+'. '+c[7],i,j,true)}
+function setVoice582(k,v){S.voice582??={};if(v)S.voice582[k]=v;else delete S.voice582[k];save()}
+function voiceOptions582(){let i=previewCoach??activeCoach(),j=previewLook??avatarChoice(coachPrefs(),i),k=voiceKey582(i,j),vs=voiceList582().filter(v=>/^en(?:-|$)/i.test(v.lang)),chosen=S.voice582?.[k]||'';return `<div class="line"><small>Voice: ${esc(voicePick582(i,j)?.name||'Device default')}</small></div><button class="alt wide" onclick="previewVoice582()">🔊 Hear this coach</button><details><summary>Choose a different voice</summary><select onchange="setVoice582(${k},this.value)"><option value="">Automatic match</option>${vs.map(v=>`<option value="${esc(v.voiceURI)}" ${chosen===v.voiceURI?'selected':''}>${esc(v.name)} · ${esc(v.lang)}</option>`).join('')}</select><small>Available accents and voice quality depend on your device. Preview after changing.</small></details>`}
+const avatar582=avatarPanel;avatarPanel=function(){return avatar582().replace('<h3>About ',voiceOptions582()+'<h3>About ')};
+const rhythm582=rhythmPanel58;rhythmPanel58=function(){return rhythm582().replace('</p>','</p><button class="alt wide" onclick="speakCoach()">🔊 Hear your coach</button>')};
+
 render();let lastDay=today(),lastMeal=autoMeal();setInterval(()=>{let now=today(),mt=autoMeal();if(now!==lastDay){if(day()===lastDay){$('date').value=now;calendarOffset=0;if(tab!=='Food'&&tab!=='Goals')render()}lastDay=now}if(mt!==lastMeal){lastMeal=mt;if(tab==='Planner'&&mealType==='Auto')render()}},30000);</script><script>if("serviceWorker" in navigator && location.protocol==="https:"){navigator.serviceWorker.register("./sw.js").catch(console.warn)}</script></html>
