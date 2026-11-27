@@ -24,7 +24,7 @@ button.wide + .grid{margin-top:12px}
 #recordDate{font-size:.75rem}#recordDate[hidden]{display:none}#recordDate input{display:block;margin:2px 0 0;width:145px}.week-day{width:100%;display:block;text-align:left;margin-top:8px}.week-day[aria-current=date]{border:1px solid #a5ef91}.week-meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;margin-top:7px;font-weight:400}.week-meals small{display:block}.daily-disclosure{margin:12px 0;padding:12px;border:1px solid #42564a;border-radius:12px}.daily-disclosure>summary{cursor:pointer;font-weight:700}
 .briefing-identity{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:12px 0}.briefing-portrait{width:50px;flex:none}.briefing-identity button{margin-left:auto}
 .workout-example{padding:.75rem 0;border-bottom:1px solid #42564a}.workout-example summary{cursor:pointer}.workout-example summary small{display:block;margin:.2rem 0 0 1rem}
-</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.5</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
+</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.7</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
 const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());let S={profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,legs:true},meals:{},work:{},measure:[]};var storageBlocked=false;try{let x=localStorage.getItem('myfit-v1');if(x){let parsed=JSON.parse(x);if(!validState(parsed))throw Error('Invalid saved data');S=parsed}}catch(e){storageBlocked=true;alert('Saved data could not be read. Automatic saving is disabled to protect it. Export or restore a valid backup.')}function save(){if(storageBlocked)return false;try{localStorage.setItem('myfit-v1',JSON.stringify(S));return true}catch(e){alert('Storage unavailable. Export your data before closing.')}}S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};let plannerDate = '';
 const day = () => tab === 'Planner' ? plannerDate || today() : ['Home','Coach'].includes(tab) ? today() : $('date').value;
 function openMainTab(next) {
@@ -1628,11 +1628,106 @@ const exercisePhotoGuides = new Map([
   ['Bodyweight squat','https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/']
 ]);
 
+const exerciseVideoGuides = new Map([
+  ['Bodyweight squat',['Mayo Clinic','https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/squat/vid-20084663']],
+  ['Bodyweight step-up',['Mayo Clinic','https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/step-up/vid-20084661']],
+  ['Biceps curl',['Mayo Clinic','https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/biceps-curl/vid-20084675']],
+  ['Dumbbell row',['PureGym','https://www.youtube.com/watch?v=ZRSGpBUVcNw']],
+  ['Dumbbell bench press',['PureGym','https://www.youtube.com/watch?v=AduT4Eq-iP0']],
+  ['Lat pulldown',['PureGym','https://www.youtube.com/watch?v=JGeRYIZdojU']],
+  ['Leg press',['Joanna Soh · leg press chapter','https://www.youtube.com/watch?v=c5LkcjEeNlo&t=60s']],
+  ['Push-up',['NASM','https://www.youtube.com/watch?v=WDIpL0pjun0']],
+  ["90/90 hip stretch",["","https://www.youtube.com/watch?v=_rzJ1RXhM90"]],
+  ["Band chest fly",["","https://www.youtube.com/watch?v=4Dp3OwgBlqs"]],
+  ["Band curl",["","https://www.youtube.com/watch?v=gK832HdCcFQ"]],
+  ["Band knee extension",["","https://www.youtube.com/watch?v=8FVIsRReMdQ"]],
+  ["Band lateral raise",["","https://www.youtube.com/watch?v=Pg2HWPUepD8"]],
+  ["Band pull-apart",["","https://www.youtube.com/watch?v=kZNeqj-wtE0"]],
+  ["Band pulldown",["","https://www.youtube.com/watch?v=GfKgPSaK4Mg"]],
+  ["Band shoulder press",["","https://www.youtube.com/watch?v=Lkr9xf1dcAg"]],
+  ["Band triceps extension",["","https://www.youtube.com/watch?v=Av5dYcVvoDc"]],
+  ["Barbell Romanian deadlift",["NASM","https://www.youtube.com/watch?v=xgusDooVfKU"]],
+  ["Barbell row",["","https://www.youtube.com/watch?v=FWJR5Ve8bnQ"]],
+  ["Bird dog",["NASM","https://www.youtube.com/watch?v=ZdAHe9_HeEw"]],
+  ["Bodyweight hip hinge",["","https://www.youtube.com/watch?v=e3bJ56AgCss"]],
+  ["Brisk walk",["","https://www.youtube.com/watch?v=nmvVfgrExAg"]],
+  ["Cable row",["PureGym","https://www.youtube.com/watch?v=lJoozxC0Rns"]],
+  ["Calf raise",["","https://www.youtube.com/watch?v=cqDMYUaIXvw"]],
+  ["Calf stretch",["","https://www.youtube.com/watch?v=IWhSHm5Iu6A"]],
+  ["Cat cow",["PureGym","https://www.youtube.com/watch?v=CE_5RWjFA3Q"]],
+  ["Chair squat",["Community Medical Centers","https://www.youtube.com/watch?v=x1lluFT8iuA"]],
+  ["Chest stretch",["","https://www.youtube.com/watch?v=nfBApvcOiAc"]],
+  ["Chest-supported row",["PureGym","https://www.youtube.com/watch?v=Nx0TzjgsI-0"]],
+  ["Child pose",["","https://www.youtube.com/watch?v=OOVNQVV4CH8"]],
+  ["Close-grip wall push-up",["","https://www.youtube.com/watch?v=1Yv9K95xdWE"]],
+  ["Dead bug",["NASM","https://www.youtube.com/watch?v=bxn9FBrt4-A"]],
+  ["Dumbbell Romanian deadlift",["NASM","https://www.youtube.com/watch?v=aa57T45iFSE"]],
+  ["Dumbbell floor press",["PureGym","https://www.youtube.com/watch?v=T0Y3OBF1bNI"]],
+  ["Dumbbell goblet squat",["","https://www.youtube.com/watch?v=Xjo_fY9Hl9w"]],
+  ["Dumbbell shoulder press",["PureGym","https://www.youtube.com/watch?v=aI2hGzsAMXs"]],
+  ["Dumbbell step-up",["PureGym","https://www.youtube.com/watch?v=DxUNi119Qzs"]],
+  ["Easy walk",["","https://www.youtube.com/watch?v=s9sGx0NFdhs"]],
+  ["Face pull",["NASM","https://www.youtube.com/watch?v=eTCBSFlCJ_s"]],
+  ["Farmer carry",["","https://www.youtube.com/watch?v=c3CXaiZk9Hc"]],
+  ["Gentle breathing",["NHS Health Scotland","https://www.youtube.com/watch?v=IYTZwBzjNC0"]],
+  ["Gentle shoulder circles",["","https://www.youtube.com/watch?v=qiyTtBPxyIs"]],
+  ["Glute bridge",["PureGym","https://www.youtube.com/watch?v=tqp5XQPpTxY"]],
+  ["Hammer curl",["","https://www.youtube.com/watch?v=B4RznoFvTl4"]],
+  ["Hamstring curl",["","https://www.youtube.com/watch?v=mP2jRrK7dLg"]],
+  ["Hamstring stretch",["","https://www.youtube.com/watch?v=ykOlGxeEnr0"]],
+  ["Hamstring walkout",["Physitrack","https://us.physitrack.com/home-exercise-video/hamstring-walkout"]],
+  ["Hip flexor stretch",["","https://www.youtube.com/watch?v=UU7Nqd_Dric"]],
+  ["Hip thrust",["","https://www.youtube.com/watch?v=7XuNzi5rcj4"]],
+  ["Incline dumbbell press",["","https://www.youtube.com/watch?v=oZVCBM9f8Eo"]],
+  ["Incline press",["","https://www.youtube.com/watch?v=oZVCBM9f8Eo"]],
+  ["Incline push-up",["NASM","https://www.youtube.com/watch?v=0JUrOH--Kdk"]],
+  ["Kettlebell carry",["","https://www.youtube.com/watch?v=m7iiTYfRy9A"]],
+  ["Kettlebell deadlift",["NASM","https://www.youtube.com/watch?v=MJPGkNqAXzg"]],
+  ["Kettlebell goblet squat",["","https://www.youtube.com/watch?v=sIX71MwChNg"]],
+  ["Kettlebell row",["","https://www.youtube.com/watch?v=IyQAMOV0WAc"]],
+  ["Kettlebell shoulder press",["","https://www.youtube.com/watch?v=20Yis752pi4"]],
+  ["Lateral raise",["NASM","https://www.youtube.com/watch?v=XPPfnSEATJA"]],
+  ["Leg extension",["PureGym","https://www.youtube.com/watch?v=4ZDm5EbiFI8"]],
+  ["Leg swings",["PureGym","https://www.youtube.com/watch?v=difYoBtZi2s"]],
+  ["Machine chest fly",["","https://www.youtube.com/watch?v=XZg28DIf1oc"]],
+  ["March in place",["Special Olympics","https://resources.specialolympics.org/sports-essentials/sports-and-coaching/warm-up-and-cool-down-videos/dynamic-warm-up-march-in-place"]],
+  ["Pike push-up",["NASM","https://www.youtube.com/watch?v=2b5t0Cu2nQI"]],
+  ["Plank",["NASM","https://www.youtube.com/watch?v=mwlp75MS6Rg"]],
+  ["Prone T raise",["","https://www.youtube.com/watch?v=nyhVRwBzh0Y"]],
+  ["Prone W raise",["","https://www.youtube.com/watch?v=EURInbYKKfQ"]],
+  ["Prone Y raise",["","https://www.youtube.com/watch?v=w1AWGKubE5U"]],
+  ["Prone lat pull",["","https://www.youtube.com/watch?v=u9M73NCL1yc"]],
+  ["Pull-up",["NASM","https://www.youtube.com/watch?v=9yVGh3XbJ34"]],
+  ["Resistance band row",["","https://www.youtube.com/watch?v=LSkyinhmA8k"]],
+  ["Reverse lunge",["PureGym","https://www.youtube.com/watch?v=xrPteyQLGAo"]],
+  ["Reverse snow angel",["","https://www.youtube.com/watch?v=Gfc2vP6gm-o"]],
+  ["Seated hamstring curl",["Steph Gaudreau","https://www.youtube.com/watch?v=mP2jRrK7dLg"]],
+  ["Seated shoulder press",["PureGym","https://www.youtube.com/watch?v=TsduLWuhlFM"]],
+  ["Self-resisted curl",["","https://www.youtube.com/watch?v=xvNEdLVDV1w"]],
+  ["Shoulder circles",["","https://www.youtube.com/watch?v=qiyTtBPxyIs"]],
+  ["Split squat",["PureGym","https://www.youtube.com/watch?v=rlvpaDkc76g"]],
+  ["Standing band chest press",["","https://www.youtube.com/watch?v=dNyxQdzkItI"]],
+  ["Standing band leg curl",["","https://www.youtube.com/watch?v=w6hVi3HrI5k"]],
+  ["Standing calf raise",["","https://www.youtube.com/watch?v=yZdaBOrwCOg"]],
+  ["Straight-arm pulldown",["","https://www.youtube.com/watch?v=V2c7C5ziCmA"]],
+  ["Thoracic rotation",["","https://www.youtube.com/watch?v=ZAE3PuiG9qU"]],
+  ["Triceps pushdown",["PureGym","https://www.youtube.com/watch?v=LXkCrxn3caQ"]],
+  ["Wall push-up",["Swell Physiotherapy","https://www.youtube.com/watch?v=yKxkkxkWRYI"]]
+]);
+
 function exerciseExample(name) {
   const instruction = exerciseExamples.get(name);
   if (!instruction) return '<p class="muted">A form example is unavailable for this exercise.</p>';
   const photos = exercisePhotoGuides.get(name);
-  return `<p>${esc(instruction)}</p>${photos?`<p><a href="${photos}" target="_blank" rel="noopener noreferrer">See exercise photos (ACE)</a></p>`:''}`;
+  const clip = exerciseVideoGuides.get(name);
+  const video = clip?`<p><a href="${esc(clip[1])}" target="_blank" rel="noopener noreferrer">Watch demo${clip[0]?' · '+esc(clip[0]):''}</a></p>`:'';
+  const variation = name==='Reverse snow angel'
+    ? '<small>The video lifts the legs. Keep your legs on the floor for the MyFit version.</small>'
+    : name==='Incline press'
+      ? '<small>The video demonstrates the dumbbell version.</small>'
+      : '';
+  const formReminder = '<small>Start with a load you can control. If a movement causes pain, stop. A qualified trainer can check your form.</small>';
+  return `<p>${esc(instruction)}</p>${video}${variation}${formReminder}${photos?`<p><a href="${photos}" target="_blank" rel="noopener noreferrer">See exercise photos (ACE)</a></p>`:''}`;
 }
 
 function liveEntryPanel() {
