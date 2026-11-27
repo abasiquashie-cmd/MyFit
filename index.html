@@ -23,7 +23,8 @@ button.wide + .grid{margin-top:12px}
 .recipe-detail-actions{display:grid;gap:.5rem;margin-top:1rem}
 #recordDate{font-size:.75rem}#recordDate[hidden]{display:none}#recordDate input{display:block;margin:2px 0 0;width:145px}.week-day{width:100%;display:block;text-align:left;margin-top:8px}.week-day[aria-current=date]{border:1px solid #a5ef91}.week-meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;margin-top:7px;font-weight:400}.week-meals small{display:block}.daily-disclosure{margin:12px 0;padding:12px;border:1px solid #42564a;border-radius:12px}.daily-disclosure>summary{cursor:pointer;font-weight:700}
 .briefing-identity{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:12px 0}.briefing-portrait{width:50px;flex:none}.briefing-identity button{margin-left:auto}
-</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.3</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
+.workout-example{padding:.75rem 0;border-bottom:1px solid #42564a}.workout-example summary{cursor:pointer}.workout-example summary small{display:block;margin:.2rem 0 0 1rem}
+</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.5</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
 const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());let S={profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,legs:true},meals:{},work:{},measure:[]};var storageBlocked=false;try{let x=localStorage.getItem('myfit-v1');if(x){let parsed=JSON.parse(x);if(!validState(parsed))throw Error('Invalid saved data');S=parsed}}catch(e){storageBlocked=true;alert('Saved data could not be read. Automatic saving is disabled to protect it. Export or restore a valid backup.')}function save(){if(storageBlocked)return false;try{localStorage.setItem('myfit-v1',JSON.stringify(S));return true}catch(e){alert('Storage unavailable. Export your data before closing.')}}S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};let plannerDate = '';
 const day = () => tab === 'Planner' ? plannerDate || today() : ['Home','Coach'].includes(tab) ? today() : $('date').value;
 function openMainTab(next) {
@@ -900,8 +901,31 @@ function coachSuggestions(a,t){let remaining=t[0]-a[0],protein=Math.max(0,t[1]-a
 function coachLog(i){let x=coachSuggestions(sum(),targets()).find(x=>x.i===i);if(!x)return;if(draft.length&&!confirm('Replace your current meal draft?'))return;draft=x.items;foodEdit=null;tab='Food';foodOpen('Log','text')}
 const coachStyles=[['The Beast','🔥',5,'Bring intensity to every controlled rep. Finish strong!','Fuel the work. Make protein a priority.','Recovery is part of getting stronger.'],['The Drill Sergeant','🛡️',4,'Follow the plan. Record your sets and stay consistent.','Check your targets and plan your next meal.','Schedule recovery and stick to it.'],['The Athlete','🏆',4,'Execute with precision. Quality reps build performance.','Fuel performance with balanced meals.','Recover well so you can perform again.'],['The Scientist','🧠',3,'Track repetitions and effort to evaluate training progress.','Use complete food logs to evaluate energy and protein intake.','Assess sleep and soreness before increasing training load.'],['The Personal Trainer','💪',3,'Focus on achievable targets and good technique today.','Choose a balanced meal that supports your goals.','Make time for rest and mobility.'],['The Cheerleader','💚',2,'Every quality rep counts. Celebrate showing up!','Small consistent nutrition choices add up.','Rest is progress too. You deserve recovery.'],['The Zen Coach','🌿',1,'Move with intention, breathe and respect your limits.','Eat mindfully and notice hunger and fullness.','Enjoy gentle movement and restorative breathing.']];
 function coachPrefs(){return S.coachPrefs??={style:4,auto:false,intensity:3,account:3,detail:3,profanity:false,voice:false}}
-function setCoach(k,v){coachPrefs()[k]=v;save();render();if($('coachStyleSettings'))$('coachStyleSettings').open=true}
-function chooseCoach(i){i=Number(i);if(!Number.isInteger(i)||!coachStyles[i])return;Object.assign(coachPrefs(),{style:i,intensity:coachStyles[i][2],auto:false});rotation=0;save();render();if($('coachStyleSettings'))$('coachStyleSettings').open=true}
+function setCoach(key,value) {
+  const before = JSON.stringify(S);
+  const prefs = coachPrefs();
+  if (key==='auto'&&prefs.auto!==value&&S.setup596?.completed) flagProgramReview('coach');
+  prefs[key]=value;
+  if (!save()) {S=JSON.parse(before);return;}
+  render();
+  if ($('coachStyleSettings')) $('coachStyleSettings').open=true;
+}
+function chooseCoach(index,look) {
+  const i = Number(index);
+  if (!Number.isInteger(i) || !coachStyles[i]) return;
+  const prior = JSON.stringify(S);
+  const before = activeCoach();
+  const p = coachPrefs();
+  const changingStyle = p.auto || i!==before;
+  const changingAppearance = Number.isInteger(look) && look!==avatarChoice(p,i);
+  if (look!==undefined) (p.avatars??={})[i]=look;
+  if (changingStyle || look===undefined) Object.assign(p,{style:i,intensity:coachStyles[i][2],auto:false});
+  if ((changingStyle||changingAppearance) && S.setup596?.completed) flagProgramReview('coach');
+  if (!save()) {S=JSON.parse(prior);return;}
+  rotation=0;
+  render();
+  if ($('coachStyleSettings')) $('coachStyleSettings').open=true;
+}
 function coachMessage(w){let p=coachPrefs(),i=activeCoach(),c=coachStyles[i]||coachStyles[4],msg=w==='rest'?c[5]:c[3];let n=p.auto?coachStyles[3][4]:c[4];return [c[0],(p.intensity>=5?(p.profanity?'Give it your damn best! ':'Bring your best effort! '):p.intensity<=2?'At your own pace. ':'')+msg+' '+n+(p.account>=4?' Check off your planned actions today.':p.account<=2?' Adjust the plan if needed.':'')+(p.detail>=4?' Use controlled technique, adequate rest and consistent logs to assess progress.':'')]}
 function speakCoach(){if(!('speechSynthesis' in window))return alert('Voice coaching is unavailable on this device.');let u=new SpeechSynthesisUtterance(coachMessage(workout())[1]);u.rate=coachPrefs().intensity>=4?1.08:.88;speechSynthesis.cancel();speechSynthesis.speak(u)}
 function coachPersonality(w){let p=coachPrefs(),m=coachMessage(w);return `<div class="pill">${esc(m[0])}${p.auto?' · Auto':''}</div><p><b>${esc(m[1])}</b></p>${p.voice?'<button class="alt wide" onclick="speakCoach()">🔊 Hear your coach</button>':''}<details id="coachStyleSettings"><summary>Customize coaching style</summary><label><input type="checkbox" ${p.auto?'checked':''} onchange="setCoach('auto',this.checked)"> Automatic coach by workout</label>${[['intensity','Motivational intensity'],['account','Accountability'],['detail','Explanation detail']].map(([k,n])=>`<label>${n}: ${p[k]}/5<input type="range" min="1" max="5" value="${p[k]}" onchange="setCoach('${k}',+this.value)"></label>`).join('')}<label><input type="checkbox" ${p.profanity?'checked':''} onchange="setCoach('profanity',this.checked)"> Allow mild profanity</label><label><input type="checkbox" ${p.voice?'checked':''} onchange="setCoach('voice',this.checked)"> Enable voice playback</label><small>Original coaching personalities. Advice and safety limits stay the same. Voice uses your device's speech engine.</small></details>`}
@@ -949,10 +973,20 @@ function logMeal() {
 }
 function record(n,k,v){if(v!==''&&(!Number.isFinite(+v)||+v<0)){alert('Enter a non-negative number.');return}let key=day()+'|'+n;(S.work[key]??={})[k]=v;save()}function saveProfile(profile) {
   const previous = S.profile;
-  S.profile = profile;
+  const previousReview = S.programReview;
+  S.profile = {...profile,startingProfile:previous.startingProfile || startingProfileFrom(previous)};
+  if (profile.goal!==previous.goal) flagProgramReview('goal');
   if (save()) return true;
   S.profile = previous;
+  if (previousReview===undefined) delete S.programReview;
+  else S.programReview = previousReview;
   return false;
+}
+
+function startingProfileFrom(profile) {
+  const draft = S.setup596?.completed ? S.setup596.draft : null;
+  return {age:draft?.age || profile.age,height:draft?.height || profile.height,
+    weight:profile.baseline597?.v?.[0] || draft?.weight || profile.weight};
 }
 
 function updateGoals(){let p={...S.profile};for(let k of ['age','height','weight','activity','days'])p[k]=+$(k).value;for(let k of ['sex','goal'])p[k]=$(k).value;if(!['age','height','weight','activity','days'].every(k=>Number.isFinite(p[k]))||p.age<18||p.age>100||p.height<120||p.height>230||p.weight<80||p.weight>600){alert('Check adult profile values.');return}p.priorities=['legs','chest','back','arms','shoulders','core','flexibility'].filter(n=>$('priority-'+n).checked);if(p.priorities.filter(n=>n!=='flexibility').length>3){alert('Choose up to three strength priorities.');return}if(saveProfile(p))render()}function measure(){let v=Array.from({length:5},(_,i)=>$('m'+i).value);if(!v.some(Boolean))return;if(v.some(x=>x!==''&&(!Number.isFinite(+x)||+x<=0))){alert('Enter positive measurements.');return}S.measure.push({date:day(),v});save();render()}async function checkUpdate(){try{if(navigator.serviceWorker){let r=await navigator.serviceWorker.getRegistration();if(r)await r.update()}location.replace(location.pathname+"?v="+Date.now())}catch(e){alert("Update check failed. Reconnect and try again.")}}function backup(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:'application/json'}));a.download='myfit-backup.json';a.click();URL.revokeObjectURL(a.href)}async function restore(el){try{let x=JSON.parse(await el.files[0].text());if(!validState(x))throw 0;if(!confirm('Replace current records with this backup? Export current data first if needed.'))return;let previous=S;try{localStorage.setItem('myfit-v1',JSON.stringify(x))}catch(e){alert('Restore failed: storage unavailable. Current records unchanged.');return}storageBlocked=false;S=x;S.favorites??=[];S.profile.priorities??=['legs','chest'];save();render()}catch(e){alert('Invalid backup')}}
@@ -1169,7 +1203,7 @@ function selectAvatar(i,j){if(!Number.isInteger(i)||i<0||i>6||!Number.isInteger(
 function openCoachAppearance(){coachCustomizeOpen=true;if($('coachCustomize'))$('coachCustomize').open=true;previewCoach=null;previewLook=null;tab="Coach";render();document.getElementById("coachAppearance").scrollIntoView({block:"start"})}
 let previewCoach=null,previewLook=null;
 function previewSelection(i,j){previewCoach=i;previewLook=j;let el=$('coachAppearance');if(el){let scroll=el.querySelector('.roster')?.scrollLeft||0;el.outerHTML=avatarPanel();$('coachAppearance').querySelector('.roster').scrollLeft=scroll}}
-function confirmCoachSelection(){let i=previewCoach??activeCoach(),j=previewLook??avatarChoice(coachPrefs(),i);(coachPrefs().avatars??={})[i]=j;previewCoach=null;previewLook=null;if(i===activeCoach()&&!coachPrefs().auto){save();render()}else chooseCoach(i)}
+function confirmCoachSelection(){const i=previewCoach??activeCoach(),j=previewLook??avatarChoice(coachPrefs(),i);previewCoach=null;previewLook=null;chooseCoach(i,j)}
 function avatarPanel(){let i=previewCoach??activeCoach(),j=previewLook??avatarChoice(coachPrefs(),i);return `<section id="coachAppearance"><small>MYFIT / COACH ROSTER</small><h2>Choose your coach</h2><div class="roster">${coachStyles.map((c,k)=>`<button aria-pressed="${i===k}" onclick="previewSelection(${k},${avatarChoice(coachPrefs(),k)})">${avatarArt(k,avatarChoice(coachPrefs(),k))}${esc(c[0])}</button>`).join('')}</div><div class="hero">${avatarArt(i,j)}<div class="heroText"><h2>${esc(coachStyles[i][0])}</h2><p>${esc(strategies[i][0])}</p><small>${esc(strategies[i][2])}</small></div></div><h3>Choose appearance</h3><small>Same personality. Same coaching. Your choice of face.</small><div class="looks">${[0,1,2,3].map(k=>`<button aria-pressed="${j===k}" onclick="previewSelection(${i},${k})">${avatarArt(i,k)}<small>Option ${k+1}${j===k?' ✓':''}</small></button>`).join('')}</div><p>${esc(coachStyles[i][4])}</p><button class="wide confirm" onclick="confirmCoachSelection()">SELECT COACH</button><small>Active: ${esc(coachStyles[activeCoach()][0])}</small></section>`}
 function setDetailValid(r){return r&&Number.isFinite(r.load)&&r.load>=0&&r.load<=2000&&Number.isInteger(r.reps)&&r.reps>=1&&r.reps<=100&&Number.isInteger(r.effort)&&r.effort>=1&&r.effort<=10}
 function addSetDetail(n){let r={load:Number($('setLoad').value),reps:Number($('setReps').value),effort:Number($('setEffort').value)};if($('setLoad').value===''||!setDetailValid(r))return alert('Enter a valid load, reps and effort.');let key=day()+'|'+n;let a=(S.setDetails??={})[key]??=[];a.push(r);save();render()}
@@ -1214,12 +1248,166 @@ const trainingLocations = {
   none:['Bodyweight only',[]]
 };
 
+const gymRestrictions = {
+  floor:'Avoid floor exercises',
+  overhead:'Avoid overhead movements',
+  steps:'Avoid step-ups'
+};
+
+const floorExercises = new Set(['90/90 hip stretch','Bird dog','Cat cow','Child pose','Dead bug',
+  'Dumbbell floor press','Glute bridge','Hamstring stretch','Hamstring walkout','Hip flexor stretch',
+  'Hip thrust','Pike push-up','Plank','Prone T raise','Prone W raise','Prone Y raise','Prone lat pull',
+  'Push-up','Reverse snow angel','Thoracic rotation']);
+const overheadExercises = new Set(['Band pulldown','Band shoulder press','Band triceps extension',
+  'Dumbbell shoulder press','Kettlebell shoulder press','Lat pulldown','Pull-up','Seated shoulder press',
+  'Straight-arm pulldown','Prone lat pull','Prone Y raise']);
+
+function gymAllows(name, restrictions) {
+  return !(restrictions.includes('floor')&&floorExercises.has(name) ||
+    restrictions.includes('overhead')&&overheadExercises.has(name) ||
+    restrictions.includes('steps')&&/step-up/i.test(name));
+}
+
+function normalizeGym(location, gear, restrictions, notes) {
+  const key = Object.hasOwn(trainingLocations, location) ? location : 'gym';
+  return {
+    location:key,
+    gear:Array.isArray(gear) ? Object.keys(equipmentNames).filter(item=>gear.includes(item)) : [...trainingLocations[key][1]],
+    restrictions:Array.isArray(restrictions) ? Object.keys(gymRestrictions).filter(item=>restrictions.includes(item)) : [],
+    notes:typeof notes==='string' ? notes.trim().slice(0,800) : ''
+  };
+}
+
+function logGymChange(gym) {
+  const records = Array.isArray(S.gymRecords) ? S.gymRecords : [];
+  const last = records.at(-1);
+  if (last && JSON.stringify(last.gym)===JSON.stringify(gym)) return;
+  S.gymRecords = [...records,{date:today(),gym}];
+}
+
+function gymSettingsFields(gym,onboarding=false) {
+  return `
+    <label>Training location<select id="trainingLocation" onchange="showEquipmentPreset(this.value,${onboarding})">
+      ${Object.entries(trainingLocations).map(([key,[label]])=>
+        `<option value="${key}" ${key===gym.location?'selected':''}>${label}</option>`).join('')}
+    </select></label>
+    <p>Check only the equipment you can use.</p>
+    <div class="grid">${Object.entries(equipmentNames).map(([key,label])=>
+      `<label><input data-training-gear type="checkbox" value="${key}" style="width:auto"
+        ${gym.gear.includes(key)?'checked':''} ${onboarding?'onchange="saveOrientationGymDraft()"':''}> ${label}</label>`).join('')}</div>
+    <h3>Movement preferences</h3>
+    ${Object.entries(gymRestrictions).map(([key,label])=>
+      `<label><input data-training-restriction type="checkbox" value="${key}" style="width:auto"
+        ${gym.restrictions.includes(key)?'checked':''} ${onboarding?'onchange="saveOrientationGymDraft()"':''}> ${label}</label>`).join('')}
+    <label>Accessibility or other limitations
+      <textarea id="trainingNotes" maxlength="800" ${onboarding?'oninput="saveOrientationGymDraft()"':''}>${esc(gym.notes)}</textarea>
+    </label>
+    <small>Movement preferences change recommendations. Written notes are kept for your coach review.</small>`;
+}
+
+function readGymForm() {
+  return normalizeGym($('trainingLocation').value,
+    [...document.querySelectorAll('[data-training-gear]:checked')].map(input=>input.value),
+    [...document.querySelectorAll('[data-training-restriction]:checked')].map(input=>input.value),
+    $('trainingNotes').value);
+}
+
+function saveOrientationGymDraft() {
+  const draft = setup596().draft;
+  const gym = readGymForm();
+  Object.assign(draft,{equipment:gym.location,trainingGear:gym.gear,movementRestrictions:gym.restrictions,limitations:gym.notes});
+  save();
+}
+
+function gymSummary(gym) {
+  return `<p><b>${trainingLocations[gym.location][0]}</b> · ${gym.gear.map(item=>equipmentNames[item]).join(', ')||'Bodyweight only'}</p>
+    ${gym.restrictions.length?`<p>${gym.restrictions.map(item=>gymRestrictions[item]).join(' · ')}</p>`:''}
+    ${gym.notes?`<p><b>Notes:</b> ${esc(gym.notes)}</p>`:''}`;
+}
+
+function myGymPanel() {
+  const history = Array.isArray(S.gymRecords) ? S.gymRecords : [];
+  return `<section><h2>My Gym</h2><p>Your coach uses this setup when building workout lists.</p>
+    ${gymSettingsFields(trainingEquipment())}
+    <button class="wide" onclick="saveTrainingEquipment()">Save My Gym</button>
+    <details class="daily-disclosure"><summary>Equipment and limitations history</summary>
+      ${[...history].reverse().map(record=>{
+        const gym = record?.gym;
+        return gym?`<div class="line"><div><small>${esc(record.date)}</small>${gymSummary(normalizeGym(gym.location,gym.gear,gym.restrictions,gym.notes))}</div></div>`:'';
+      }).join('')||'<p>Your changes will appear here after you save My Gym.</p>'}
+    </details>
+  </section>`;
+}
+
+function startingProfile() {
+  return S.profile.startingProfile || startingProfileFrom(S.profile);
+}
+
+function flagProgramReview(reason) {
+  S.programReview = {...S.programReview, pending:[...new Set([...(S.programReview?.pending || []),reason])]};
+}
+
+let programReviewStep = 0;
+function openProgramReview() {
+  programReviewStep = 0;
+  profileSection598('Review');
+  window.scrollTo(0,0);
+}
+
+function finishProgramReview() {
+  const previous = S.programReview;
+  S.programReview = {pending:[],completedAt:today(),goal:S.profile.goal,coach:activeCoach()};
+  if (!save()) {
+    if (previous===undefined) delete S.programReview;
+    else S.programReview = previous;
+    return;
+  }
+  profileSection598('Profile');
+}
+
+function programReviewPrompt() {
+  const changes = S.programReview?.pending;
+  return changes?.length ? `<section><h3>Review your program</h3>
+    <p>${changes.length>1?'Your coach and goal changed.':changes[0]==='coach'?'You chose a coach.':'You changed your goal.'}</p>
+    <button class="wide" onclick="openProgramReview()">Start coach orientation</button>
+  </section>` : '';
+}
+
+function programReviewScript() {
+  const goal = goals[S.profile.goal];
+  return programReviewStep===0
+    ? `I’m ${character58()[0]}. Our goal is ${goal}. We’ll use your existing profile and training schedule to work toward it.`
+    : 'Let’s check My Gym and walk through a sample strength session. I’ll use your equipment and movement preferences to choose your exercises.';
+}
+
+function hearProgramReview() {
+  speak582(programReviewScript());
+}
+
+function programReviewPanel() {
+  const start = startingProfile();
+  const session = schedule().find(key=>key!=='rest'&&key!=='mobility');
+  return `<section><h2>Coach orientation</h2><p>${esc(programReviewScript())}</p>
+    <button class="alt" onclick="hearProgramReview()">Hear your coach</button>
+    ${programReviewStep===0?`<h3>Goal and starting profile</h3>
+      <p>${esc(goals[S.profile.goal])} · ${S.profile.days} lifting days per week</p>
+      <p>Starting age ${esc(start.age)} · ${esc(start.height)} cm · ${esc(start.weight)} lb</p>
+      <button class="wide" onclick="programReviewStep=1;render()">Next: review My Gym</button>`:
+      `<h3>My Gym</h3>${gymSummary(trainingEquipment())}
+      <button class="alt" onclick="profileSection598('Gym')">Edit My Gym</button>
+      <h3>Sample session · ${esc(names[session])}</h3>
+      <ul>${exerciseList(session).map(row=>`<li>${esc(row.split('|')[0])}</li>`).join('')||'<li>No exercises match your saved setup for this session.</li>'}</ul>
+      <button class="wide" onclick="finishProgramReview()">Finish orientation</button>
+      <button class="alt" onclick="programReviewStep=0;render()">Back</button>`}
+    <button class="alt" onclick="profileSection598('Profile')">Review later</button>
+  </section>`;
+}
+
 function trainingEquipment() {
   const stored = S.profile.trainingEquipment;
-  if (stored && Object.hasOwn(trainingLocations,stored.location) && Array.isArray(stored.gear)) return stored;
-  const earlier = S.setup596?.draft?.equipment;
-  const location = Object.hasOwn(trainingLocations,earlier) ? earlier : 'gym';
-  return {location,gear:trainingLocations[location][1]};
+  const draft = S.setup596?.draft;
+  return normalizeGym(stored?.location ?? draft?.equipment, stored?.gear ?? draft?.trainingGear,
+    stored?.restrictions ?? draft?.movementRestrictions, stored?.notes ?? draft?.limitations);
 }
 
 // Alternatives are ordered by movement and available equipment.
@@ -1250,12 +1438,13 @@ const exerciseAlternatives = {
 
 const coachExerciseList = exerciseList;
 exerciseList = function(session) {
-  const gear = new Set(trainingEquipment().gear);
+  const gym = trainingEquipment();
+  const gear = new Set(gym.gear);
   const selected = new Set();
   return coachExerciseList(session).flatMap(row => {
     const [name,sets,range] = row.split('|');
     const option = (exerciseAlternatives[name] || [['']]).find(([needs,replacement]) =>
-      (!needs || needs.split('+').every(item=>gear.has(item))) && !selected.has(replacement || name));
+      (!needs || needs.split('+').every(item=>gear.has(item))) && !selected.has(replacement || name) && gymAllows(replacement || name,gym.restrictions));
     if (!option) return [];
     const exercise = option[1] || name;
     selected.add(exercise);
@@ -1263,27 +1452,27 @@ exerciseList = function(session) {
   });
 };
 
-function showEquipmentPreset(location) {
+function showEquipmentPreset(location,onboarding=false) {
   const gear = trainingLocations[location][1];
   document.querySelectorAll('[data-training-gear]').forEach(input=>input.checked=gear.includes(input.value));
+  if (onboarding) saveOrientationGymDraft();
 }
 
 function saveTrainingEquipment() {
-  const location = $('trainingLocation').value;
-  const gear = [...document.querySelectorAll('[data-training-gear]:checked')].map(input=>input.value);
-  if (saveProfile({...S.profile,trainingEquipment:{location,gear}})) render();
+  const gym = readGymForm();
+  const previous = S.gymRecords;
+  logGymChange(gym);
+  if (saveProfile({...S.profile,trainingEquipment:gym})) render();
+  else if (previous===undefined) delete S.gymRecords;
+  else S.gymRecords = previous;
 }
 
 function trainingEquipmentPanel() {
-  const {location,gear} = trainingEquipment();
-  return `<section><details><summary>Workout equipment · ${trainingLocations[location][0]}</summary>
-    <label>Training location<select id="trainingLocation" onchange="showEquipmentPreset(this.value)">
-      ${Object.entries(trainingLocations).map(([key,[label]])=>`<option value="${key}" ${key===location?'selected':''}>${label}</option>`).join('')}
-    </select></label>
-    <p>Check only the equipment you have. Your coach will suggest alternatives for the rest.</p>
-    <div class="grid">${Object.entries(equipmentNames).map(([key,label])=>
-      `<label><input data-training-gear type="checkbox" value="${key}" style="width:auto" ${gear.includes(key)?'checked':''}> ${label}</label>`).join('')}</div>
+  const gym = trainingEquipment();
+  return `<section><details><summary>Workout equipment · ${trainingLocations[gym.location][0]}</summary>
+    ${gymSettingsFields(gym)}
     <button class="wide" onclick="saveTrainingEquipment()">Save equipment</button>
+    <button class="alt wide" onclick="profileSection598('Gym')">Open My Gym records</button>
   </details></section>`;
 }
 
@@ -1346,8 +1535,109 @@ function logTimedRound(increment) {
   render();
 }
 
+const exerciseExamples = new Map([
+  ['90/90 hip stretch','Sit with one bent leg in front and one bent to the side. Keep your hands down for support and lean slightly over the front thigh.'],
+  ['Band chest fly','Anchor a band behind you at chest height. With softly bent elbows, sweep your hands together in front of your chest, then return slowly.'],
+  ['Band curl','Stand on the middle of the band and hold the ends. Keep your elbows by your ribs as you curl your hands up and lower them.'],
+  ['Band knee extension','Sit with a band secured behind you and around your ankle. Straighten the knee against the band, then bend it slowly.'],
+  ['Band lateral raise','Stand on the band and hold an end at each side. Lift your hands outward to about shoulder height, then lower slowly.'],
+  ['Band pull-apart','Hold the band in front of your chest with your arms extended. Pull your hands apart without shrugging and return slowly.'],
+  ['Band pulldown','Use a secure overhead anchor. Pull your elbows down toward your ribs, then let your arms extend slowly.'],
+  ['Band shoulder press','Stand on the band with its ends at shoulder height. Press overhead while keeping your torso steady, then lower.'],
+  ['Band triceps extension','Stand on one end of the band and hold the other behind your head. Keep your upper arm still as you straighten and bend your elbow.'],
+  ['Barbell Romanian deadlift','Stand with the bar in front of your thighs and knees slightly bent. Push your hips back, keeping the bar close, then stand tall.'],
+  ['Barbell row','Hinge forward at the hips with the bar hanging below your shoulders. Pull it toward your lower ribs, then lower it without rocking.'],
+  ['Biceps curl','Hold dumbbells at your sides with palms forward. Keep your elbows near your ribs as you curl and lower the weights.'],
+  ['Bird dog','Start on hands and knees. Reach one arm forward and the opposite leg back without turning your hips. Return and switch sides.'],
+  ['Bodyweight hip hinge','Stand with soft knees and your hands at your hips. Push your hips back as your torso tips forward, then stand tall.'],
+  ['Bodyweight squat','Stand with feet about shoulder-width apart. Bend your hips and knees as if sitting down, then push through your feet to stand.'],
+  ['Bodyweight step-up','Place one full foot on a stable step. Push through that foot to stand on the step, then lower with control.'],
+  ['Brisk walk','Walk tall with relaxed shoulders and a natural arm swing. Use a pace that raises your breathing while you can still talk.'],
+  ['Cable row','Sit facing a low cable with feet braced. Pull the handle toward your ribs without rocking back, then extend your arms slowly.'],
+  ['Calf raise','Stand with your feet flat and use a stable support for balance. Lift your heels, pause briefly and lower.'],
+  ['Calf stretch','Face a wall and step one foot back. Keep the back heel down while bending your front knee until you feel a gentle calf stretch.'],
+  ['Cat cow','Start on hands and knees. Slowly round your back, then reverse the movement and gently lift your chest.'],
+  ['Chair squat','Stand in front of a stable chair. Lower until you lightly touch the seat, then push through your feet to stand.'],
+  ['Chest stretch','Place your forearm on a doorframe at a comfortable height. Turn your chest gently away until you feel the stretch across the front of your shoulder.'],
+  ['Chest-supported row','Lie chest-down on an inclined bench with a dumbbell in each hand. Pull your elbows back toward your ribs, then lower slowly.'],
+  ['Child pose','Kneel and sit your hips back toward your heels. Reach your arms forward and rest as far down as is comfortable.'],
+  ['Close-grip wall push-up','Stand facing a wall with hands slightly closer than shoulder-width. Bend your elbows close to your sides, then push away.'],
+  ['Dead bug','Lie on your back with your arms up and knees over your hips. Lower the opposite arm and leg while keeping your lower back steady. Return and switch sides.'],
+  ['Dumbbell Romanian deadlift','Hold dumbbells against the front of your thighs. With soft knees, push your hips back and slide the weights down close to your legs. Stand tall to finish.'],
+  ['Dumbbell bench press','Lie on a flat bench with feet supported and dumbbells beside your chest. Press both weights up, then lower them slowly.'],
+  ['Dumbbell floor press','Lie on the floor with knees bent and dumbbells near your chest. Press up, then lower until your upper arms touch the floor gently.'],
+  ['Dumbbell goblet squat','Hold one dumbbell upright close to your chest. Sit down between your hips and stand by pushing through your feet.'],
+  ['Dumbbell row','Support one hand on a stable surface and hold a dumbbell in the other. Pull your elbow toward your hip, then lower and switch sides.'],
+  ['Dumbbell shoulder press','Hold dumbbells at shoulder height. Press overhead without leaning back, then lower to your shoulders with control.'],
+  ['Dumbbell step-up','Hold dumbbells by your sides and place one full foot on a stable step. Drive through that foot to stand up, then step down under control.'],
+  ['Easy walk','Walk at a relaxed pace with comfortable strides and a natural arm swing.'],
+  ['Face pull','Set a rope attachment near face height. Pull the rope toward your face and separate the ends so your hands finish beside your head. Return slowly.'],
+  ['Farmer carry','Hold a weight in each hand by your sides. Walk with steady steps, a tall posture and relaxed shoulders.'],
+  ['Gentle breathing','Sit or lie comfortably. Breathe slowly and let your ribs expand as you inhale, then relax as you exhale.'],
+  ['Gentle shoulder circles','Let your arms hang loosely. Roll your shoulders gently up, back and down, then reverse.'],
+  ['Glute bridge','Lie on your back with knees bent and feet flat. Press through your feet to raise your hips, then lower slowly.'],
+  ['Hammer curl','Hold dumbbells with palms facing each other. Curl the weights without moving your upper arms, then lower slowly.'],
+  ['Hamstring curl','Set up on the leg-curl machine with the pad against your lower legs. Bend your knees to move the pad and return slowly.'],
+  ['Hamstring stretch','Sit with one leg extended and the other bent. Hinge forward from the hips until you feel a gentle stretch behind the straight thigh.'],
+  ['Hamstring walkout','Start in a glute bridge. Walk your heels away with small steps, then walk them back while keeping your hips steady.'],
+  ['Hip flexor stretch','Kneel on one knee with your other foot in front. Tuck your pelvis slightly and shift forward until you feel a stretch at the front of the back hip.'],
+  ['Hip thrust','Sit with your upper back against a stable bench and feet flat. Lift your hips until your torso and thighs line up, then lower slowly.'],
+  ['Incline dumbbell press','Lie back on an inclined bench with dumbbells beside your upper chest. Press up and lower the weights with control.'],
+  ['Incline press','Set a bench at a modest incline. Press the weights up from upper-chest height, then lower them with control.'],
+  ['Incline push-up','Place your hands on a stable raised surface. Keep your body in a line, lower your chest toward the surface and push back up.'],
+  ['Kettlebell carry','Hold the kettlebell at your side and walk without leaning toward or away from it. Switch hands to train both sides.'],
+  ['Kettlebell deadlift','Stand over the kettlebell. Hinge at the hips, take the handle with both hands and stand tall. Set it down with the same hip hinge.'],
+  ['Kettlebell goblet squat','Hold the kettlebell close to your chest with both hands. Bend your hips and knees, then push through your feet to stand.'],
+  ['Kettlebell row','Support one hand on a stable surface. Pull the kettlebell toward your hip with the other hand, lower it slowly and switch sides.'],
+  ['Kettlebell shoulder press','Hold the kettlebell at one shoulder. Press overhead without leaning, lower with control and switch sides.'],
+  ['Lat pulldown','Sit with thighs secured under the pads. Pull the bar toward your upper chest, then let your arms straighten slowly.'],
+  ['Lateral raise','Hold light dumbbells at your sides. With elbows slightly bent, raise your arms out to about shoulder height, then lower.'],
+  ['Leg extension','Sit on the machine with the pad above your ankles. Straighten your knees to lift the pad, then lower it slowly.'],
+  ['Leg press','Sit with your back supported and feet flat on the platform. Lower the platform by bending your knees, then press it away without locking your knees.'],
+  ['Leg swings','Hold a stable support. Swing one leg gently forward and back within a comfortable range, then switch legs.'],
+  ['Machine chest fly','Set the seat so the handles line up near chest height. Bring the handles together with slightly bent elbows, then open slowly.'],
+  ['March in place','Stand tall and alternate lifting each knee as if marching. Let your arms swing naturally.'],
+  ['Pike push-up','Start with hands and feet on the floor and hips high. Bend your elbows to lower your head toward the floor, then press back up.'],
+  ['Plank','Rest on your forearms and toes with elbows under shoulders. Keep your torso in a straight line and breathe steadily.'],
+  ['Prone T raise','Lie face down with arms out to the sides like a T. Lift your hands slightly without shrugging, pause and lower.'],
+  ['Prone W raise','Lie face down with elbows bent into a W shape. Lift the arms slightly and draw your shoulder blades together, then lower.'],
+  ['Prone Y raise','Lie face down with your arms reaching diagonally overhead. Lift your arms slightly without arching your back, then lower.'],
+  ['Prone lat pull','Lie face down with arms reaching forward. Draw your elbows down toward your ribs, then reach forward again.'],
+  ['Pull-up','Grip a secure overhead bar. Pull your chest toward the bar without swinging, then lower gradually.'],
+  ['Push-up','Place your hands just wider than shoulder-width. Keep your body in a line, lower your chest toward the floor and press back up.'],
+  ['Resistance band row','Sit with the band looped securely around your feet. Pull your elbows toward your ribs without leaning back, then release slowly.'],
+  ['Reverse lunge','Step one foot behind you and bend both knees. Push through the front foot to return to standing, then switch sides.'],
+  ['Reverse snow angel','Lie face down. With your hands slightly off the floor, sweep your arms from your hips toward overhead and back.'],
+  ['Seated hamstring curl','Sit with the thigh pad secured and the roller behind your lower legs. Pull your heels down and back, then return slowly.'],
+  ['Seated shoulder press','Sit upright with weights at shoulder height. Press overhead without leaning back and lower with control.'],
+  ['Self-resisted curl','Press one hand down against the other wrist. Curl the working arm while the other hand provides gentle resistance, then switch sides.'],
+  ['Shoulder circles','Relax your arms by your sides. Move your shoulders in slow circles, then reverse direction.'],
+  ['Split squat','Stand with one foot forward and the other back. Lower by bending both knees, then rise while keeping your feet in place. Switch sides.'],
+  ['Standing band chest press','Anchor the band securely behind you. Stand in a staggered stance and press your hands forward at chest height, then return slowly.'],
+  ['Standing band leg curl','Secure a band low in front of you and around one ankle. Hold a support, bend the working knee to bring the heel back, then lower.'],
+  ['Standing calf raise','Use a stable support for balance. Rise onto the balls of your feet, pause and lower your heels slowly.'],
+  ['Straight-arm pulldown','Face a high cable. Keep a slight bend in the elbows as you sweep the handle down toward your thighs, then return slowly.'],
+  ['Thoracic rotation','Start on hands and knees. Place one hand behind your head and rotate that elbow toward the ceiling without shifting your hips. Return and switch sides.'],
+  ['Triceps pushdown','Stand facing a high cable with elbows by your ribs. Straighten your elbows to press the handle down, then return slowly.'],
+  ['Wall push-up','Place your hands on a wall at chest height and step your feet back. Bend your elbows to bring your chest toward the wall, then push away.']
+]);
+
+const exercisePhotoGuides = new Map([
+  ['Leg press','https://www.acefitness.org/resources/everyone/exercise-library/154/seated-leg-press/'],
+  ['Bird dog','https://www.acefitness.org/resources/everyone/exercise-library/14/bird-dog/'],
+  ['Bodyweight squat','https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/']
+]);
+
+function exerciseExample(name) {
+  const instruction = exerciseExamples.get(name);
+  if (!instruction) return '<p class="muted">A form example is unavailable for this exercise.</p>';
+  const photos = exercisePhotoGuides.get(name);
+  return `<p>${esc(instruction)}</p>${photos?`<p><a href="${photos}" target="_blank" rel="noopener noreferrer">See exercise photos (ACE)</a></p>`:''}`;
+}
+
 function liveEntryPanel() {
   const session = entryWorkout || workout();
+  const gym = trainingEquipment();
   const plan = livePlan();
   const plannedNames = plan.map(row=>row[0]);
   const extras = liveExtras().filter(name=>!plannedNames.includes(name));
@@ -1392,6 +1682,8 @@ function liveEntryPanel() {
       ${extras.length?`<optgroup label="Your added exercises">${options(extras)}</optgroup>`:''}
     </select></label>`:'<p>No exercises scheduled for recovery. Choose another workout or add an exercise.</p>'}
     ${selected?`<p><b>Coach’s target:</b> ${esc(target)} ${timed?'rounds':'sets'} × ${esc(range)}${timed||range.includes('/')?'':' reps'}</p>`:''}
+    ${entryExercise?`<details class="daily-disclosure"><summary>How to do it · ${esc(entryExercise)}</summary>${exerciseExample(entryExercise)}</details>`:''}
+    ${gym.notes||gym.restrictions.length?`<details><summary>My Gym · movement preferences and notes</summary>${gymSummary(gym)}</details>`:''}
     ${!timed&&previous?`<small>Last session · ${esc(prior.date)} · ${esc(previous)}</small>`:''}
     ${completion}
     <p role="status">${esc(entryNotice)}</p>
@@ -1425,7 +1717,7 @@ function trainingStatus(state,date,plan){let planned=plan.filter(x=>/^\d+(?:[–
 function logMetrics(row){let a=row.a;if(a.length)return {reps:a.reduce((n,r)=>n+r.reps,0),volume:detailSummary(a).volume,best:Math.max(...a.map(r=>r.load))};let r=row.r;return +r.sets>0&&+r.reps>0&&r.weight!==''&&r.weight!=null&&Number.isFinite(+r.weight)?{reps:+r.sets*+r.reps,volume:+r.sets*+r.reps*+r.weight,best:+r.weight}:null}
 const originalLogPanel=workoutLogPanel;workoutLogPanel=function(){let rows=workoutHistory(S);let summary=rows.filter(r=>loggedSetCount(S,r.date+'|'+r.name)>0);return originalLogPanel().replace('<h2>Workout log</h2>',`<h2>Workout log &amp; progression</h2><p>${new Set(summary.map(r=>r.date)).size} training days · ${summary.reduce((n,r)=>n+loggedSetCount(S,r.date+'|'+r.name),0)} recorded sets</p><small>Calculated from saved workouts, not planned sets.</small>`).replace('</summary>', '</summary>')+`<section id="exerciseProgress"><h3>Exercise progression</h3>${[...new Set(summary.map(r=>r.name))].map(n=>{let history=summary.filter(r=>r.name===n).map(r=>({date:r.date,m:logMetrics(r)})).filter(r=>r.m);if(!history.length)return '';let latest=history[0],previous=history[1];return `<details><summary>${esc(n)} · ${latest.m.volume.toLocaleString()} lb volume</summary><p>${esc(latest.date)}: ${latest.m.reps} reps · heaviest recorded load ${latest.m.best} lb</p>${previous?`<p>Previous (${esc(previous.date)}): ${previous.m.volume.toLocaleString()} lb volume · ${previous.m.reps} reps</p>`:'<p>Baseline recorded.</p>'}<small>Volume is not a direct measure of strength. Bodyweight work excludes body mass.</small></details>`}).join('')||'<p>Record a workout to see progression.</p>'}</section>`};
 const previousAccountability=accountability;accountability=function(date=today(),event='daily'){let w=schedule()[(new Date(date+'T12:00:00').getDay()+6)%7],t=trainingStatus(S,date,exerciseList(w)),msg=previousAccountability(date,event);if(t.target){msg+=' '+(t.kind==='complete'?`All ${t.target} planned strength sets recorded.`:t.kind==='partial'?`${t.done}/${t.target} planned strength sets recorded (${t.actual} total sets). Finish or adjust your plan if appropriate.`:date<today()||date===today()&&new Date().getHours()>=20?'No sets saved. If you trained, log the session; otherwise reschedule if appropriate.':`${t.target} planned strength sets awaiting recording.`)}return msg};
-const cleanRender=render;render=function(){cleanRender();if(tab==='Workout'&&entryMode!=='past'){$('app').innerHTML=`<section><h2>Training plan &amp; records</h2><div style="display:grid;gap:12px"><button class="wide" onclick="entryStart('past')">Log past workout</button><button class="alt wide" onclick="openWorkoutLog()">Workout log &amp; progression</button><button class="alt wide" onclick="dashboardStart()">Go to live workout</button></div></section><section><h3>Weekly training plan</h3>${schedule().map((x,i)=>`<div class="line"><small>${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][i]}</small><b>${esc(names[x])}</b></div>`).join('')}</section><section><h3>${esc(names[workout()])}</h3>${exerciseList(workout()).map(x=>{let [n,c,r]=x.split('|');return `<div class="line"><div><b>${esc(n)}</b><br><small>${esc(c)} sets × ${esc(r)}</small></div><small>${loggedSetCount(S,day()+'|'+n)} recorded</small></div>`}).join('')||'<p>Recovery day.</p>'}<small>Record training on Dashboard or Log past workout.</small></section>`}};
+const cleanRender=render;render=function(){cleanRender();if(tab==='Workout'&&entryMode!=='past'){$('app').innerHTML=`<section><h2>Training plan &amp; records</h2><div style="display:grid;gap:12px"><button class="wide" onclick="entryStart('past')">Log past workout</button><button class="alt wide" onclick="openWorkoutLog()">Workout log &amp; progression</button><button class="alt wide" onclick="dashboardStart()">Go to live workout</button></div></section><section><h3>Weekly training plan</h3>${schedule().map((x,i)=>`<div class="line"><small>${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][i]}</small><b>${esc(names[x])}</b></div>`).join('')}</section><section><h3>${esc(names[workout()])}</h3>${exerciseList(workout()).map(x=>{let [n,c,r]=x.split('|');return `<details class="workout-example"><summary><b>${esc(n)}</b> <small>${esc(c)} × ${esc(r)} · ${loggedSetCount(S,day()+'|'+n)} recorded</small></summary>${exerciseExample(n)}</details>`}).join('')||'<p>Recovery day.</p>'}<small>Record training on Dashboard or Log past workout.</small></section>`}};
 
 
 
@@ -1553,8 +1845,8 @@ function setupOpen596(){setup596().paused=false;save();tab='Home';render()}
 function setupPause596(){setup596().paused=true;save();render()}
 const tour596=[['Home','Dashboard','Your daily targets and next activity.'],['Workout','Training','Log sets, reps and weights; review your training history.'],['Food','Nutrition','Log meals, scan labels, estimate meals from photos and track water.'],['Planner','Planner','Review your upcoming routine.'],['Progress','Progress','Review your recorded measurements and results.']];
 function setupTour596(t){setup596().paused=true;save();tab=t;render()}
-function setupFinish596(){let o=setup596(),d=o.draft;if(!String(d.name||'').trim())return alert('Enter your name in the starting point step.');if([0,1,2,3].some(i=>d['baseline'+i]&&(!Number.isFinite(+d['baseline'+i])||+d['baseline'+i]<=0)))return alert('Enter positive measurements.');if(!validTime58(d.time)||!goals[d.goal]||![3,4,5].includes(+d.days))return alert('Review your training settings.');if(![d.age,d.height,d.weight].every(x=>x!==''&&Number.isFinite(+x))||+d.age<18||+d.age>100||+d.height<120||+d.height>230||+d.weight<80||+d.weight>600)return alert('Review your physical assessment.');if(d.budget!==''&&(!Number.isFinite(+d.budget)||+d.budget<0))return alert('Review your budget.');let old=JSON.stringify(S);Object.assign(S.profile,{goal:d.goal,age:+d.age,height:+d.height,weight:+d.weight,sex:d.sex,activity:+d.activity,days:+d.days});let i=Math.floor(+d.coach/4),j=+d.coach%4;Object.assign(coachPrefs(),{style:i,auto:false,intensity:coachStyles[i][2]});(coachPrefs().avatars??={})[i]=j;rhythm().work=d.time;S.profile.name=String(d.name).trim();S.profile.baseline597={date:today(),v:[String(d.weight),...[0,1,2,3].map(i=>String(d['baseline'+i]||''))]};S.measure.push(S.profile.baseline597);o.completed=true;o.paused=false;o.approved=today();if(!save()){S=JSON.parse(old);return}tab='Home';render()}
-function setupHTML596(){let o=setup596(),d=o.draft,n=o.step,i=Math.floor(+d.coach/4),j=+d.coach%4,c=character58(i,j);let field=(k,label,type='text',attrs='')=>`<label>${label}<input type="${type}" ${attrs} value="${esc(String(d[k]??''))}" oninput="setupField596('${k}',this.value)"></label>`,sel=(k,label,opts)=>`<label>${label}<select onchange="setupField596('${k}',this.value)">${opts.map(([v,l])=>`<option value="${esc(String(v))}" ${String(d[k])===String(v)?'selected':''}>${esc(l)}</option>`).join('')}</select></label>`;let body=[()=>roster597(d),()=>tourHTML597(),()=>sel('goal','What are we working toward?',Object.entries(goals)),()=>field('name','Your name')+field('age','Age','number','min="18" max="100"')+field('height','Height (cm)','number')+field('weight','Weight (lb)','number')+sel('sex','Sex used for calorie estimate',[['male','Male'],['female','Female']])+sel('activity','Activity level',[[1.2,'Sedentary'],[1.375,'Light'],[1.5,'Moderate'],[1.725,'Very active']])+field('limitations','Physical limitations (optional)')+['Waist','Chest','Thigh','Arm'].map((x,i)=>field('baseline'+i,x+' (in, optional)','number','min="0" step="0.1"')).join(''),()=>field('budget','Weekly grocery budget (optional)','number','min="0"')+field('diet','Food preferences and allergies (optional)'),()=>sel('days','Training days per week',[[3,'3 days'],[4,'4 days'],[5,'5 days']])+field('time','Usual training time','time')+sel('equipment','Equipment available',[['gym','Gym'],['home','Home equipment'],['crossfit','CrossFit-style station'],['none','No equipment']])+field('duration','Session duration (minutes)','number','min="10" max="180"'),()=>review597(d)][n]();return `<section><small>CONSULTATION · STEP ${n+1} OF 7</small><h2>${['Meet your coach','Your MyFit tour','Your goals','Your starting point','Nutrition consultation','Training consultation','Review your program'][n]}</h2><div style="display:flex;gap:12px;align-items:center"><img src="${coachPortraits[i][j]}" style="width:76px;border-radius:12px" alt=""><div><b>${esc(c[0])}</b><p>${esc(c[4])}</p></div></div>${body}<button class="wide" onclick="${n===6?'setupFinish596()':`setupGo596(${n+1})`}">${n===6?'Approve & begin':'Continue'}</button>${n?`<button class="alt wide" onclick="setupGo596(${n-1})">Back</button>`:''}<button class="alt wide" onclick="setupPause596()">Pause setup</button></section>`}
+function setupFinish596(){let o=setup596(),d=o.draft;if(!String(d.name||'').trim())return alert('Enter your name in the starting point step.');if([0,1,2,3].some(i=>d['baseline'+i]&&(!Number.isFinite(+d['baseline'+i])||+d['baseline'+i]<=0)))return alert('Enter positive measurements.');if(!validTime58(d.time)||!goals[d.goal]||![3,4,5].includes(+d.days))return alert('Review your training settings.');if(![d.age,d.height,d.weight].every(x=>x!==''&&Number.isFinite(+x))||+d.age<18||+d.age>100||+d.height<120||+d.height>230||+d.weight<80||+d.weight>600)return alert('Review your physical assessment.');if(d.budget!==''&&(!Number.isFinite(+d.budget)||+d.budget<0))return alert('Review your budget.');let old=JSON.stringify(S);Object.assign(S.profile,{goal:d.goal,age:+d.age,height:+d.height,weight:+d.weight,sex:d.sex,activity:+d.activity,days:+d.days});let i=Math.floor(+d.coach/4),j=+d.coach%4;Object.assign(coachPrefs(),{style:i,auto:false,intensity:coachStyles[i][2]});(coachPrefs().avatars??={})[i]=j;rhythm().work=d.time;S.profile.name=String(d.name).trim();S.profile.startingProfile={age:+d.age,height:+d.height,weight:+d.weight};S.profile.trainingEquipment=normalizeGym(d.equipment,d.trainingGear,d.movementRestrictions,d.limitations);logGymChange(S.profile.trainingEquipment);S.profile.baseline597={date:today(),v:[String(d.weight),...[0,1,2,3].map(i=>String(d['baseline'+i]||''))]};S.measure.push(S.profile.baseline597);o.completed=true;o.paused=false;o.approved=today();if(!save()){S=JSON.parse(old);return}tab='Home';render()}
+function setupHTML596(){let o=setup596(),d=o.draft,n=o.step,i=Math.floor(+d.coach/4),j=+d.coach%4,c=character58(i,j);let field=(k,label,type='text',attrs='')=>`<label>${label}<input type="${type}" ${attrs} value="${esc(String(d[k]??''))}" oninput="setupField596('${k}',this.value)"></label>`,sel=(k,label,opts)=>`<label>${label}<select onchange="setupField596('${k}',this.value)">${opts.map(([v,l])=>`<option value="${esc(String(v))}" ${String(d[k])===String(v)?'selected':''}>${esc(l)}</option>`).join('')}</select></label>`;let body=[()=>roster597(d),()=>tourHTML597(),()=>sel('goal','What are we working toward?',Object.entries(goals)),()=>field('name','Your name')+field('age','Age','number','min="18" max="100"')+field('height','Height (cm)','number')+field('weight','Weight (lb)','number')+sel('sex','Sex used for calorie estimate',[['male','Male'],['female','Female']])+sel('activity','Activity level',[[1.2,'Sedentary'],[1.375,'Light'],[1.5,'Moderate'],[1.725,'Very active']])+['Waist','Chest','Thigh','Arm'].map((x,i)=>field('baseline'+i,x+' (in, optional)','number','min="0" step="0.1"')).join(''),()=>field('budget','Weekly grocery budget (optional)','number','min="0"')+field('diet','Food preferences and allergies (optional)'),()=>sel('days','Training days per week',[[3,'3 days'],[4,'4 days'],[5,'5 days']])+field('time','Usual training time','time')+gymSettingsFields(normalizeGym(d.equipment,d.trainingGear,d.movementRestrictions,d.limitations),true)+field('duration','Session duration (minutes)','number','min="10" max="180"'),()=>review597(d)][n]();return `<section><small>CONSULTATION · STEP ${n+1} OF 7</small><h2>${['Meet your coach','Your MyFit tour','Your goals','Your starting point','Nutrition consultation','Training consultation','Review your program'][n]}</h2><div style="display:flex;gap:12px;align-items:center"><img src="${coachPortraits[i][j]}" style="width:76px;border-radius:12px" alt=""><div><b>${esc(c[0])}</b><p>${esc(c[4])}</p></div></div>${body}<button class="wide" onclick="${n===6?'setupFinish596()':`setupGo596(${n+1})`}">${n===6?'Approve & begin':'Continue'}</button>${n?`<button class="alt wide" onclick="setupGo596(${n-1})">Back</button>`:''}<button class="alt wide" onclick="setupPause596()">Pause setup</button></section>`}
 function routine596(){return `<section><h3>Training schedule</h3><p>Usual time: ${fmt58(rhythm().work)} · Today: ${fmt58(rhythm().commit[today()]||rhythm().work)}</p><label>Training time<input id="routineTime596" type="time" value="${rhythm().commit[today()]||rhythm().work}"></label><button class="wide" onclick="routineSave596(false)">Change today only</button><button class="alt wide" onclick="routineSave596(true)">Change usual training time</button></section>`}
 function routineSave596(all){let v=$('routineTime596').value;if(!validTime58(v))return;let r=rhythm();if(all){r.work=v;delete r.commit[today()]}else r.commit[today()]=v;if(save())render()}
 const prior596=render;render=function(){prior596();let o=setup596(),app=$('app');if(tab==='Home'&&entryMode!=='live'&&!o.completed&&!o.paused){app.innerHTML=setupHTML596();return}if(tab==='Home'&&entryMode!=='live'&&!o.completed)app.insertAdjacentHTML('afterbegin','<section><button class="wide" onclick="setupOpen596()">Resume coach consultation</button></section>');if(tab==='Workout'&&entryMode!=='live')app.insertAdjacentHTML('afterbegin',routine596());if(tab==='Coach'&&o.completed)app.insertAdjacentHTML('afterbegin','<section><small>Program active · Your coach can change without resetting your routine.</small></section>')};
@@ -1623,7 +1915,7 @@ function profileGoalsPanel() {
   </section>`;
 }
 
-const render598=render;render=function(){render598();let nav=$('nav'),app=$('app');if(nav){for(let b of [...nav.querySelectorAll('button')]){let text=b.textContent.trim();if(/Goals$|Progress$/.test(text))b.remove();else if(/Profile$/.test(text)){b.classList.toggle('active',['Profile','Goals','Progress','Data'].includes(tab));}}}if(!['Profile','Goals','Progress','Data'].includes(tab))return;let sub=`<section style="padding:10px"><h2>My fitness profile</h2><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px">${[['Profile','Overview'],['Goals','Goals'],['Progress','Progression'],['Data','Data &amp; backup']].map(([t,n])=>`<button class="${tab===t?'':'alt'}" aria-pressed="${tab===t}" style="padding:9px 3px" onclick="profileSection598('${t}')">${n}</button>`).join('')}</div></section>`;app.insertAdjacentHTML('afterbegin',sub);if(tab==='Progress')$('workoutHistory').insertAdjacentHTML('beforebegin',strengthProgressPanel());if(tab==='Goals'){let t=targets();app.insertAdjacentHTML('beforeend',`<section><h3>Daily nutrition goals</h3><div class="line"><span>Calories</span><b>${t[0]} kcal</b></div>${['Protein','Carbohydrates','Fat'].map((n,i)=>`<div class="line"><span>${n}</span><b>${t[i+1]} g</b></div>`).join('')}<p class="muted">Targets are estimated from your profile and primary goal.</p></section>`+profileGoalsPanel())} };
+const render598=render;render=function(){render598();let nav=$('nav'),app=$('app');if(nav){for(let b of [...nav.querySelectorAll('button')]){let text=b.textContent.trim();if(/Goals$|Progress$/.test(text))b.remove();else if(/Profile$/.test(text)){b.classList.toggle('active',['Profile','Goals','Progress','Data','Gym','Review'].includes(tab));}}}if(!['Profile','Goals','Progress','Data','Gym','Review'].includes(tab))return;let sub=`<section style="padding:10px"><h2>My fitness profile</h2><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px">${[['Profile','Overview'],['Goals','Goals'],['Progress','Progression'],['Gym','My Gym'],['Data','Data &amp; backup']].map(([t,n])=>`<button class="${tab===t?'':'alt'}" aria-pressed="${tab===t}" style="padding:9px 3px" onclick="profileSection598('${t}')">${n}</button>`).join('')}</div></section>`;app.insertAdjacentHTML('afterbegin',sub);if(tab==='Progress')$('workoutHistory').insertAdjacentHTML('beforebegin',strengthProgressPanel());if(tab==='Goals'){let t=targets();app.insertAdjacentHTML('beforeend',`<section><h3>Daily nutrition goals</h3><div class="line"><span>Calories</span><b>${t[0]} kcal</b></div>${['Protein','Carbohydrates','Fat'].map((n,i)=>`<div class="line"><span>${n}</span><b>${t[i+1]} g</b></div>`).join('')}<p class="muted">Targets are estimated from your profile and primary goal.</p></section>`+profileGoalsPanel())} };
 let coachCustomizeOpen = false;
 
 function dataBackupPanel() {
@@ -1744,6 +2036,16 @@ render = function() {
   if (tab === 'Workout' && entryMode !== 'past') $('app').firstElementChild?.insertAdjacentHTML('afterend',trainingEquipmentPanel());
   if (tab === 'Progress') groupProgress();
   if (tab === 'Data') $('app').insertAdjacentHTML('beforeend',dataBackupPanel());
+  if (tab === 'Gym') $('app').insertAdjacentHTML('beforeend',myGymPanel());
+  if (tab === 'Review') $('app').insertAdjacentHTML('beforeend',programReviewPanel());
+  if (['Profile','Goals','Coach'].includes(tab)) {
+    const first = $('app').firstElementChild;
+    if (first) first.insertAdjacentHTML('afterend',programReviewPrompt());
+  }
+  if (tab==='Profile'&&!edit597) {
+    const start=startingProfile();
+    $('app').insertAdjacentHTML('beforeend',`<section><h3>Starting profile</h3><p>Age ${esc(start.age)} · ${esc(start.height)} cm · ${esc(start.weight)} lb</p></section>`);
+  }
   placeDailyControls();
 };
 render();let lastDay=today(),lastMeal=autoMeal();setInterval(()=>{let now=today(),mt=autoMeal();if(now!==lastDay){if(day()===lastDay){$('date').value=now;calendarOffset=0;if(tab!=='Food'&&tab!=='Goals')render()}lastDay=now}if(mt!==lastMeal){lastMeal=mt;if(tab==='Planner'&&mealType==='Auto')render()}},30000);</script><script>if("serviceWorker" in navigator && location.protocol==="https:"){navigator.serviceWorker.register("./sw.js").catch(console.warn)}</script></html>
