@@ -23,7 +23,7 @@ button.wide + .grid{margin-top:12px}
 .recipe-detail-actions{display:grid;gap:.5rem;margin-top:1rem}
 #recordDate{font-size:.75rem}#recordDate[hidden]{display:none}#recordDate input{display:block;margin:2px 0 0;width:145px}.week-day{width:100%;display:block;text-align:left;margin-top:8px}.week-day[aria-current=date]{border:1px solid #a5ef91}.week-meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;margin-top:7px;font-weight:400}.week-meals small{display:block}.daily-disclosure{margin:12px 0;padding:12px;border:1px solid #42564a;border-radius:12px}.daily-disclosure>summary{cursor:pointer;font-weight:700}
 .briefing-identity{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:12px 0}.briefing-portrait{width:50px;flex:none}.briefing-identity button{margin-left:auto}
-</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.9.5</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
+</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.9.9</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
 const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());let S={profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,legs:true},meals:{},work:{},measure:[]};var storageBlocked=false;try{let x=localStorage.getItem('myfit-v1');if(x){let parsed=JSON.parse(x);if(!validState(parsed))throw Error('Invalid saved data');S=parsed}}catch(e){storageBlocked=true;alert('Saved data could not be read. Automatic saving is disabled to protect it. Export or restore a valid backup.')}function save(){if(storageBlocked)return false;try{localStorage.setItem('myfit-v1',JSON.stringify(S));return true}catch(e){alert('Storage unavailable. Export your data before closing.')}}S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};let plannerDate = '';
 const day = () => tab === 'Planner' ? plannerDate || today() : ['Home','Coach'].includes(tab) ? today() : $('date').value;
 function openMainTab(next) {
@@ -224,13 +224,118 @@ recipes.push(
     'Cook the sliced pepper in a skillet until softened. Add the ground pork and break it up as it cooks. Fill the tortillas with the cooked pork and peppers, then top with salsa.', ['Lunch','Dinner']]
 );
 
+const everydayMains = [
+  ['Chicken, rice and broccoli',[['chicken breast',150],['white rice',160],['broccoli',130],['olive oil',5]],
+    'Warm the cooked chicken and rice. Steam the broccoli until tender. Serve the chicken, rice and broccoli together and drizzle with oil.'],
+  ['Chicken, potatoes and green beans',[['chicken breast',150],['potato',200],['green beans',120],['olive oil',5]],
+    'Cut the cooked potatoes into chunks and brown them in a skillet with the oil. Warm the cooked chicken and steam the green beans. Serve together.'],
+  ['Chicken and sweet potato plate',[['chicken breast',150],['sweet potato',200],['spinach',70],['olive oil',5]],
+    'Warm the cooked chicken and sweet potato. Wilt the spinach in the oil in a skillet. Slice the chicken and serve it with the vegetables.'],
+  ['Chicken and tomato pasta',[['chicken breast',130],['cooked spaghetti',170],['tomato pasta sauce',120],['spinach',55]],
+    'Warm the tomato sauce in a skillet. Add the diced cooked chicken and spinach, then stir until the spinach wilts. Toss with cooked spaghetti.'],
+  ['Chicken and cheddar sandwich',[['chicken breast',120],['bread',75],['cheddar cheese',25],['lettuce',30],['tomato',60]],
+    'Slice the cooked chicken and tomato. Layer them with cheddar and lettuce between the bread slices. Toast the bread first if you like.'],
+  ['Chicken and corn lettuce bowl',[['chicken breast',140],['corn',90],['lettuce',85],['cucumber',80],['greek yogurt',50]],
+    'Chop the cooked chicken, lettuce and cucumber. Drain the canned corn and toss it with the chicken and vegetables. Spoon the yogurt over the bowl.'],
+  ['Chicken and carrot rice skillet',[['chicken breast',130],['brown rice',160],['carrots',85],['peas',65],['olive oil',5]],
+    'Chop the carrots and cook them in the oil until tender. Add the peas, diced cooked chicken and cooked rice. Stir until hot throughout.'],
+  ['Turkey and cheddar wrap',[['turkey',120],['tortilla',65],['cheddar cheese',25],['lettuce',35],['tomato',60]],
+    'Slice the cooked turkey and tomato. Layer the turkey, cheddar, lettuce and tomato in the tortilla. Fold the sides in and roll.'],
+  ['Turkey, mashed potatoes and peas',[['turkey',150],['potato',200],['peas',100],['milk',35]],
+    'Mash the cooked potatoes with warm milk. Warm the cooked turkey and peas. Serve the turkey over the mash with the peas on the side.'],
+  ['Turkey and spinach rice bowl',[['turkey',140],['brown rice',150],['spinach',80],['salsa',45]],
+    'Warm the cooked rice and chopped cooked turkey. Wilt the spinach in a skillet with a splash of water. Spoon the salsa over the bowl.'],
+  ['Beef and tomato spaghetti',[['lean ground beef',130],['cooked spaghetti',175],['tomato pasta sauce',130]],
+    'Break up the ground beef in a skillet and cook it through. Stir in the pasta sauce and heat it through. Spoon the sauce over the cooked spaghetti.'],
+  ['Ground beef and potato hash',[['lean ground beef',135],['potato',190],['onion',55],['bell pepper',75],['olive oil',5]],
+    'Dice the onion and pepper and soften them in the oil. Add the ground beef, break it up and cook it through. Stir in diced cooked potatoes and heat through.'],
+  ['Cheeseburger rice bowl',[['lean ground beef',130],['white rice',145],['cheddar cheese',25],['lettuce',45],['tomato',75]],
+    'Cook the ground beef through, breaking it up in the skillet. Spoon it over warm cooked rice and add grated cheddar. Top with chopped lettuce and tomato.'],
+  ['Beef and black bean tacos',[['lean ground beef',115],['black beans',85],['tortilla',65],['lettuce',35],['salsa',45]],
+    'Cook the ground beef through in a skillet. Stir in the drained canned beans and warm them. Fill warm tortillas and top with shredded lettuce and salsa.'],
+  ['Beef and bean chilli',[['lean ground beef',120],['kidney beans',120],['tomato pasta sauce',140],['onion',50],['bell pepper',60]],
+    'Dice the onion and pepper and cook them with the ground beef, breaking up the meat until cooked through. Add the drained canned beans and tomato sauce. Simmer until hot and thickened.'],
+  ['Beef jacket potato',[['potato',230],['lean ground beef',125],['tomato pasta sauce',75],['cheddar cheese',25]],
+    'Warm a cooked potato and split it open. Cook the ground beef through and stir in the tomato sauce. Spoon the hot beef onto the potato and top with grated cheddar.'],
+  ['Salmon, rice and green beans',[['salmon',145],['white rice',155],['green beans',125],['olive oil',5]],
+    'Warm the cooked rice and steam the green beans. Flake the cooked salmon over the rice. Add the beans and drizzle with oil.'],
+  ['Salmon and cucumber salad bowl',[['salmon',130],['brown rice',140],['cucumber',90],['tomato',70],['greek yogurt',45]],
+    'Chop the cucumber and tomato. Flake the cooked salmon and serve it with cooked rice and the vegetables. Add a spoonful of yogurt.'],
+  ['Tuna and white bean toast',[['tuna',100],['white beans',105],['bread',70],['greek yogurt',40]],
+    'Drain the canned tuna and beans. Mash the beans with the yogurt and fold in the tuna. Spread the mixture on toast.'],
+  ['Tuna jacket potato',[['potato',230],['tuna',110],['greek yogurt',55],['corn',55]],
+    'Warm a cooked potato and split it open. Drain the canned tuna and corn, then mix them with the yogurt. Spoon the filling into the potato.'],
+  ['Tuna, peas and rice bowl',[['tuna',115],['white rice',155],['peas',105],['olive oil',5]],
+    'Warm the cooked rice and peas. Drain the canned tuna and flake it over the bowl. Toss gently with the oil.'],
+  ['Egg and cucumber sandwich',[['egg',100],['bread',75],['cucumber',65],['lettuce',30],['greek yogurt',40]],
+    'Chop the hard-boiled eggs and stir them into the yogurt. Slice the cucumber. Fill the bread with the egg mixture, cucumber and lettuce.'],
+  ['Cheddar and black bean quesadilla',[['black beans',120],['tortilla',70],['cheddar cheese',40],['salsa',45]],
+    'Drain the canned beans and crush them lightly. Spread them over one half of the tortilla, add the grated cheddar and fold. Toast in a skillet on both sides until the cheese melts. Serve with salsa.'],
+  ['Lentil and tomato pasta',[['lentils',145],['cooked spaghetti',155],['tomato pasta sauce',130],['spinach',65]],
+    'Warm the cooked lentils in the sauce. Fold in the spinach and stir until wilted. Toss with cooked spaghetti.'],
+  ['Tofu and broccoli rice bowl',[['tofu',185],['broccoli',140],['brown rice',155],['olive oil',5]],
+    'Pat the tofu dry and cut it into cubes. Brown it in a skillet with the oil. Steam the broccoli and serve both over warm cooked rice.'],
+  ['White bean and potato bowl',[['white beans',160],['potato',200],['spinach',70],['olive oil',5]],
+    'Cut the cooked potatoes into chunks and warm them in the oil. Add drained canned white beans and spinach. Stir until the beans are hot and the spinach has wilted.'],
+  ['Pork and potato skillet',[['ground pork',130],['potato',190],['onion',55],['green beans',105]],
+    'Cook the chopped onion and ground pork together, breaking up the meat until cooked through. Stir in diced cooked potatoes and heat through. Serve with steamed green beans.'],
+  ['Pork, cabbage and rice bowl',[['ground pork',125],['cabbage',135],['white rice',150],['carrots',70]],
+    'Shred the cabbage and slice the carrots thinly. Cook the ground pork through, breaking it up as it cooks. Stir in the vegetables and cook until tender. Serve over warm cooked rice.']
+];
+recipes.push(...everydayMains.map(([title,ingredients,method]) =>
+  ['Everyday',title,ingredients,method,['Lunch','Dinner']]));
+
+const plantMeals = [
+  ['Banana and peanut butter rice bowl',[['white rice',150],['banana',105],['peanut butter',24]],'Warm the cooked rice with a splash of water. Slice the banana over it and swirl in the peanut butter.',['Breakfast','Snack']],
+  ['Warm apple and peanut rice',[['brown rice',145],['apple',135],['peanuts',25]],'Dice the apple and soften it in a pan with a splash of water. Stir it into warm cooked rice and top with chopped peanuts.',['Breakfast','Snack']],
+  ['Peach and peanut quinoa cup',[['quinoa',150],['peach',125],['peanut butter',22]],'Spoon cooked quinoa into a bowl. Slice the peach and top the quinoa with peaches and peanut butter.',['Breakfast','Snack']],
+  ['Pear and crunchy peanut cup',[['pear',155],['peanuts',28]],'Slice the pear and serve with chopped peanuts.',['Breakfast','Snack']],
+  ['Sweet potato with peanut butter and banana',[['sweet potato',165],['banana',90],['peanut butter',24]],'Warm the cooked sweet potato, split it open and mash the inside. Top with sliced banana and peanut butter.',['Breakfast','Snack']],
+  ['Breakfast potato and black bean hash',[['potato',170],['black beans',115],['bell pepper',70],['olive oil',5]],'Dice the cooked potato and pepper. Brown them in a skillet with the oil. Add the drained canned beans and stir until hot.',['Breakfast','Lunch']],
+  ['Tomato and spinach breakfast tofu',[['tofu',170],['tomato',95],['spinach',75],['olive oil',5]],'Crumble the plain tofu into a skillet with the oil and diced tomato. Stir until hot, then add the spinach and let it wilt.',['Breakfast','Lunch']],
+  ['Chickpea and tomato breakfast bowl',[['chickpeas',140],['tomato',100],['potato',145],['olive oil',5]],'Dice the cooked potato and tomato. Warm them in the oil with the drained canned chickpeas.',['Breakfast','Lunch']],
+  ['Chickpea and cucumber snack cup',[['chickpeas',95],['cucumber',85],['olive oil',5]],'Drain the canned chickpeas and chop the cucumber. Toss together with the oil.',['Snack']],
+  ['White bean mash with carrots',[['white beans',110],['carrots',100],['olive oil',5]],'Drain the canned beans and mash them with the oil and a splash of water. Slice the carrots into sticks for dipping.',['Snack']],
+  ['Banana and peanuts',[['banana',115],['peanuts',30]],'Slice the banana and serve it with the peanuts.',['Snack']],
+  ['Lentil and sweet potato bowl',[['lentils',165],['sweet potato',185],['spinach',80],['olive oil',5]],'Warm the cooked lentils and cubed cooked sweet potato. Wilt the spinach in the oil and spoon it over the bowl.',['Lunch','Dinner']],
+  ['Black bean and corn rice bowl',[['black beans',155],['corn',90],['white rice',145],['tomato',85]],'Drain the canned beans and corn, then warm them with the cooked rice. Top with diced tomato.',['Lunch','Dinner']],
+  ['Crispy tofu and potato skillet',[['tofu',180],['potato',190],['onion',55],['olive oil',8]],'Pat the plain tofu dry and cube it. Brown the tofu, chopped onion and diced cooked potato in the oil.',['Lunch','Dinner']],
+  ['Chickpea and broccoli quinoa bowl',[['chickpeas',155],['quinoa',135],['broccoli',125],['olive oil',6]],'Steam the broccoli. Warm the drained canned chickpeas and cooked quinoa, then add the broccoli and drizzle with oil.',['Lunch','Dinner']],
+  ['White bean and tomato rice skillet',[['white beans',160],['white rice',150],['tomato',120],['spinach',70],['olive oil',5]],'Soften the diced tomato in the oil. Stir in the drained canned beans, cooked rice and spinach. Heat until the spinach wilts.',['Lunch','Dinner']],
+  ['Lentil and carrot potato plate',[['lentils',170],['potato',185],['carrots',100],['olive oil',6]],'Mash the cooked potato with a splash of water and the oil. Warm the cooked lentils and steam the sliced carrots. Serve beside the mash.',['Lunch','Dinner']],
+  ['Peanut tofu and cabbage rice bowl',[['tofu',180],['brown rice',155],['cabbage',125],['peanut butter',22],['olive oil',5]],'Brown cubes of plain tofu and sliced cabbage in the oil. Whisk the peanut butter with warm water and stir it into the pan. Serve over cooked rice.',['Lunch','Dinner']],
+  ['Kidney bean and pepper potato bowl',[['kidney beans',155],['potato',190],['bell pepper',90],['olive oil',6]],'Soften the sliced pepper in the oil. Add cubed cooked potato and drained canned kidney beans. Stir until hot.',['Lunch','Dinner']],
+  ['Chickpea and spinach quinoa salad',[['chickpeas',145],['quinoa',145],['spinach',65],['cucumber',90],['olive oil',8]],'Drain and rinse the canned chickpeas. Chop the spinach and cucumber, then toss with cooked quinoa, chickpeas and oil.',['Lunch','Dinner']],
+  ['Lentil and tomato rice bowl',[['lentils',170],['brown rice',145],['tomato',115],['onion',55],['olive oil',6]],'Soften the chopped onion and tomato in a skillet with the oil. Add the cooked lentils and serve over warm cooked rice.',['Lunch','Dinner']]
+];
+const plantRecipes = new Set(plantMeals.map(([title,ingredients,method,types]) =>
+  ['Everyday',title,ingredients,method,types]));
+recipes.push(...plantRecipes);
+
+const reviewedPlantMeals = new Set(['Apple and peanut butter','Chickpea and cucumber salad','Tofu and broccoli rice bowl','White bean and potato bowl']);
+const reviewedDairyAndGlutenFreeMeals = new Set([
+  'Hard-boiled eggs','Chicken, rice and broccoli','Chicken, potatoes and green beans',
+  'Chicken and sweet potato plate','Chicken and carrot rice skillet','Salmon, rice and green beans',
+  'Pork and potato skillet','Pork, cabbage and rice bowl','Ground beef and potato hash',
+  'Salmon and plantain','Chicken quinoa salad'
+]);
+const reviewedDairyFreeMeals = new Set(['Chicken and tomato pasta','Beef and tomato spaghetti',
+  'Beef and black bean tacos','Lentil and tomato pasta','Peanut butter and banana toast']);
+
 function isQuickRecipe(index) {
   return index >= quickRecipeStart;
 }
 
 function recipeAllowed(recipe) {
-  return prefs().includePork === true ||
-    ![recipe[1],...recipe[2].map(([name])=>name)].some(name =>
+  const preferences = prefs();
+  const title = recipe[1];
+  const plant = plantRecipes.has(recipe) || reviewedPlantMeals.has(title);
+  if (preferences.vegan && !plant) return false;
+  const dairyAndGlutenFree = plant || reviewedDairyAndGlutenFreeMeals.has(title);
+  if (preferences.glutenFree && !dairyAndGlutenFree) return false;
+  if (preferences.dairyFree && !dairyAndGlutenFree && !reviewedDairyFreeMeals.has(title)) return false;
+  return preferences.includePork === true ||
+    ![title,...recipe[2].map(([name])=>name)].some(name =>
       /\b(pork|bacon|ham|prosciutto|pepperoni|pancetta|lard)\b/i.test(name));
 }
 
@@ -240,9 +345,11 @@ let pantry='',dishSearch='',quickRecipesOnly=false; function matchesRecipe(x){re
 function prefs(){return {style:'Balanced',tier:'Moderate',budget:100,days:2,pantry:'',...(S.prep||{})}}
 function prepSet(k,v){S.prep={...prefs(),[k]:v};save();render()}
 let plannerSettingsOpen = false;
-function setPorkPreference(include) {
+function setPorkPreference(include) {setRecipePreference('includePork',include)}
+
+function setRecipePreference(key,include) {
   const previous = S.prep;
-  S.prep = {...prefs(),includePork:include};
+  S.prep = {...prefs(),[key]:include};
   if (!save()) {
     if (previous === undefined) delete S.prep;
     else S.prep = previous;
@@ -251,7 +358,11 @@ function setPorkPreference(include) {
   render();
 }
 
-function prepControls(){let p=prefs();return `<section><details ${plannerSettingsOpen?'open':''} ontoggle="plannerSettingsOpen=this.open"><summary>Planning settings</summary><label><input type="checkbox" style="width:auto" ${p.includePork===true?'checked':''} onchange="setPorkPreference(this.checked)"> Include pork in recipes and suggestions</label><label>Discipline & variety<select onchange="prepSet('style',this.value)">${['Strict','Meal prep','Balanced','Variety'].map(v=>`<option ${v===p.style?'selected':''}>${v}</option>`).join('')}</select></label><label>Spending style<select onchange="prepSet('tier',this.value)">${['Budget friendly','Moderate','Splurge'].map(v=>`<option ${v===p.tier?'selected':''}>${v}</option>`).join('')}</select></label><label>Weekly budget (CAD, personal target)<input type="number" min="0" value="${p.budget}" onchange="prepSet('budget',Math.max(0,+this.value||0))"></label><label>Batch cooking sessions<select onchange="prepSet('days',+this.value)">${[1,2,3,4,7].map(v=>`<option ${v===p.days?'selected':''}>${v}</option>`).join('')}</select></label><label>Pantry ingredients (comma separated)<input value="${esc(p.pantry)}" onchange="prepSet('pantry',this.value)"></label><small>Strict prioritizes protein per calorie. Meal prep repeats batch recipes. Balanced and Variety offer different meals across the week. Spending style uses ingredient proxies, not store prices. Budget is a reference target, not a guaranteed cap.</small></details></section>`}
+function prepControls(){let p=prefs();return `<section><details ${plannerSettingsOpen?'open':''} ontoggle="plannerSettingsOpen=this.open"><summary>Planning settings</summary><label><input type="checkbox" style="width:auto" ${p.includePork===true?'checked':''} onchange="setPorkPreference(this.checked)"> Include pork in recipes and suggestions</label>
+<div class="recipe-preferences">
+${[['dairyFree','Dairy-free'],['vegan','Vegan'],['glutenFree','Gluten-free ingredients']].map(([key,label])=>`<label><input type="checkbox" style="width:auto" ${p[key]?'checked':''} onchange="setRecipePreference('${key}',this.checked)"> ${label}</label>`).join('')}
+<small>For allergies or celiac disease, check package labels and avoid cross-contact in the kitchen. These filters screen recipe ingredients.</small>
+</div><label>Discipline & variety<select onchange="prepSet('style',this.value)">${['Strict','Meal prep','Balanced','Variety'].map(v=>`<option ${v===p.style?'selected':''}>${v}</option>`).join('')}</select></label><label>Spending style<select onchange="prepSet('tier',this.value)">${['Budget friendly','Moderate','Splurge'].map(v=>`<option ${v===p.tier?'selected':''}>${v}</option>`).join('')}</select></label><label>Weekly budget (CAD, personal target)<input type="number" min="0" value="${p.budget}" onchange="prepSet('budget',Math.max(0,+this.value||0))"></label><label>Batch cooking sessions<select onchange="prepSet('days',+this.value)">${[1,2,3,4,7].map(v=>`<option ${v===p.days?'selected':''}>${v}</option>`).join('')}</select></label><label>Pantry ingredients (comma separated)<input value="${esc(p.pantry)}" onchange="prepSet('pantry',this.value)"></label><small>Strict prioritizes protein per calorie. Meal prep repeats batch recipes. Balanced and Variety offer different meals across the week. Spending style uses ingredient proxies, not store prices. Budget is a reference target, not a guaranteed cap.</small></details></section>`}
 function costProxy(r){return r[2].reduce((a,[n,g])=>a+g/1000*(/lobster|steak|salmon|shrimp|lamb|scallop|crab/.test(n)?30:/beef|fish|chicken|turkey|cheese|nuts/.test(n)?15:/rice|oat|potato|bean|lentil|flour/.test(n)?4:8),0)}
 function planScore(x,type,p,used){let items=recipeItems(x.r,type,true),v=totals(items),cost=costProxy(x.r),shared=x.r[2].filter(([n])=>used.has(n)||p.pantry.toLowerCase().split(',').map(a=>a.trim()).includes(n)).length;return (p.style==='Strict'?v[1]/Math.max(1,v[0])*150:0)+(p.tier==='Budget friendly'?-cost*2:p.tier==='Splurge'?cost*.6:-cost*.5)+shared*.5+Math.random()*1.5}
 function batchLabel(k,type){let p=prefs(),i=planned(k,type)?.i,prev=new Date((dateSeed(k)-1)*86400000).toISOString().slice(0,10);return planned(prev,type)?.i===i?'Repeat / leftover (if safely stored)':'Prepare fresh or batch'}
@@ -300,7 +411,7 @@ function plannerPeriodHeader(range) {
 
 function plannerThemes() {
   return ['Mixed cuisines', ...new Set(recipes
-    .filter(recipe => recipe[4].some(type => type === 'Lunch' || type === 'Dinner'))
+    .filter(recipe => recipeAllowed(recipe) && recipe[4].some(type => type === 'Lunch' || type === 'Dinner'))
     .map(recipe => recipe[0]))];
 }
 
@@ -706,7 +817,7 @@ function dailyPrefs(){return S.dailyCoach??={mode:'active',morning:'07:00',meal:
 function dailySet(k,v){if(k!=='mode'&&!/^([01]\d|2[0-3]):[0-5]\d$/.test(v))return;dailyPrefs()[k]=v;save();render()}
 function dailyToggle(k,v){dailyPrefs().enabled[k]=v;save();render()}
 function dailyEvents(date=day()){let p=dailyPrefs(),i=activeCoach(),c=strategies[i];return [['morning','Morning briefing',c[2]],['meal','Meal reminder',c[3]],['workout','Training reminder',schedule()[(new Date(date+'T12:00:00').getDay()+6)%7]==='rest'?coachStyles[i][5]:coachStyles[i][3]],['evening','Evening check-in',c[4]]].map(([k,n,m])=>({k,n,m,time:p[k]}))}
-function coachDaily(){let p=dailyPrefs(),i=activeCoach(),c=strategies[i];return `<section><div class="pill">${coachStyles[i][1]} ${coachStyles[i][0]} · v5.9.6.2</div><label for="activeCoachSelect">Choose your coach</label><select id="activeCoachSelect" onchange="chooseCoach(this.value)">${coachStyles.map((x,j)=>`<option value="${j}" ${j===i?'selected':''}>${x[1]} ${x[0]}</option>`).join('')}</select><small>Active coach: ${coachStyles[i][0]}${coachPrefs().auto?' · automatic':''}</small><h3>${c[0]}</h3><p>${c[2]}</p><small>Nutrition: ${c[1]}</small><p>${coachStyles[i][4]}</p><details><summary>Daily coaching & reminders</summary><label>Coaching involvement<select onchange="dailySet('mode',this.value)">${['passive','active','proactive'].map(x=>`<option ${p.mode===x?'selected':''}>${x}</option>`).join('')}</select></label>${dailyEvents().map(e=>`<div class="line"><div><label><input style="width:auto" type="checkbox" ${p.enabled[e.k]?'checked':''} onchange="dailyToggle('${e.k}',this.checked)"> ${e.n}</label><small>${e.m}</small></div><input type="time" value="${e.time}" onchange="dailySet('${e.k}',this.value)"></div>`).join('')}<label>Quiet hours start<input type="time" value="${p.quietStart}" onchange="dailySet('quietStart',this.value)"></label><label>Quiet hours end<input type="time" value="${p.quietEnd}" onchange="dailySet('quietEnd',this.value)"></label><button class="alt wide" onclick="enableCoachNotifications()">Enable device notifications</button><small>Reminders run while MyFit is open. Closed-app delivery is not supported yet.</small></details></section>`}
+function coachDaily(){let p=dailyPrefs(),i=activeCoach(),c=strategies[i];return `<section><div class="pill">${coachStyles[i][1]} ${coachStyles[i][0]}</div><label for="activeCoachSelect">Choose your coach</label><select id="activeCoachSelect" onchange="chooseCoach(this.value)">${coachStyles.map((x,j)=>`<option value="${j}" ${j===i?'selected':''}>${x[1]} ${x[0]}</option>`).join('')}</select><small>Active coach: ${coachStyles[i][0]}${coachPrefs().auto?' · automatic':''}</small><h3>${c[0]}</h3><p>${c[2]}</p><small>Nutrition: ${c[1]}</small><p>${coachStyles[i][4]}</p><details><summary>Daily coaching & reminders</summary><label>Coaching involvement<select onchange="dailySet('mode',this.value)">${['passive','active','proactive'].map(x=>`<option ${p.mode===x?'selected':''}>${x}</option>`).join('')}</select></label>${dailyEvents().map(e=>`<div class="line"><div><label><input style="width:auto" type="checkbox" ${p.enabled[e.k]?'checked':''} onchange="dailyToggle('${e.k}',this.checked)"> ${e.n}</label><small>${e.m}</small></div><input type="time" value="${e.time}" onchange="dailySet('${e.k}',this.value)"></div>`).join('')}<label>Quiet hours start<input type="time" value="${p.quietStart}" onchange="dailySet('quietStart',this.value)"></label><label>Quiet hours end<input type="time" value="${p.quietEnd}" onchange="dailySet('quietEnd',this.value)"></label><button class="alt wide" onclick="enableCoachNotifications()">Enable device notifications</button><small>Reminders run while MyFit is open. Closed-app delivery is not supported yet.</small></details></section>`}
 async function enableCoachNotifications(){if(!('Notification' in window))return alert('Notifications unavailable in this browser.');try{let r=await Notification.requestPermission();alert('Notification permission: '+r)}catch(e){alert('Notification permission unavailable.')}}
 async function coachTick(){let p=dailyPrefs();if(p.mode==='passive')return;let now=new Date(),hm=now.toTimeString().slice(0,5),quiet=p.quietStart===p.quietEnd?false:p.quietStart<p.quietEnd?hm>=p.quietStart&&hm<p.quietEnd:hm>=p.quietStart||hm<p.quietEnd;if(quiet)return;for(let e of dailyEvents(today())){let key=today()+'|'+e.k;let mins=t=>Number(t.slice(0,2))*60+Number(t.slice(3,5)),late=mins(hm)-mins(e.time);if(e.k==='workout'&&(schedule()[(now.getDay()+6)%7]==='rest'||trainingStatus(S,today(),exerciseList(schedule()[(now.getDay()+6)%7])).kind==='complete'||['stop','recover'].includes(recoveryAdvice(S.recovery?.[today()]))))continue;if(!p.enabled[e.k]||!Number.isFinite(late)||late<0||late>30||S.coachDelivered?.[key])continue;(S.coachDelivered??={})[key]=true;save();let el=document.createElement('section');el.setAttribute('role','status');el.textContent=coachStyles[activeCoach()][0]+': '+e.m;document.querySelector('main')?.prepend(el);if('Notification' in window&&Notification.permission==='granted'){try{let r=await navigator.serviceWorker?.getRegistration();if(r)await r.showNotification(coachStyles[activeCoach()][0],{body:e.m});else new Notification(coachStyles[activeCoach()][0],{body:e.m})}catch(e){}}}}
 // Normalize duplicate food names, preferring the later prepared profile when present.
