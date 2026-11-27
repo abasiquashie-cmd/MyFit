@@ -14,7 +14,7 @@ button.wide + .grid{margin-top:12px}
 .recipe-ingredients{padding:0;list-style:none}
 .recipe-ingredients label,.recipe-method label{display:flex!important;gap:.65rem;align-items:baseline;line-height:1.5}
 .recipe-ingredients label{padding:.5rem 0;border-bottom:1px solid #34443b}
-.recipe-ingredients label b{margin-left:auto;white-space:nowrap}
+.recipe-ingredients label b{margin-left:auto;text-align:right;flex-shrink:0;max-width:50%}
 .recipe-ingredients input,.recipe-method input{flex:none;width:auto;margin:0}
 .recipe-method{padding-left:1.5rem}
 .recipe-method li{padding:.6rem 0 .75rem;border-bottom:1px solid #34443b}
@@ -23,7 +23,7 @@ button.wide + .grid{margin-top:12px}
 .recipe-detail-actions{display:grid;gap:.5rem;margin-top:1rem}
 #recordDate{font-size:.75rem}#recordDate[hidden]{display:none}#recordDate input{display:block;margin:2px 0 0;width:145px}.week-day{width:100%;display:block;text-align:left;margin-top:8px}.week-day[aria-current=date]{border:1px solid #a5ef91}.week-meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;margin-top:7px;font-weight:400}.week-meals small{display:block}.daily-disclosure{margin:12px 0;padding:12px;border:1px solid #42564a;border-radius:12px}.daily-disclosure>summary{cursor:pointer;font-weight:700}
 .briefing-identity{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:12px 0}.briefing-portrait{width:50px;flex:none}.briefing-identity button{margin-left:auto}
-</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.0</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
+</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.2</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
 const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());let S={profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,legs:true},meals:{},work:{},measure:[]};var storageBlocked=false;try{let x=localStorage.getItem('myfit-v1');if(x){let parsed=JSON.parse(x);if(!validState(parsed))throw Error('Invalid saved data');S=parsed}}catch(e){storageBlocked=true;alert('Saved data could not be read. Automatic saving is disabled to protect it. Export or restore a valid backup.')}function save(){if(storageBlocked)return false;try{localStorage.setItem('myfit-v1',JSON.stringify(S));return true}catch(e){alert('Storage unavailable. Export your data before closing.')}}S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};let plannerDate = '';
 const day = () => tab === 'Planner' ? plannerDate || today() : ['Home','Coach'].includes(tab) ? today() : $('date').value;
 function openMainTab(next) {
@@ -736,6 +736,90 @@ async function loadDishPhotos(){for(const el of document.querySelectorAll('[data
 function plannerView(){let tabs=[['Calendar','Plan'],['Recipes','Recipes'],['Groceries','Groceries'],['Saved','Saved']];let nav=`<div class="planner-tabs">${tabs.map(([t,label])=>`<button class="${plannerTab===t?'':'alt'}" aria-pressed="${plannerTab===t}" onclick="switchPlanner('${t}')">${label}</button>`).join('')}</div>`;let body='';if(plannerTab==='Calendar')body=plannerPlanView();if(plannerTab==='Recipes'){let p=picks(activeMeal(),cuisine).filter(matchesRecipe),idx=((rotation)%p.length+p.length)%p.length,x=p[idx];body=themedPlanner()+(x?`<section><button class="alt wide" onclick="openRecipeDetail(${x.i})">${dishPhoto(x.i)}<h3>${esc(x.r[1])}</h3>Open recipe →</button></section>`:'')+`<div class="grid">${p.slice(0,24).map(y=>`<button class="alt" onclick="openRecipeDetail(${y.i})">${esc(y.r[1])}</button>`).join('')}</div><small>Showing up to 24 matches; use filters or the browse dropdown for all matches.</small>`}if(plannerTab==='Saved')body=`<section><h3>Saved recipes</h3>${(S.recipeFav||[]).filter(i=>recipes[i]&&recipeAllowed(recipes[i])).map(i=>`<button class="alt wide" onclick="openPlanned(${i},'${recipes[i][4][0]}')">${esc(recipes[i][1])}</button>`).join('')||'No saved recipes yet.'}</section>`;if(plannerTab==='Groceries')body=shoppingView();if(plannerTab==='Detail')body=`<button class="alt wide" onclick="switchPlanner(returnPlanner,plannerRecipeSlot)">← ${tabs.find(([key])=>key===returnPlanner)?.[1]||'Recipes'}</button>${recipeCard({r:recipes[detailIndex],i:detailIndex})}`;return '<h2>Meal planner</h2>'+nav+body}
 function photoLink(r){let q=encodeURIComponent(r[1].replace(/ adaptation| inspired/gi,''));return `<p><a style="color:#a5ef91" target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?search=${q}&title=Special:MediaSearch&type=image">See dish photos on Wikimedia Commons ↗</a></p><small>External photo search; results may vary. Internet required.</small>`}
 
+// Approximate household weights for the form shown in the recipe.
+const kitchenCupWeights = new Map(Object.entries({
+  'white rice':158, 'brown rice':195, 'quinoa':185, 'bulgur cooked':182,
+  'cooked spaghetti':140, 'pasta':140, 'soba cooked':114, 'cooked oatmeal':234,
+  'oats dry':89, 'flour dry':120, 'whole wheat flour':113, 'chickpea flour':120,
+  'semolina dry':167, 'cornmeal dry':156, 'sugar':198, 'black eyed peas dry':167,
+  'black beans':172, 'kidney beans':177, 'pinto beans':171, 'white beans':179,
+  'black eyed peas':171, 'chickpeas':164, 'lentils':198, 'fava beans':170,
+  'split peas cooked':196, 'chicken breast':140, 'chicken thighs skinless':140,
+  'grilled chicken breast':140, 'turkey':140, 'lean ground beef':170, 'ground pork':155,
+  'salmon':140, 'cod':140, 'cooked fish':140, 'shrimp':145, 'tuna':154, 'tofu':248,
+  'tomato':180, 'onion':160, 'bell pepper':149, 'broccoli':156, 'green beans':125,
+  'carrots':156, 'carrot':156, 'peas':160, 'corn':165, 'cucumber':104, 'lettuce':47,
+  'spinach':30, 'potato':156, 'sweet potato':200, 'cabbage':150, 'cooked cabbage':150,
+  'mushrooms':156, 'zucchini':180, 'eggplant':99, 'pumpkin':245, 'okra':160,
+  'collard greens':190, 'green onion':100, 'cilantro':16, 'parsley':60,
+  'mango':165, 'pineapple':165, 'blueberries':148, 'peach':154, 'avocado':150,
+  'almonds':143, 'peanuts':146, 'walnuts':117, 'cashews':137, 'coconut grated':80,
+  'milk':244, 'coconut milk':240, 'greek yogurt':245, 'cottage cheese':226,
+  'ricotta':246, 'cheddar cheese':113, 'mozzarella':113, 'parmesan':100,
+  'tomato pasta sauce':260, 'salsa':250, 'salsa verde':250, 'hummus':246,
+  'peanut butter':256, 'tahini':240, 'olive oil':216, 'sesame oil':218,
+  'maple syrup':320, 'honey':336, 'butter':227, 'lemon juice':244, 'lime juice':242,
+  'soy sauce':255, 'fish sauce':288, 'vinegar':239
+}));
+const kitchenTeaspoonWeights = new Map(Object.entries({
+  garlic:3, ginger:2, cinnamon:2.6, cumin:2.1, turmeric:3, 'chili powder':2.7,
+  'curry powder':2, 'garam masala':2, 'black pepper':2.3, cardamom:2,
+  oregano:1, thyme:1, 'baking powder':4, miso:6, gochujang:6
+}));
+const kitchenCounts = new Map([
+  ['egg',[50,'large egg','large eggs']],
+  ['bread',[30,'slice','slices']],
+  ['tortilla',[30,'small tortilla','small tortillas']],
+  ['banana',[118,'medium banana','medium bananas']],
+  ['apple',[182,'medium apple','medium apples']],
+  ['pear',[178,'medium pear','medium pears']]
+]);
+const kitchenFractions = [[0,''],[1/8,'⅛'],[1/4,'¼'],[1/3,'⅓'],[1/2,'½'],[2/3,'⅔'],[3/4,'¾'],[7/8,'⅞'],[1,'']];
+
+function kitchenQuantity(value, single, plural=single) {
+  let whole = Math.floor(value);
+  const part = value - whole;
+  const [rounded,symbol] = kitchenFractions.reduce((best, option) =>
+    Math.abs(part-option[0]) < Math.abs(part-best[0]) ? option : best);
+  if (!whole && !rounded) return 'Less than ⅛ ' + single;
+  if (rounded === 1) whole += 1;
+  const amount = [whole || '',symbol].filter(Boolean).join(' ');
+  return amount+' '+(whole + (rounded===1?0:rounded)>1?plural:single);
+}
+
+function recipeMeasure(name, grams, units) {
+  if (units === 'kitchen') {
+    const count = kitchenCounts.get(name);
+    if (count) return kitchenQuantity(grams/count[0],count[1],count[2]);
+    const spoonWeight = kitchenTeaspoonWeights.get(name);
+    if (spoonWeight) {
+      const tsp = grams/spoonWeight;
+      return tsp>=3?kitchenQuantity(tsp/3,'tbsp'):kitchenQuantity(tsp,'tsp');
+    }
+    const cupWeight = kitchenCupWeights.get(name);
+    if (cupWeight) {
+      const cups = grams/cupWeight;
+      if (cups>=.25) return kitchenQuantity(cups,'cup','cups');
+      return cups>=1/16?kitchenQuantity(cups*16,'tbsp'):kitchenQuantity(cups*48,'tsp');
+    }
+  }
+  return grams+' g';
+}
+
+let recipeUnits = 'grams';
+try {
+  if (localStorage.getItem('myfit-recipe-units') === 'kitchen') recipeUnits = 'kitchen';
+} catch (_) {}
+
+function changeRecipeUnits(units) {
+  recipeUnits = units === 'kitchen' ? 'kitchen' : 'grams';
+  try {localStorage.setItem('myfit-recipe-units',recipeUnits)} catch (_) {}
+  $('recipeMeasureHint').hidden = recipeUnits !== 'kitchen';
+  for (const measure of $('fullRecipe').querySelectorAll('[data-recipe-grams]')) {
+    measure.textContent = recipeMeasure(measure.dataset.ingredient,+measure.dataset.recipeGrams,recipeUnits);
+  }
+}
+
 function recipeCard({r,i}) {
   const items = recipeItems(r,activeMeal(),scheduledRecipe);
   const [calories, protein, carbs, fat] = totals(items);
@@ -749,11 +833,18 @@ function recipeCard({r,i}) {
       </select>
     </label>
     <h4>Ingredients for ${recipeServings} ${recipeServings===1?'serving':'servings'}</h4>
+    <label>Measure ingredients in
+      <select id="recipeUnits" onchange="changeRecipeUnits(this.value)">
+        <option value="grams" ${recipeUnits==='grams'?'selected':''}>Grams</option>
+        <option value="kitchen" ${recipeUnits==='kitchen'?'selected':''}>Kitchen measures (cups, spoons, counts)</option>
+      </select>
+    </label>
     <p class="muted">Weights are cooked or ready to eat unless marked otherwise.</p>
+    <p id="recipeMeasureHint" class="muted" ${recipeUnits==='kitchen'?'':'hidden'}>Kitchen measures are approximate. Measure spinach as raw leaves, chop or crumble cooked meat, and drain canned ingredients. Some ingredients are shown in grams.</p>
     ${scheduledRecipe&&recipeServings>1?'<small>The grocery plan includes one serving for this meal.</small>':''}
     <ul class="recipe-ingredients">
       ${items.map(item=>`<li><label>
-        <input type="checkbox"><span>${esc(item.name)}</span><b>${item.name==='egg'&&isQuickRecipe(i)?`${item.g*recipeServings/50} eggs`:`${item.g*recipeServings} g`}</b>
+        <input type="checkbox"><span>${esc(item.name)}</span><b data-ingredient="${esc(item.name)}" data-recipe-grams="${item.g*recipeServings}">${recipeMeasure(item.name,item.g*recipeServings,recipeUnits)}</b>
       </label></li>`).join('')}
     </ul>
     ${cookGuide(r,i)}
@@ -913,15 +1004,101 @@ function shoppingBag(dates=plannerPeriod(day(), groceryRange)) {
       if (!selection) continue;
       for (const item of recipeItems(selection.r,type,true)) {
         for (const [name,factor] of shoppingBreakdown[item.name] || [[item.name,1]]) {
-          bag[name] = (bag[name] || 0) + item.g * factor;
+          const shoppingName = name==='carrot'?'carrots':name==='cooked kidney beans'?'kidney beans':name;
+          bag[shoppingName] = (bag[shoppingName] || 0) + item.g * factor;
         }
       }
     }
   }
   return bag;
 }
-function shopGroup(n){return /chicken|turkey|beef|pork|fish|salmon|shrimp|cod|tuna/.test(n)?'Meat & seafood':/egg|yogurt|cheese|milk|paneer/.test(n)&&!n.includes('coconut')?'Dairy & eggs':/banana|berry|berries|broccoli|cucumber|spinach|onion|potato|carrot|tomato|cabbage|pepper|apple|fruit|greens|okra|thyme/.test(n)?'Produce':'Pantry & other'}
-function shopQty(n,g){return n==='egg'?Math.ceil(g/50)+' eggs (approx.)':g>=1000?(g/1000).toFixed(2)+' kg':Math.ceil(g)+' g'}
+const shoppingProduce = new Map([
+  ['banana',[118,'medium banana','medium bananas']],
+  ['apple',[182,'medium apple','medium apples']],
+  ['pear',[178,'medium pear','medium pears']],
+  ['orange',[131,'medium orange','medium oranges']],
+  ['peach',[150,'medium peach','medium peaches']],
+  ['mango',[200,'medium mango','medium mangoes']],
+  ['avocado',[140,'medium avocado','medium avocados']],
+  ['plantain',[175,'medium plantain','medium plantains']],
+  ['pineapple',[500,'small pineapple','small pineapples']],
+  ['potato',[150,'medium potato','medium potatoes']],
+  ['sweet potato',[130,'medium sweet potato','medium sweet potatoes']],
+  ['tomato',[120,'medium tomato','medium tomatoes']],
+  ['onion',[110,'medium onion','medium onions']],
+  ['bell pepper',[115,'medium bell pepper','medium bell peppers']],
+  ['serrano pepper',[6,'serrano pepper','serrano peppers']],
+  ['carrots',[60,'medium carrot','medium carrots']],
+  ['cucumber',[200,'medium cucumber','medium cucumbers']],
+  ['zucchini',[180,'medium zucchini','medium zucchini']],
+  ['eggplant',[300,'medium eggplant','medium eggplants']],
+  ['broccoli',[200,'medium head','medium heads']],
+  ['cabbage',[700,'small head','small heads']],
+  ['cooked cabbage',[600,'small head','small heads']],
+  ['lettuce',[250,'head','heads']],
+  ['spinach',[140,'bag (140 g)','bags (140 g each)']],
+  ['green onion',[75,'bunch','bunches']],
+  ['cilantro',[30,'bunch','bunches']],
+  ['parsley',[30,'bunch','bunches']],
+  ['dill',[20,'bunch','bunches']],
+  ['collard greens',[200,'bunch','bunches']],
+  ['garlic',[30,'bulb','bulbs']],
+  ['ginger',[25,'thumb-sized piece','thumb-sized pieces']],
+  ['blueberries',[170,'small container (170 g)','small containers (170 g each)']],
+  ['mushrooms',[227,'pack (227 g)','packs (227 g each)']],
+  ['green beans',[340,'bag (340 g)','bags (340 g each)']],
+  ['okra',[340,'bag (340 g)','bags (340 g each)']]
+]);
+
+const shoppingPackages = new Map([
+  ['greek yogurt',[500,'tub (500 g)','tubs (500 g each)']],
+  ['cottage cheese',[500,'tub (500 g)','tubs (500 g each)']],
+  ['ricotta',[475,'tub (475 g)','tubs (475 g each)']],
+  ['milk',[1000,'carton (1 L)','cartons (1 L each)']],
+  ['cheddar cheese',[200,'block (200 g)','blocks (200 g each)']],
+  ['mozzarella',[200,'pack (200 g)','packs (200 g each)']],
+  ['butter',[454,'block (454 g)','blocks (454 g each)']],
+  ['bread',[600,'loaf (about 20 slices)','loaves (about 20 slices each)']],
+  ['tortilla',[240,'pack (8 small tortillas)','packs (8 small tortillas each)']],
+  ['tofu',[350,'block (350 g)','blocks (350 g each)']],
+  ['coconut milk',[400,'can (400 mL)','cans (400 mL each)']],
+  ['tomato pasta sauce',[650,'jar (650 mL)','jars (650 mL each)']],
+  ['peas',[500,'frozen bag (500 g)','frozen bags (500 g each)']],
+  ['corn',[500,'frozen bag (500 g)','frozen bags (500 g each)']]
+]);
+
+const groceryBeans = new Set(['black beans','kidney beans','pinto beans','white beans','black eyed peas','chickpeas','lentils','fava beans']);
+
+function shopGroup(name) {
+  if (shoppingProduce.has(name)) return 'Produce';
+  if (/chicken|turkey|beef|pork|fish|salmon|shrimp|cod|tuna|steak|oxtail|bacon/.test(name)) return 'Meat & seafood';
+  if (/^egg$|yogurt|cheese|milk|paneer|^butter$|feta|ricotta|mozzarella|parmesan/.test(name)&&!name.includes('coconut')) return 'Dairy & eggs';
+  return 'Pantry & other';
+}
+
+function shopQty(name, grams) {
+  const purchase = shoppingProduce.get(name) || shoppingPackages.get(name) ||
+    (name==='egg'?[50,'large egg','large eggs']:null);
+  if (purchase) {
+    const [size,single,plural] = purchase;
+    const count = Math.ceil(grams/size);
+    return count+' '+(count===1?single:plural);
+  }
+  if (groceryBeans.has(name)) {
+    const cupWeight = kitchenCupWeights.get(name);
+    const cans = Math.ceil(grams/(cupWeight*1.5));
+    return cans+' '+(cans===1?'can':'cans')+' (about 1½ cups drained each)';
+  }
+  if (shopGroup(name)==='Meat & seafood') {
+    const pounds = grams/453.59237;
+    return Math.ceil(grams)+' g · '+pounds.toFixed(2)+' lb';
+  }
+  if (['white rice','brown rice','quinoa','cooked spaghetti','pasta','soba cooked'].includes(name)) {
+    return recipeMeasure(name,grams,'kitchen')+' cooked (buy dry or ready to heat)';
+  }
+  return recipeMeasure(name,grams,'kitchen');
+}
+
 function shopCheck(name, grams, checked) {
   const key = groceryRange+'|'+plannerPeriod(day(),groceryRange)[0];
   const previous = S.shoppingChecksByRange;
@@ -946,7 +1123,7 @@ function shoppingView() {
     ${plannerPeriodHeader(groceryRange)}
     <button class="alt wide" onclick="plannerRange=groceryRange;switchPlanner('Calendar')">View meals for this ${groceryRange.toLowerCase()}</button>
     <p>Budget target: $${prefs().budget} CAD</p>
-    <small>Quantities come from the recipes scheduled in this period. Logged and skipped meals are excluded. Most weights are cooked unless marked dry. Check pantry and package sizes.</small>
+    <small>Whole items and packages are rounded up for this plan. Sizes and yields vary. Meat weights follow the recipe, so allow for cooking loss when buying raw meat for cooked portions.</small>
     ${['Produce','Meat & seafood','Dairy & eggs','Pantry & other'].map(group => {
       const rows = Object.entries(bag).filter(([name]) => shopGroup(name) === group).sort();
       return rows.length ? `<h3>${group}</h3>` + rows.map(([name,grams]) =>
