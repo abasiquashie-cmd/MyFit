@@ -517,5 +517,58 @@ function profileName597(){let v=$('profileName597').value.trim();if(!v)return al
 const render597=render;render=function(){render597();let o=setup596(),app=$('app');let nav=$('nav');if(nav&&!nav.querySelector('[data-profile597]'))nav.insertAdjacentHTML('beforeend',`<button data-profile597 class="${tab==='Profile'?'active':''}" onclick="edit597=false;tab='Profile';render()"><span>♙</span>Profile</button>`);if(!o.completed&&o.paused&&o.step===1&&lessons597[tab])app.insertAdjacentHTML('afterbegin',`<section><h3>Your coach explains</h3><p>${lessons597[tab]}</p><button class="wide" onclick="setupOpen596()">Return to orientation</button></section>`);if(tab==='Goals')app.innerHTML=`<section><h2>Your goals</h2><p>${esc(goals[S.profile.goal])}</p><p>${S.profile.days} training days per week</p><p>Daily nutrition target: ${targets()[0]} kcal</p><button class="alt wide" onclick="tab='Profile';edit597=true;render()">Review or edit profile & program</button></section>`;if(tab==='Profile'){if(!edit597){let p=S.profile,b=p.baseline597;app.innerHTML=`<section><h2>My profile</h2><h3>${esc(p.name||'Your profile')}</h3><p>Height: ${p.height} cm · Profile weight: ${p.weight} lb</p><p>Goal: ${esc(goals[p.goal])}</p><h3>Starting measurements</h3>${b?b.v.map((v,i)=>v?`<p>${['Weight (lb)','Waist (in)','Chest (in)','Thigh (in)','Arm (in)'][i]}: ${esc(v)}</p>`:'').join(''):'<p>No onboarding baseline recorded.</p>'}<button class="wide" onclick="profileEdit597()">Edit profile & program</button><button class="alt wide" onclick="tab='Progress';render()">View progress journal</button></section>`}else app.insertAdjacentHTML('afterbegin',`<section><label>Name<input id="profileName597" value="${esc(S.profile.name||'')}"></label><button class="alt wide" onclick="profileName597()">Save name</button><button class="alt wide" onclick="edit597=false;render()">Close editor</button></section>`)}if(tab==='Progress')app.insertAdjacentHTML('afterbegin',`<section><h3>Understanding your progress</h3><p>${lessons597.Progress}</p><small>New journal entries do not overwrite your starting measurements or profile weight.</small></section>`)};
 
 function profileSection598(t){edit597=false;tab=t;render()}
-const render598=render;render=function(){render598();let nav=$('nav'),app=$('app');if(nav){for(let b of [...nav.querySelectorAll('button')]){let text=b.textContent.trim();if(/Goals$|Progress$/.test(text))b.remove();else if(/Profile$/.test(text)){b.classList.toggle('active',['Profile','Goals','Progress'].includes(tab));}}}if(!['Profile','Goals','Progress'].includes(tab))return;let sub=`<section style="padding:10px"><h2>My fitness profile</h2><div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px">${[['Profile','Overview'],['Goals','Goals'],['Progress','Progress']].map(([t,n])=>`<button class="${tab===t?'':'alt'}" aria-pressed="${tab===t}" style="padding:9px 3px" onclick="profileSection598('${t}')">${n}</button>`).join('')}</div></section>`;app.insertAdjacentHTML('afterbegin',sub);if(tab==='Goals'){let t=targets();app.insertAdjacentHTML('beforeend',`<section><h3>Daily nutrition goals</h3><div class="line"><span>Calories</span><b>${t[0]} kcal</b></div>${['Protein','Carbohydrates','Fat'].map((n,i)=>`<div class="line"><span>${n}</span><b>${t[i+1]} g</b></div>`).join('')}<p class="muted">These are estimated targets, not hard limits.</p></section>`)} };
+
+function strengthSets(row) {
+  const sets = row.a.length ? row.a : +row.r.sets > 0
+    ? [{load: +row.r.weight, reps: +row.r.reps}]
+    : [];
+  return sets.filter(set => set.load > 0 && set.reps > 0);
+}
+
+function strengthProgress(history) {
+  const exercises = new Map();
+  for (const row of history) {
+    const sets = strengthSets(row);
+    if (!sets.length) continue;
+    if (!exercises.has(row.name)) exercises.set(row.name, []);
+    exercises.get(row.name).push({...row, sets});
+  }
+  return [...exercises].map(([name, [latest, ...earlier]]) => {
+    const current = latest.sets.reduce((best, set) => set.load > best.load ? set : best);
+    const previous = earlier.find(row =>
+      row.date < latest.date && row.sets.some(set => set.reps === current.reps));
+    const previousLoad = previous && Math.max(...previous.sets
+      .filter(set => set.reps === current.reps).map(set => set.load));
+    return {name, date: latest.date, current, previous, previousLoad};
+  });
+}
+
+function strengthProgressPanel() {
+  const rows = strengthProgress(workoutHistory(S));
+  return `<section><h3>Strength progression</h3>
+    <p class="muted">Your heaviest set from the latest session is compared with the most recent earlier session with the same reps.</p>
+    ${rows.map(({name, date, current, previous, previousLoad}) => {
+      const change = previous ? Math.round((current.load - previousLoad) * 100) / 100 : 0;
+      const comparison = previous
+        ? `Previous: ${previousLoad} lb (${esc(previous.date)}) · ${change > 0 ? '+' : ''}${change} lb`
+        : 'No earlier set with matching reps.';
+      return `<div class="line"><div><b>${esc(name)}</b><br>
+        <small>${current.load} lb × ${current.reps} reps · ${esc(date)}<br>${comparison}</small></div></div>`;
+    }).join('') || '<p>Log a set with weight and reps to start tracking strength.</p>'}
+  </section>`;
+}
+
+function profileGoalsPanel() {
+  const plan = schedule();
+  const liftingDays = plan.filter(session => session !== 'rest' && session !== 'mobility').length;
+  return `<section><h3>Weekly training</h3>
+    <p>${liftingDays} lifting days · ${plan.filter(session => session === 'mobility').length} mobility days</p>
+    ${plan.map((session, i) => `<div class="line"><span>${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][i]}</span><b>${esc(names[session])}</b></div>`).join('')}
+  </section><section><h3>Daily hydration goal</h3>
+    <label>Target (ml)<input id="waterGoal" type="number" min="250" max="10000" step="1" value="${waterGoal()}"></label>
+    <button class="wide" onclick="waterTarget()">Save hydration goal</button>
+  </section>`;
+}
+
+const render598=render;render=function(){render598();let nav=$('nav'),app=$('app');if(nav){for(let b of [...nav.querySelectorAll('button')]){let text=b.textContent.trim();if(/Goals$|Progress$/.test(text))b.remove();else if(/Profile$/.test(text)){b.classList.toggle('active',['Profile','Goals','Progress'].includes(tab));}}}if(!['Profile','Goals','Progress'].includes(tab))return;let sub=`<section style="padding:10px"><h2>My fitness profile</h2><div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px">${[['Profile','Overview'],['Goals','Goals'],['Progress','Progression']].map(([t,n])=>`<button class="${tab===t?'':'alt'}" aria-pressed="${tab===t}" style="padding:9px 3px" onclick="profileSection598('${t}')">${n}</button>`).join('')}</div></section>`;app.insertAdjacentHTML('afterbegin',sub);if(tab==='Progress')$('workoutHistory').insertAdjacentHTML('beforebegin',strengthProgressPanel());if(tab==='Goals'){let t=targets();app.insertAdjacentHTML('beforeend',`<section><h3>Daily nutrition goals</h3><div class="line"><span>Calories</span><b>${t[0]} kcal</b></div>${['Protein','Carbohydrates','Fat'].map((n,i)=>`<div class="line"><span>${n}</span><b>${t[i+1]} g</b></div>`).join('')}<p class="muted">Targets are estimated from your profile and primary goal.</p></section>`+profileGoalsPanel())} };
 render();let lastDay=today(),lastMeal=autoMeal();setInterval(()=>{let now=today(),mt=autoMeal();if(now!==lastDay){if(day()===lastDay){$('date').value=now;calendarOffset=0;if(tab!=='Food'&&tab!=='Goals')render()}lastDay=now}if(mt!==lastMeal){lastMeal=mt;if(tab==='Planner'&&mealType==='Auto')render()}},30000);</script><script>if("serviceWorker" in navigator && location.protocol==="https:"){navigator.serviceWorker.register("./sw.js").catch(console.warn)}</script></html>
