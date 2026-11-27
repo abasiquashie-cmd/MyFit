@@ -23,7 +23,7 @@ button.wide + .grid{margin-top:12px}
 .recipe-detail-actions{display:grid;gap:.5rem;margin-top:1rem}
 #recordDate{font-size:.75rem}#recordDate[hidden]{display:none}#recordDate input{display:block;margin:2px 0 0;width:145px}.week-day{width:100%;display:block;text-align:left;margin-top:8px}.week-day[aria-current=date]{border:1px solid #a5ef91}.week-meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;margin-top:7px;font-weight:400}.week-meals small{display:block}.daily-disclosure{margin:12px 0;padding:12px;border:1px solid #42564a;border-radius:12px}.daily-disclosure>summary{cursor:pointer;font-weight:700}
 .briefing-identity{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:12px 0}.briefing-portrait{width:50px;flex:none}.briefing-identity button{margin-left:auto}
-</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.9.9</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
+</style><style>.dash{display:grid;gap:12px}.dash section{margin:0;padding:12px}.dash h2,.dash h3,.dash p{margin:4px 0}.dash-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.dash-rings button{background:#1b2721;color:#eef5ef;padding:8px 2px;border:1px solid #304238;min-width:0}.dash-rings button[aria-expanded=true]{border-color:#a5ef91}.dash-ring{width:min(100%,104px);aspect-ratio:1;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#35463b 0)}.dash-ring>span{width:84%;height:84%;border-radius:50%;background:#1b2721;display:grid;align-content:center;justify-items:center}.dash-ring b{font-size:clamp(16px,5vw,24px)}.dash-ring small{font-size:10px}.dash-coach{display:flex;gap:12px;align-items:center}.dash-coach img{width:64px;height:76px;object-fit:cover;border-radius:10px}.dash-coach p{font-size:13px;line-height:1.35}.dash-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.dash-actions button{padding:10px 2px;font-size:12px;min-height:48px}.dash details{margin:0}.dash summary{padding:8px 0}.dash .wide{margin-top:0}.dash .line{padding:8px 0}.dash button:focus-visible{outline:2px solid white;outline-offset:2px} .nutrition-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.nutrition-suggestion{border-top:1px solid #42564a;margin-top:16px;padding-top:16px}#lookupResults{margin-top:16px}#lookupResults button{margin-top:10px}#lookupResults p{overflow-wrap:anywhere}#lookup{margin-top:12px}#lookup+button{margin:8px 8px 12px 0}button[onclick="openBarcodeDirect()"]{margin:8px 0 12px}button[onclick="barcodeManual()"]{margin:12px 0} </style><style>.dash .quick591{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.quick591 button{min-height:64px;padding:8px 3px;font-size:12px}.quick591 svg{display:block;width:27px;height:27px;margin:0 auto 6px;color:#a7ef86}.quick591 button{min-height:72px}.dash .coach591{background:#203027;border:1px solid #49614e}.coach591 img{width:54px;height:64px;object-fit:cover;border-radius:10px}.coach591 .identity591{display:flex;gap:10px;align-items:center}.coach591 p{line-height:1.45;margin:10px 0}.dash .next591{border-left:3px solid #a5ef91}.dash .next591 button{margin-top:8px}.dash .settings591 summary{cursor:pointer}.dash .quick591 button:active{transform:scale(.98)}.food-method-menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.food-method-menu button{min-height:64px;font-size:12px;padding:8px 3px}.food-method-menu svg{display:block;width:25px;height:25px;margin:0 auto 5px;color:#a7ef86}.dash .quick591{grid-template-columns:repeat(2,minmax(0,1fr))}</style><main><header><div><h1 class="brand">MyFit<span style="color:white">.</span></h1><small>YOUR PERSONAL FITNESS STUDIO · 5.10.0</small></div><label id="recordDate">Record date<input id="date" type="date"></label></header><button class="alt wide" style="margin:8px 0 12px" onclick="checkUpdate()">Check for updates</button><div id="app"></div></main><nav id="nav"></nav><script>
 const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const today=()=>dateKey(new Date());let S={profile:{age:44,height:178,weight:180,sex:'male',activity:1.5,goal:'recomp',days:5,legs:true},meals:{},work:{},measure:[]};var storageBlocked=false;try{let x=localStorage.getItem('myfit-v1');if(x){let parsed=JSON.parse(x);if(!validState(parsed))throw Error('Invalid saved data');S=parsed}}catch(e){storageBlocked=true;alert('Saved data could not be read. Automatic saving is disabled to protect it. Export or restore a valid backup.')}function save(){if(storageBlocked)return false;try{localStorage.setItem('myfit-v1',JSON.stringify(S));return true}catch(e){alert('Storage unavailable. Export your data before closing.')}}S.favorites??=[]; S.profile.priorities??=['legs','chest']; let tab='Home',draft=[]; let timerId; $('date').value=today();$('date').onchange=()=>{if(!$('date').value)$('date').value=today();calendarOffset=0;rotation=0;render()};let plannerDate = '';
 const day = () => tab === 'Planner' ? plannerDate || today() : ['Home','Coach'].includes(tab) ? today() : $('date').value;
 function openMainTab(next) {
@@ -322,24 +322,93 @@ const reviewedDairyAndGlutenFreeMeals = new Set([
 const reviewedDairyFreeMeals = new Set(['Chicken and tomato pasta','Beef and tomato spaghetti',
   'Beef and black bean tacos','Lentil and tomato pasta','Peanut butter and banana toast']);
 
+// USDA SR Legacy profiles per 100 g: 20466, 16062 and 11977.
+foods.push(['semolina dry',360,12.68,72.83,1.05],
+  ['black eyed peas dry',336,23.52,60.03,1.26],
+  ['serrano pepper',32,1.74,6.7,.44]);
+
+const researchedBreakfasts = [
+  ['Mexican','Huevos a la mexicana',[['egg',100],['tomato',95],['onion',35],['serrano pepper',7],['olive oil',5]],
+    'Dice the onion, tomato and serrano. Soften the onion and chile in the oil, then add the tomato. Pour in beaten eggs and gently stir until set.',
+    'https://www.mexicoinmykitchen.com/mexican-style-scrambled-eggs/','México in My Kitchen','dairy gluten'],
+  ['Mexican','Enfrijoladas with scrambled eggs',[['tortilla',75],['pinto beans',145],['egg',100],['tomato',65],['onion',30],['serrano pepper',5],['olive oil',6],['cilantro',5]],
+    'Blend cooked pinto beans with enough water to make a smooth sauce and warm it. Sauté diced onion, chile and tomato in the oil, then scramble the eggs into the vegetables. Dip warm corn tortillas in the bean sauce, fill with eggs and finish with cilantro.',
+    'https://www.cocinafacil.com.mx/recetas/enfrijoladas-con-huevo-a-la-mexicana','Cocina Fácil','dairy','This version skips the cream and cheese. Use corn tortillas and check the package label.'],
+  ['Caribbean','Jamaican peanut porridge',[['peanuts',45],['coconut milk',100],['flour dry',10],['milk',110],['cinnamon',1],['sugar',10]],
+    'Blend unsalted peanuts with the milk and a splash of water. Bring the coconut milk to a gentle simmer and stir in the peanut mixture. Whisk the flour with a little cold water and stir it into the pot. Cook gently, stirring until smooth and thick, then season with cinnamon and sugar.',
+    'https://jamaicans.com/chef-noel-cunninghams-peanut-porridge-recipe/','Chef Noel Cunningham, Jamaicans.com','','MyFit uses milk and sugar in place of sweetened condensed milk.'],
+  ['Italian','Ciambellone all’acqua · breakfast ring cake',[['flour dry',38],['egg',25],['sugar',22],['olive oil',12],['baking powder',2]],
+    'Select eight servings for a full ring cake. Beat the eggs and sugar until pale, then mix in the oil and 200 mL of water for the full batch. Fold in the flour and baking powder, pour into a lined ring pan, and bake at 170°C until a skewer comes out clean. Cool and slice into eight pieces.',
+    'https://www.giallozafferano.com/recipes/water-ring-cake.html','GialloZafferano','dairy','A simplified batch recipe using flour instead of cornstarch. Nutrition is for one slice.'],
+  ['Mediterranean','Çılbır · Turkish eggs and yogurt',[['egg',100],['greek yogurt',150],['garlic',4],['butter',8],['chili powder',1],['vinegar',5]],
+    'Stir grated garlic into the yogurt and spoon it into a shallow bowl. Poach the eggs in gently simmering water with the vinegar, then drain and place them on the yogurt. Warm the butter with the chile and spoon it over the eggs.',
+    'https://eggs.ab.ca/cooking/recipe-categories/cilbir-turkish-eggs/','Egg Farmers of Alberta','gluten'],
+  ['Asian-inspired','Dan bing · Taiwanese egg crepes',[['flour dry',45],['egg',100],['green onion',18],['olive oil',6],['soy sauce',6]],
+    'Whisk the flour with water until the batter pours in a thin stream. Cook a thin layer in an oiled skillet. Beat the eggs with the scallions, add them to the skillet and lay the crepe over them. When the egg has set, roll the crepe and serve with soy sauce.',
+    'https://cookswithoutborders.com/dan-bing','Frankie Gaw’s recipe via Cooks Without Borders','dairy','A pantry adaptation using a flour-only batter.'],
+  ['Indian-inspired','Rava upma · savoury semolina',[['semolina dry',65],['onion',45],['carrots',55],['peas',55],['ginger',5],['cashews',18],['olive oil',6]],
+    'Toast the semolina in a dry pan until fragrant and set it aside. Cook the chopped onion, carrot and ginger in the oil. Add the peas and water, bring to a simmer and gradually stir in the semolina. Cook until the grains are tender and the water is absorbed. Finish with cashews.',
+    'https://www.swasth.org/wp-content/uploads/2022/10/Yogic-Aahaar-Extra-Recipe-book-version-2.pdf','Swasth Yog Institute','plant dairy','A simplified version using common vegetables and pantry ingredients.'],
+  ['Canadian-inspired','Pain doré with maple syrup',[['bread',80],['egg',100],['milk',70],['butter',6],['maple syrup',18]],
+    'Whisk together the eggs and milk. Dip the bread into the mixture. Cook both sides in a buttered skillet until golden and set, then serve with maple syrup.',
+    'https://maplefromcanada.ca/recipes/maple-syrup-french-toast/','Québec Maple Syrup Producers',''],
+  ['Japanese','Salmon ochazuke · rice with green tea',[['white rice',165],['salmon',95],['nori',3],['green onion',12]],
+    'Put warm cooked rice in a bowl. Flake the cooked salmon over the rice and add sliced scallion and shredded nori. Pour freshly brewed unsweetened green tea around the rice and serve.',
+    'https://www.justonecookbook.com/ochazuke/','Just One Cookbook','dairy gluten'],
+  ['Chinese','Ji dan bing · Chinese breakfast egg pancakes',[['flour dry',60],['egg',100],['green onion',20],['olive oil',7]],
+    'Mix the flour with water to make a soft dough. Let it rest, then roll it into thin rounds. Cook a round in an oiled skillet, cover it with beaten egg and scallion, and flip it to set the egg. Fold and serve warm.',
+    'https://thewoksoflife.com/chinese-breakfast-jidan-bing/','The Woks of Life','dairy'],
+  ['Korean','Ganjang gyeranbap · egg and soy sauce rice',[['white rice',165],['egg',100],['soy sauce',7],['sesame oil',6],['green onion',12]],
+    'Fry the eggs in a nonstick skillet. Place them over warm cooked rice and add soy sauce, sesame oil and sliced scallion. Mix the egg and seasonings into the rice as you eat.',
+    'https://folkency.nfm.go.kr/en/topic/detail/11818','National Folk Museum of Korea','dairy'],
+  ['Korean','Dakjuk · chicken and vegetable porridge',[['white rice',150],['chicken breast',110],['carrots',55],['zucchini',65],['sesame oil',6],['green onion',12]],
+    'Briefly stir the cooked rice in sesame oil. Add water and simmer until the rice softens and thickens. Add finely diced carrot and zucchini, then stir in shredded cooked chicken and heat through. Finish with sliced scallion.',
+    'https://www.koreanbapsang.com/dakjuk-korean-chicken-porridge/','Korean Bapsang','dairy gluten','This shortcut starts with cooked rice and chicken.'],
+  ['Thai','Khao tom goong · shrimp breakfast rice soup',[['white rice',150],['shrimp',110],['garlic',6],['ginger',7],['green onion',14],['fish sauce',7],['olive oil',6]],
+    'Fry chopped garlic in the oil and set it aside. Simmer cooked rice, ginger and fish sauce in water to make a broth with distinct rice grains. Add shrimp and cook until opaque. Finish with scallion and the fried garlic.',
+    'https://hot-thai-kitchen.com/kao-tom-goong/','Hot Thai Kitchen','dairy','A shortcut broth using water and fish sauce.'],
+  ['Thai','Jok moo · pork breakfast rice porridge',[['white rice',155],['ground pork',105],['ginger',9],['green onion',15],['fish sauce',6]],
+    'Simmer the cooked rice in water until the grains break down into a thick porridge. Drop small pieces of ground pork into the simmering porridge and cook them through. Season with fish sauce and top with ginger and scallion.',
+    'https://hot-thai-kitchen.com/breakfast-congee/','Hot Thai Kitchen','dairy','A shortcut using cooked rice. Requires pork opt-in.'],
+  ['Vietnamese','Cháo gà · ginger chicken rice porridge',[['white rice',150],['chicken breast',115],['ginger',9],['green onion',15],['fish sauce',7],['black pepper',1]],
+    'Simmer cooked rice with ginger and water until very soft. Shred the cooked chicken and stir it in until heated through. Season with fish sauce and finish with scallion and black pepper.',
+    'https://www.hungryhuy.com/chao-ga-vietnamese-porridge/','Hungry Huy','dairy','A shortcut using cooked chicken and rice.'],
+  ['Vietnamese','Bánh mì ốp la · fried eggs and bread',[['bread',95],['egg',100],['olive oil',6],['soy sauce',5]],
+    'Warm the bread until crisp. Fry the eggs in the oil and season them with soy sauce. Serve with the bread for dipping or tuck the eggs inside.',
+    'https://www.vietnamairlines.com/go/en/plan-book/travel/travel-guide/vietnamese-breakfast','Vietnam Airlines','dairy','A simple egg-and-bread version. Use a small baguette or bread roll.'],
+  ['African','Akara · Nigerian black-eyed pea fritters',[['black eyed peas dry',75],['onion',35],['bell pepper',30],['serrano pepper',5],['olive oil',13]],
+    'Soak the dried black-eyed peas, rub off the skins and rinse. Blend the drained peas, onion and peppers with just enough water to make a thick batter, then beat it to lighten it. Fry small spoonfuls in the measured oil, turning until golden and cooked through.',
+    'https://cheflolaskitchen.com/web-stories/akara-black-eyed-peas-fritters/','Chef Lola’s Kitchen','plant dairy gluten','MyFit uses shallow frying and counts all the measured oil in its estimate.'],
+  ['Everyday','Tomato beans on toast',[['white beans',160],['tomato pasta sauce',105],['bread',80],['onion',35],['olive oil',5]],
+    'Soften the diced onion in the oil. Add drained canned beans and tomato sauce and simmer until hot and thick. Spoon over toast.',
+    'https://www.bbcgoodfood.com/recipes/smoky-beans-toast','BBC Good Food','plant dairy','A pantry adaptation of British beans on toast. Choose bread and sauce that fit your dietary preferences.']
+];
+const sourcedBreakfastRecipes = new Map();
+researchedBreakfasts.forEach(([cuisine,title,ingredients,method,url,source,diet,note]) => {
+  const recipe = [cuisine,title,ingredients,method,['Breakfast']];
+  recipes.push(recipe);
+  sourcedBreakfastRecipes.set(recipe,{url,source,diet:diet.split(' '),note});
+});
+
 function isQuickRecipe(index) {
-  return index >= quickRecipeStart;
+  return index >= quickRecipeStart && !sourcedBreakfastRecipes.has(recipes[index]);
 }
 
 function recipeAllowed(recipe) {
   const preferences = prefs();
   const title = recipe[1];
-  const plant = plantRecipes.has(recipe) || reviewedPlantMeals.has(title);
+  const sourceDiet = sourcedBreakfastRecipes.get(recipe)?.diet;
+  const plant = plantRecipes.has(recipe) || reviewedPlantMeals.has(title) || sourceDiet?.includes('plant');
   if (preferences.vegan && !plant) return false;
   const dairyAndGlutenFree = plant || reviewedDairyAndGlutenFreeMeals.has(title);
-  if (preferences.glutenFree && !dairyAndGlutenFree) return false;
-  if (preferences.dairyFree && !dairyAndGlutenFree && !reviewedDairyFreeMeals.has(title)) return false;
+  if (preferences.glutenFree && !(sourceDiet ? sourceDiet.includes('gluten') : dairyAndGlutenFree)) return false;
+  if (preferences.dairyFree && !(sourceDiet ? sourceDiet.includes('dairy') : dairyAndGlutenFree || reviewedDairyFreeMeals.has(title))) return false;
   return preferences.includePork === true ||
     ![title,...recipe[2].map(([name])=>name)].some(name =>
       /\b(pork|bacon|ham|prosciutto|pepperoni|pancetta|lard)\b/i.test(name));
 }
 
-function recipeItems(r,type=activeMeal(),planning=false){let t=targets(),a=sum(),budget=!planning&&mealBudget==='remaining'?Math.max(0,t[0]-a[0]):t[0]*({Breakfast:.25,Lunch:.30,Dinner:.35,Snack:.10}[type]);let base=r[2].map(([n,g])=>{let f=foods.find(x=>x[0]===n);if(!f)throw Error("Missing ingredient: "+n);return {name:n,g,k:f[1],p:f[2],c:f[3],f:f[4],source:'Generic recipe estimate'}});let scale=isQuickRecipe(recipes.indexOf(r))?1:Math.max(.5,Math.min(1.6,budget/Math.max(1,totals(base)[0])));return base.map(x=>({...x,g:Math.round(x.g*scale)}))}
+function recipeItems(r,type=activeMeal(),planning=false){let t=targets(),a=sum(),budget=!planning&&mealBudget==='remaining'?Math.max(0,t[0]-a[0]):t[0]*({Breakfast:.25,Lunch:.30,Dinner:.35,Snack:.10}[type]);let base=r[2].map(([n,g])=>{let f=foods.find(x=>x[0]===n);if(!f)throw Error("Missing ingredient: "+n);return {name:n,g,k:f[1],p:f[2],c:f[3],f:f[4],source:'Generic recipe estimate'}});let scale=(isQuickRecipe(recipes.indexOf(r))||sourcedBreakfastRecipes.has(r))?1:Math.max(.5,Math.min(1.6,budget/Math.max(1,totals(base)[0])));return base.map(x=>({...x,g:Math.round(x.g*scale)}))}
 function dateSeed(d){return Math.floor(Date.parse(d+'T00:00:00Z')/86400000)}
 let pantry='',dishSearch='',quickRecipesOnly=false; function matchesRecipe(x){return (!quickRecipesOnly||isQuickRecipe(x.i))&& (!pantry||x.r[2].some(([n])=>n.includes(pantry.toLowerCase())))&&(!dishSearch||x.r[1].toLowerCase().includes(dishSearch.toLowerCase()))} function picks(type,c='All cuisines'){return recipes.map((r,i)=>({r,i})).filter(x=>x.r[4].includes(type)&&(c==='All cuisines'||x.r[0]===c)&&recipeAllowed(x.r))}
 function prefs(){return {style:'Balanced',tier:'Moderate',budget:100,days:2,pantry:'',...(S.prep||{})}}
@@ -670,6 +739,7 @@ function photoLink(r){let q=encodeURIComponent(r[1].replace(/ adaptation| inspir
 function recipeCard({r,i}) {
   const items = recipeItems(r,activeMeal(),scheduledRecipe);
   const [calories, protein, carbs, fat] = totals(items);
+  const reference = sourcedBreakfastRecipes.get(r);
   return `<section id="fullRecipe">
     <small>${esc(r[0])} · ${activeMeal()}</small>
     <h3 class="recipe-title">${esc(r[1])}</h3>
@@ -687,6 +757,10 @@ function recipeCard({r,i}) {
       </label></li>`).join('')}
     </ul>
     ${cookGuide(r,i)}
+    ${reference?`<details class="recipe-extra"><summary>Recipe source</summary>
+      ${reference.note?`<p>${esc(reference.note)}</p>`:''}
+      <p><a href="${esc(reference.url)}" target="_blank" rel="noopener noreferrer">${esc(reference.source)}</a></p>
+    </details>`:''}
     <details class="recipe-extra"><summary>Nutrition per serving</summary>
       <p>${calories} kcal · ${protein} g protein · ${carbs} g carbs · ${fat} g fat</p>
       <small>Estimated from the listed ingredients and portions.</small>
@@ -997,7 +1071,7 @@ function barcodeManual(){labelForm()}
 function parseLabelText(text){let get=re=>{let m=text.match(re);return m?Number(m[1].replace(',','.')):null};return {weight:get(/(?:per|serving size)[^\n]{0,65}?\(?\s*(\d+(?:[.,]\d+)?)\s*(?:g|ml)\b/i),unit:/((?:per|serving size)[^\n]{0,65}?\d\s*ml\b)/i.test(text)?'mL':'g',k:get(/\bcalories\s*[: ]*([\d.,]+)/i),p:get(/\bprotein\s*[: ]*([\d.,]+)\s*g/i),c:get(/\b(?:total carbohydrate|carbohydrate|carbohydrates)\s*[: ]*([\d.,]+)\s*g/i),f:get(/(?:^|\n)\s*(?:total )?fat\s*[: ]*([\d.,]+)\s*g/im)}}
 async function readLabel(el){let file=el.files?.[0],note=$('labelNote');if(!file||!note)return;let worker;note.textContent='Reading label… first use requires internet.';try{if(!window.Tesseract)await new Promise((resolve,reject)=>{let e=document.createElement('script');e.src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';e.onload=resolve;e.onerror=reject;document.head.append(e)});worker=await Tesseract.createWorker('eng');let r=await worker.recognize(file);if(!note.isConnected)return;let v=parseLabelText(r.data.text);for(let k of ['k','p','c','f'])$('bc_'+k).value=v[k]??'';$('bcWeight').value=v.weight??'';$('bcUnit').value=v.unit;note.textContent='Check all values against the package. Unread fields are blank.';let d=document.createElement('details'),summary=document.createElement('summary'),pre=document.createElement('pre');summary.textContent='Recognized text';pre.style.whiteSpace='pre-wrap';pre.textContent=r.data.text;d.append(summary,pre);note.append(d)}catch(e){if(note.isConnected)note.textContent='Label scan unavailable. Enter values manually.'}finally{if(worker)await worker.terminate()}}
 let smartType='',smartIndex=0,smartOptions=[],smartDate='',smartNotice='';
-function nutritionAsk(type=autoMeal(),quick=false){smartType=type;smartIndex=0;smartDate=day();let a=sum(),t=targets(),remaining=t[0]-a[0],protein=t[1]-a[1],budget=Math.max(200,Math.min(type==='Snack'?400:750,remaining>0?remaining:250));smartOptions=picks(type).filter(x=>!quick||isQuickRecipe(x.i)).map(x=>{let items=recipeItems(x.r,type,true),scale=isQuickRecipe(x.i)?1:Math.max(.35,Math.min(1.25,budget/Math.max(1,totals(items)[0])));items=items.map(y=>({...y,g:Math.max(1,Math.round(y.g*scale))}));let v=totals(items);return {...x,items,v,score:Math.abs(v[0]-budget)-(protein>0?v[1]*3:0)}}).sort((a,b)=>a.score-b.score);tab='Food';foodPage='Today';render()}
+function nutritionAsk(type=autoMeal(),quick=false){smartType=type;smartIndex=0;smartDate=day();let a=sum(),t=targets(),remaining=t[0]-a[0],protein=t[1]-a[1],budget=Math.max(200,Math.min(type==='Snack'?400:750,remaining>0?remaining:250));smartOptions=picks(type).filter(x=>!quick||isQuickRecipe(x.i)).map(x=>{let items=recipeItems(x.r,type,true),scale=(isQuickRecipe(x.i)||sourcedBreakfastRecipes.has(x.r))?1:Math.max(.35,Math.min(1.25,budget/Math.max(1,totals(items)[0])));items=items.map(y=>({...y,g:Math.max(1,Math.round(y.g*scale))}));let v=totals(items);return {...x,items,v,score:Math.abs(v[0]-budget)-(protein>0?v[1]*3:0)}}).sort((a,b)=>a.score-b.score);tab='Food';foodPage='Today';render()}
 function smartNext(){smartIndex=(smartIndex+1)%Math.max(1,smartOptions.length);render()}
 function smartLog(){let x=smartOptions[smartIndex];if(!x||smartDate!==day())return;if(draft.length&&!confirm('Replace current meal draft?'))return;draft=JSON.parse(JSON.stringify(x.items));foodEdit=null;smartType='';foodOpen('Log','text')}
 function plannedEat(type){let k=day()+'|'+type,arr=S.meals[day()]||[],existing=arr.findIndex(m=>m.planSlot===k);if(existing>=0){if(!confirm('Undo logged planned meal?'))return;removeMeal(day(),existing);return}let x=planned(day(),type);if(!x)return;if(!confirm('Log '+x.r[1]+' with the planned portions?'))return;let items=recipeItems(x.r,type,true);if(!items.every(validItem))return;let prior=JSON.stringify(S);(S.meals[day()]??=[]).push({items,planSlot:k,time:new Date().toISOString()});(S.mealSlots??={})[k]='completed';if(!save())S=JSON.parse(prior);render()}
